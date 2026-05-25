@@ -1,0 +1,177 @@
+{
+  "Research Frameworks": [
+    {
+      "full_name": "akfamily/akquant",
+      "html_url": "https://github.com/akfamily/akquant",
+      "description": "AKQuant is a high-performance quantitative research and trading framework built on Rust and Python! 开源量化回测框架",
+      "language": "Python",
+      "stars": 1293,
+      "forks": 169,
+      "pushed_at": "2026-05-20T08:02:41Z",
+      "license": "MIT"
+    }
+  ],
+  "Backtesting": [
+    {
+      "full_name": "mementum/backtrader",
+      "html_url": "https://github.com/mementum/backtrader",
+      "description": "Python Backtesting library for trading strategies",
+      "language": "Python",
+      "stars": 21685,
+      "forks": 5088,
+      "pushed_at": "2024-08-19T17:47:36Z",
+      "license": "GPL-3.0"
+    },
+    {
+      "full_name": "hummingbot/hummingbot",
+      "html_url": "https://github.com/hummingbot/hummingbot",
+      "description": "Open source software that helps you create and deploy high-frequency crypto trading bots",
+      "language": "Python",
+      "stars": 18684,
+      "forks": 4693,
+      "pushed_at": "2026-05-22T15:35:35Z",
+      "license": "Apache-2.0"
+    },
+    {
+      "full_name": "HKUDS/Vibe-Trading",
+      "html_url": "https://github.com/HKUDS/Vibe-Trading",
+      "description": "\"Vibe-Trading: Your Personal Trading Agent\"",
+      "language": "Python",
+      "stars": 8624,
+      "forks": 1753,
+      "pushed_at": "2026-05-24T16:54:11Z",
+      "license": "MIT"
+    },
+    {
+      "full_name": "kernc/backtesting.py",
+      "html_url": "https://github.com/kernc/backtesting.py",
+      "description": "🔎 📈 🐍 💰  Backtest trading strategies in Python.",
+      "language": "Python",
+      "stars": 8413,
+      "forks": 1462,
+      "pushed_at": "2025-12-20T17:50:49Z",
+      "license": "AGPL-3.0"
+    },
+    {
+      "full_name": "ricequant/rqalpha",
+      "html_url": "https://github.com/ricequant/rqalpha",
+      "description": "A extendable, replaceable Python algorithmic backtest && trading framework supporting multiple securities",
+      "language": "Python",
+      "stars": 6417,
+      "forks": 1743,
+      "pushed_at": "2026-05-20T03:21:35Z",
+      "license": "NOASSERTION"
+    },
+    {
+      "full_name": "brokermr810/QuantDinger",
+      "html_url": "https://github.com/brokermr810/QuantDinger",
+      "description": "AI quantitative trading platform for crypto, stocks, and forex with backtesting, live trading, market data, and multi-agent research.vibe-trading ,trading-agents,ai-trader,ai-trading",
+      "language": "Python",
+      "stars": 6471,
+      "forks": 1412,
+      "pushed_at": "2026-05-25T11:59:23Z",
+      "license": "Apache-2.0"
+    },
+    {
+      "full_name": "wangzhe3224/awesome-systematic-trading",
+      "html_url": "https://github.com/wangzhe3224/awesome-systematic-trading",
+      "description": "A curated list of insanely awesome libraries, packages and resources for systematic trading. Crypto, Stock, Futures, Options, CFDs, FX, and more | 量化交易 | 量化投资",
+      "language": "HTML",
+      "stars": 4166,
+      "forks": 531,
+      "pushed_at": "2026-05-18T08:51:22Z",
+      "license": "MIT"
+    },
+    {
+      "full_name": "cuemacro/finmarketpy",
+      "html_url": "https://github.com/cuemacro/finmarketpy",
+      "description": "Python library for backtesting trading strategies & analyzing financial markets (formerly pythalesians)",
+      "language": "Python",
+      "stars": 3765,
+      "forks": 522,
+      "pushed_at": "2026-04-16T09:29:35Z",
+      "license": "Apache-2.0"
+    },
+    {
+      "full_name": "fasiondog/hikyuu",
+      "html_url": "https://github.com/fasiondog/hikyuu",
+      "description": "Hikyuu Quant Framework 基于C++/Python的超高速开源量化交易研究框架，同时可基于策略部件进行资产重用，快速累积策略资产。",
+      "language": "C++",
+      "stars": 3176,
+      "forks": 780,
+      "pushed_at": "2026-05-25T08:05:53Z",
+      "license": "Apache-2.0"
+    },
+    {
+      "full_name": "edtechre/pybroker",
+      "html_url": "https://github.com/edtechre/pybroker",
+      "description": "Algorithmic Trading in Python with Machine Learning",
+      "language": "Python",
+      "stars": 3327,
+      "forks": 434,
+      "pushed_at": "2026-05-11T04:07:54Z",
+      "license": "NOASSERTION"
+    },
+    {
+      "full_name": "whittlem/pycryptobot",
+      "html_url": "https://github.com/whittlem/pycryptobot",
+      "description": "Python Crypto Bot (PyCryptoBot)",
+      "language": "Python",
+      "stars": 2055,
+      "forks": 731,
+      "pushed_at": "2026-03-26T03:53:20Z",
+      "license": "Apache-2.0"
+    },
+    {
+      "full_name": "blankly-finance/blankly",
+      "html_url": "https://github.com/blankly-finance/blankly",
+      "description": "🚀 💸  Easily build, backtest and deploy your algo in just a few lines of code. Trade stocks, cryptos, and forex across exchanges w/ one package.",
+      "language": "Python",
+      "stars": 2437,
+      "forks": 312,
+      "pushed_at": "2024-12-30T20:20:29Z",
+      "license": "LGPL-3.0"
+    }
+  ],
+  "Alpha Research": [
+    {
+      "full_name": "nuglifeleoji/Factor-Research",
+      "html_url": "https://github.com/nuglifeleoji/Factor-Research",
+      "description": "Advanced Quantitative Factor Research: ML-powered stock return prediction with 72% performance improvement. Features comprehensive alpha factor library, systematic feature selection, and deep learning models (LSTM+ResNet achieving IC=0.06476).",
+      "language": "Jupyter Notebook",
+      "stars": 403,
+      "forks": 58,
+      "pushed_at": "2025-08-22T04:22:16Z",
+      "license": null
+    },
+    {
+      "full_name": "ColliderConquer/Stock-Prediction-and-Quantitative-Analysis-Based-on-Machine-Learning-Method",
+      "html_url": "https://github.com/ColliderConquer/Stock-Prediction-and-Quantitative-Analysis-Based-on-Machine-Learning-Method",
+      "description": "This project studies the intrinsic relationship between the stocks’ multiple factors and the investment value of the stocks listed in China Securities Index 800 Index through the machine method. The investment system pipeline has been implemented including data acquirement, data preprocessing, model tuning and selection based on the XGBoost boosted tree model.",
+      "language": "Python",
+      "stars": 93,
+      "forks": 24,
+      "pushed_at": "2021-07-01T13:54:06Z",
+      "license": "MPL-2.0"
+    },
+    {
+      "full_name": "StockGram/Intelligent-Quantitative-Trading",
+      "html_url": "https://github.com/StockGram/Intelligent-Quantitative-Trading",
+      "description": "Contains detailed and extensive notes on quantitative trading, leveraging NLP for finance, backtesting, alpha factor research, portfolio management and optimization.",
+      "language": "Jupyter Notebook",
+      "stars": 54,
+      "forks": 14,
+      "pushed_at": "2022-06-22T03:50:39Z",
+      "license": null
+    }
+  ],
+  "Portfolio Optimization": [],
+  "Risk Modeling": [],
+  "Market Microstructure": [],
+  "Execution and HFT": [],
+  "Machine Learning for Trading": [],
+  "Crypto Quant": [],
+  "Data and Feeds": [],
+  "Academic Resources": [],
+  "Utilities": []
+}
