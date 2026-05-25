@@ -109,6 +109,8 @@ NEGATIVE_KEYWORDS = {
     "guaranteed profit",
     "get rich",
     "pump",
+    "terms of service",
+    "terms of use",
 }
 
 
@@ -196,6 +198,9 @@ def is_bad_repo(repo: dict[str, Any]) -> bool:
     name = clean_text(repo.get("full_name")).lower()
     desc = clean_text(repo.get("description")).lower()
     text = f"{name} {desc}"
+
+    if len(desc) > 1000:
+        return True
 
     if repo.get("archived"):
         return True
