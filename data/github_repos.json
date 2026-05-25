@@ -1,14 +1,986 @@
 {
-  "Research Frameworks": [],
-  "Backtesting": [],
-  "Alpha Research": [],
-  "Portfolio Optimization": [],
-  "Risk Modeling": [],
-  "Market Microstructure": [],
-  "Execution and HFT": [],
-  "Machine Learning for Trading": [],
-  "Crypto Quant": [],
-  "Data and Feeds": [],
-  "Academic Resources": [],
-  "Utilities": []
+  "Research Frameworks": [
+    {
+      "full_name": "akfamily/akquant",
+      "html_url": "https://github.com/akfamily/akquant",
+      "description": "AKQuant is a high-performance quantitative research and trading framework built on Rust and Python! 开源量化回测框架",
+      "language": "Python",
+      "stars": 1293,
+      "forks": 169,
+      "pushed_at": "2026-05-20T08:02:41Z",
+      "license": "MIT"
+    }
+  ],
+  "Backtesting": [
+    {
+      "full_name": "mementum/backtrader",
+      "html_url": "https://github.com/mementum/backtrader",
+      "description": "Python Backtesting library for trading strategies",
+      "language": "Python",
+      "stars": 21684,
+      "forks": 5088,
+      "pushed_at": "2024-08-19T17:47:36Z",
+      "license": "GPL-3.0"
+    },
+    {
+      "full_name": "hummingbot/hummingbot",
+      "html_url": "https://github.com/hummingbot/hummingbot",
+      "description": "Open source software that helps you create and deploy high-frequency crypto trading bots",
+      "language": "Python",
+      "stars": 18685,
+      "forks": 4694,
+      "pushed_at": "2026-05-22T15:35:35Z",
+      "license": "Apache-2.0"
+    },
+    {
+      "full_name": "HKUDS/Vibe-Trading",
+      "html_url": "https://github.com/HKUDS/Vibe-Trading",
+      "description": "\"Vibe-Trading: Your Personal Trading Agent\"",
+      "language": "Python",
+      "stars": 8624,
+      "forks": 1754,
+      "pushed_at": "2026-05-24T16:54:11Z",
+      "license": "MIT"
+    },
+    {
+      "full_name": "kernc/backtesting.py",
+      "html_url": "https://github.com/kernc/backtesting.py",
+      "description": "🔎 📈 🐍 💰  Backtest trading strategies in Python.",
+      "language": "Python",
+      "stars": 8415,
+      "forks": 1462,
+      "pushed_at": "2025-12-20T17:50:49Z",
+      "license": "AGPL-3.0"
+    },
+    {
+      "full_name": "ricequant/rqalpha",
+      "html_url": "https://github.com/ricequant/rqalpha",
+      "description": "A extendable, replaceable Python algorithmic backtest && trading framework supporting multiple securities",
+      "language": "Python",
+      "stars": 6417,
+      "forks": 1743,
+      "pushed_at": "2026-05-20T03:21:35Z",
+      "license": "NOASSERTION"
+    },
+    {
+      "full_name": "brokermr810/QuantDinger",
+      "html_url": "https://github.com/brokermr810/QuantDinger",
+      "description": "AI quantitative trading platform for crypto, stocks, and forex with backtesting, live trading, market data, and multi-agent research.vibe-trading ,trading-agents,ai-trader,ai-trading",
+      "language": "Python",
+      "stars": 6472,
+      "forks": 1412,
+      "pushed_at": "2026-05-25T11:59:23Z",
+      "license": "Apache-2.0"
+    },
+    {
+      "full_name": "wangzhe3224/awesome-systematic-trading",
+      "html_url": "https://github.com/wangzhe3224/awesome-systematic-trading",
+      "description": "A curated list of insanely awesome libraries, packages and resources for systematic trading. Crypto, Stock, Futures, Options, CFDs, FX, and more | 量化交易 | 量化投资",
+      "language": "HTML",
+      "stars": 4167,
+      "forks": 531,
+      "pushed_at": "2026-05-18T08:51:22Z",
+      "license": "MIT"
+    },
+    {
+      "full_name": "cuemacro/finmarketpy",
+      "html_url": "https://github.com/cuemacro/finmarketpy",
+      "description": "Python library for backtesting trading strategies & analyzing financial markets (formerly pythalesians)",
+      "language": "Python",
+      "stars": 3764,
+      "forks": 522,
+      "pushed_at": "2026-04-16T09:29:35Z",
+      "license": "Apache-2.0"
+    },
+    {
+      "full_name": "fasiondog/hikyuu",
+      "html_url": "https://github.com/fasiondog/hikyuu",
+      "description": "Hikyuu Quant Framework 基于C++/Python的超高速开源量化交易研究框架，同时可基于策略部件进行资产重用，快速累积策略资产。",
+      "language": "C++",
+      "stars": 3175,
+      "forks": 780,
+      "pushed_at": "2026-05-25T08:05:53Z",
+      "license": "Apache-2.0"
+    },
+    {
+      "full_name": "edtechre/pybroker",
+      "html_url": "https://github.com/edtechre/pybroker",
+      "description": "Algorithmic Trading in Python with Machine Learning",
+      "language": "Python",
+      "stars": 3327,
+      "forks": 434,
+      "pushed_at": "2026-05-11T04:07:54Z",
+      "license": "NOASSERTION"
+    },
+    {
+      "full_name": "whittlem/pycryptobot",
+      "html_url": "https://github.com/whittlem/pycryptobot",
+      "description": "Python Crypto Bot (PyCryptoBot)",
+      "language": "Python",
+      "stars": 2055,
+      "forks": 731,
+      "pushed_at": "2026-03-26T03:53:20Z",
+      "license": "Apache-2.0"
+    },
+    {
+      "full_name": "blankly-finance/blankly",
+      "html_url": "https://github.com/blankly-finance/blankly",
+      "description": "🚀 💸  Easily build, backtest and deploy your algo in just a few lines of code. Trade stocks, cryptos, and forex across exchanges w/ one package.",
+      "language": "Python",
+      "stars": 2437,
+      "forks": 312,
+      "pushed_at": "2024-12-30T20:20:29Z",
+      "license": "LGPL-3.0"
+    }
+  ],
+  "Alpha Research": [
+    {
+      "full_name": "nuglifeleoji/Factor-Research",
+      "html_url": "https://github.com/nuglifeleoji/Factor-Research",
+      "description": "Advanced Quantitative Factor Research: ML-powered stock return prediction with 72% performance improvement. Features comprehensive alpha factor library, systematic feature selection, and deep learning models (LSTM+ResNet achieving IC=0.06476).",
+      "language": "Jupyter Notebook",
+      "stars": 403,
+      "forks": 58,
+      "pushed_at": "2025-08-22T04:22:16Z",
+      "license": null
+    },
+    {
+      "full_name": "ColliderConquer/Stock-Prediction-and-Quantitative-Analysis-Based-on-Machine-Learning-Method",
+      "html_url": "https://github.com/ColliderConquer/Stock-Prediction-and-Quantitative-Analysis-Based-on-Machine-Learning-Method",
+      "description": "This project studies the intrinsic relationship between the stocks’ multiple factors and the investment value of the stocks listed in China Securities Index 800 Index through the machine method. The investment system pipeline has been implemented including data acquirement, data preprocessing, model tuning and selection based on the XGBoost boosted tree model.",
+      "language": "Python",
+      "stars": 93,
+      "forks": 24,
+      "pushed_at": "2021-07-01T13:54:06Z",
+      "license": "MPL-2.0"
+    },
+    {
+      "full_name": "StockGram/Intelligent-Quantitative-Trading",
+      "html_url": "https://github.com/StockGram/Intelligent-Quantitative-Trading",
+      "description": "Contains detailed and extensive notes on quantitative trading, leveraging NLP for finance, backtesting, alpha factor research, portfolio management and optimization.",
+      "language": "Jupyter Notebook",
+      "stars": 54,
+      "forks": 14,
+      "pushed_at": "2022-06-22T03:50:39Z",
+      "license": null
+    }
+  ],
+  "Portfolio Optimization": [
+    {
+      "full_name": "dcajasn/Riskfolio-Lib",
+      "html_url": "https://github.com/dcajasn/Riskfolio-Lib",
+      "description": "Portfolio Optimization and Quantitative Strategic Asset Allocation in Python",
+      "language": "C++",
+      "stars": 4215,
+      "forks": 668,
+      "pushed_at": "2026-05-22T07:00:11Z",
+      "license": "BSD-3-Clause"
+    },
+    {
+      "full_name": "convexfi/riskparity.py",
+      "html_url": "https://github.com/convexfi/riskparity.py",
+      "description": "Fast and scalable construction of risk parity portfolios",
+      "language": "Python",
+      "stars": 322,
+      "forks": 73,
+      "pushed_at": "2025-12-02T00:59:33Z",
+      "license": "MIT"
+    },
+    {
+      "full_name": "manujajay/portfolio-optimize",
+      "html_url": "https://github.com/manujajay/portfolio-optimize",
+      "description": "A simple Python package for optimizing investment portfolios using historical return data from Yahoo Finance. Users can easily determine the optimal portfolio allocation among a given set of tickers based on the mean-variance optimization method or other algorithms.",
+      "language": "Python",
+      "stars": 106,
+      "forks": 15,
+      "pushed_at": "2024-03-11T23:33:26Z",
+      "license": "MIT"
+    },
+    {
+      "full_name": "dppalomar/riskParityPortfolio",
+      "html_url": "https://github.com/dppalomar/riskParityPortfolio",
+      "description": "Design of Risk Parity Portfolios",
+      "language": "R",
+      "stars": 122,
+      "forks": 30,
+      "pushed_at": "2022-11-15T08:52:05Z",
+      "license": "GPL-3.0"
+    },
+    {
+      "full_name": "johnsoong216/pymarkowitz",
+      "html_url": "https://github.com/johnsoong216/pymarkowitz",
+      "description": "Mean Variance (Markowitz) Portfolio Optimization and Beyond",
+      "language": "Python",
+      "stars": 65,
+      "forks": 16,
+      "pushed_at": "2024-04-25T14:21:42Z",
+      "license": "MIT"
+    }
+  ],
+  "Risk Modeling": [
+    {
+      "full_name": "AliHabibnia/ECON_5984_CMDA_4984_Data_Science_for_Quantitative_Finance",
+      "html_url": "https://github.com/AliHabibnia/ECON_5984_CMDA_4984_Data_Science_for_Quantitative_Finance",
+      "description": "This course in applied data science covers the theoretical foundations of advanced quantitative approaches in machine learning, econometrics, risk and portfolio management, algorithmic trading, and financial forecasting. (first taught at Virginia Tech in 2019)",
+      "language": "Jupyter Notebook",
+      "stars": 51,
+      "forks": 20,
+      "pushed_at": "2026-02-26T04:15:19Z",
+      "license": "MIT"
+    }
+  ],
+  "Market Microstructure": [
+    {
+      "full_name": "python-telegramBot/crypto-liquidity-ai-trading-bot",
+      "html_url": "https://github.com/python-telegramBot/crypto-liquidity-ai-trading-bot",
+      "description": "crypto trading bot liquidity order book market microstructure algorithmic trading quant Python Node.js websocket Binance crypto signals HFT order flow sweep detection depth analysis",
+      "language": "JavaScript",
+      "stars": 339,
+      "forks": 877,
+      "pushed_at": "2026-05-13T15:46:36Z",
+      "license": null
+    },
+    {
+      "full_name": "visualHFT/VisualHFT",
+      "html_url": "https://github.com/visualHFT/VisualHFT",
+      "description": "VisualHFT is a WPF/C# desktop GUI that shows market microstructure in real time. You can track advanced limit‑order‑book dynamics and execution quality, then use its modular plugins to shape the analysis to your workflow.",
+      "language": "C#",
+      "stars": 1136,
+      "forks": 236,
+      "pushed_at": "2026-05-19T21:20:56Z",
+      "license": "Apache-2.0"
+    },
+    {
+      "full_name": "alpacahq/example-hftish",
+      "html_url": "https://github.com/alpacahq/example-hftish",
+      "description": "Example Order Book Imbalance Algorithm",
+      "language": "Python",
+      "stars": 860,
+      "forks": 249,
+      "pushed_at": "2023-07-25T16:50:41Z",
+      "license": null
+    },
+    {
+      "full_name": "suislanchez/polymarket-kalshi-weather-bot",
+      "html_url": "https://github.com/suislanchez/polymarket-kalshi-weather-bot",
+      "description": "Multi-platform prediction market trading bot: trades weather temperature markets on Kalshi (KXHIGH series) and Polymarket using 31-member GFS ensemble forecasts + BTC 5-min microstructure signals. Kelly criterion sizing, signal calibration, React dashboard. (Highest profits $1.8k)",
+      "language": "Python",
+      "stars": 407,
+      "forks": 101,
+      "pushed_at": "2026-03-02T01:19:05Z",
+      "license": null
+    },
+    {
+      "full_name": "nkaz001/algotrading-example",
+      "html_url": "https://github.com/nkaz001/algotrading-example",
+      "description": "algorithmic trading backtest and optimization examples using order book imbalances. (bitcoin, cryptocurrency, bitmex, binance futures, market making)",
+      "language": "Jupyter Notebook",
+      "stars": 318,
+      "forks": 100,
+      "pushed_at": "2023-12-04T14:51:41Z",
+      "license": null
+    },
+    {
+      "full_name": "aitradingbotspro/crypto-liquidity-ai-trading-bot",
+      "html_url": "https://github.com/aitradingbotspro/crypto-liquidity-ai-trading-bot",
+      "description": "Crypto liquidity detection & algorithmic trading bot. Order book analysis, stop-loss clusters, liquidity sweeps. Multi-exchange (Binance, Bybit, Kraken, OKX). Trading signals, quant research, market microstructure.",
+      "language": "JavaScript",
+      "stars": 65,
+      "forks": 48,
+      "pushed_at": "2026-03-12T16:34:06Z",
+      "license": null
+    },
+    {
+      "full_name": "bigmacman1129/crypto-ai-trading-bot",
+      "html_url": "https://github.com/bigmacman1129/crypto-ai-trading-bot",
+      "description": "Crypto liquidity detection & algorithmic trading bot. Order book analysis, stop-loss clusters, liquidity sweeps. Multi-exchange (Binance, Bybit, Kraken, OKX). Trading signals, quant research, market microstructure.",
+      "language": "JavaScript",
+      "stars": 48,
+      "forks": 26,
+      "pushed_at": "2026-05-22T12:04:50Z",
+      "license": null
+    },
+    {
+      "full_name": "ozankenangungor/orderbook-replay-lab",
+      "html_url": "https://github.com/ozankenangungor/orderbook-replay-lab",
+      "description": "Low-latency Limit Order Book research and deterministic replay engine.",
+      "language": "Rust",
+      "stars": 43,
+      "forks": 0,
+      "pushed_at": "2026-04-29T18:04:44Z",
+      "license": "MIT"
+    },
+    {
+      "full_name": "Haohao-end/AI-Agent-Alpha-quantitative-trading-strategy",
+      "html_url": "https://github.com/Haohao-end/AI-Agent-Alpha-quantitative-trading-strategy",
+      "description": "AI-Agent Alpha Quant Strategy: A-Share Sentiment Index — Daily 0–100 sentiment score from Tushare market microstructure signals + AI commentary for risk warnings and position management.",
+      "language": "Python",
+      "stars": 39,
+      "forks": 9,
+      "pushed_at": "2026-01-06T12:40:22Z",
+      "license": null
+    },
+    {
+      "full_name": "TexasCoding/project-x-py",
+      "html_url": "https://github.com/TexasCoding/project-x-py",
+      "description": "A high-performance Python SDK for the ProjectX Trading Platform Gateway API. This library enables developers to build sophisticated trading strategies and applications by providing comprehensive access to futures trading operations, historical market data, real-time streaming, technical analysis, and advanced market microstructure tools",
+      "language": "Python",
+      "stars": 30,
+      "forks": 16,
+      "pushed_at": "2025-09-23T00:49:09Z",
+      "license": "MIT"
+    },
+    {
+      "full_name": "Leo-Hawking/IMC-Prosperity-4-Review",
+      "html_url": "https://github.com/Leo-Hawking/IMC-Prosperity-4-Review",
+      "description": "IMC Prosperity 4 algorithmic trading retrospective: strategies, backtester, market microstructure analysis, and round-by-round research notes. Top 0.5% overall.",
+      "language": "Jupyter Notebook",
+      "stars": 23,
+      "forks": 1,
+      "pushed_at": "2026-05-13T05:35:58Z",
+      "license": null
+    },
+    {
+      "full_name": "kpetridis24/lobsim",
+      "html_url": "https://github.com/kpetridis24/lobsim",
+      "description": "Ultra fast, deterministic L3 limit order book replay + paper-execution engine designed for market microstructure research and strategy prototyping.",
+      "language": "C++",
+      "stars": 25,
+      "forks": 3,
+      "pushed_at": "2026-02-03T13:25:22Z",
+      "license": "Apache-2.0"
+    }
+  ],
+  "Execution and HFT": [
+    {
+      "full_name": "Siva-Chidambaram12/kalshi-trading-bot",
+      "html_url": "https://github.com/Siva-Chidambaram12/kalshi-trading-bot",
+      "description": "🏗 AI trading system for Kalshi prediction markets. kalshi trading bot kalshi trading bot kalshi botFeatures Grok-4 integration, multi-agent decision making, portfolio optimization, and real-time market analysis. Educational/research purposes only kalshi trading bot kalshi bot",
+      "language": "TypeScript",
+      "stars": 148,
+      "forks": 1279,
+      "pushed_at": "2026-05-14T06:55:42Z",
+      "license": null
+    },
+    {
+      "full_name": "ryanfrigo/kalshi-ai-trading-bot",
+      "html_url": "https://github.com/ryanfrigo/kalshi-ai-trading-bot",
+      "description": "🤖 Advanced AI-powered trading system for Kalshi prediction markets. Features Grok-4 integration, multi-agent decision making, portfolio optimization, and real-time market analysis. Educational/research purposes only.",
+      "language": "Python",
+      "stars": 417,
+      "forks": 161,
+      "pushed_at": "2026-04-27T22:17:37Z",
+      "license": "MIT"
+    },
+    {
+      "full_name": "Markfans/cryptoquant-ai",
+      "html_url": "https://github.com/Markfans/cryptoquant-ai",
+      "description": "CryptoQuant AI is an advanced, open-source quantitative trading platform designed to bridge the gap between algorithmic market execution and artificial intelligence. Built entirely on a modern Node.js, Vite, and TypeScript stack, this project provides a robust, highly responsive frontend dashboard paired with powerful automation capabilities.",
+      "language": "TypeScript",
+      "stars": 138,
+      "forks": 34,
+      "pushed_at": "2026-05-01T05:24:37Z",
+      "license": "MIT"
+    },
+    {
+      "full_name": "dsinyakov/quant",
+      "html_url": "https://github.com/dsinyakov/quant",
+      "description": "Codera Quant is a Java framework for algorithmic trading strategies development, execution and backtesting via Interactive Brokers TWS API or other brokers API",
+      "language": "Java",
+      "stars": 183,
+      "forks": 62,
+      "pushed_at": "2022-12-10T04:04:14Z",
+      "license": "MIT"
+    },
+    {
+      "full_name": "automatedalgo/apex",
+      "html_url": "https://github.com/automatedalgo/apex",
+      "description": "Algorithmic trading strategies research and execution platform",
+      "language": "C++",
+      "stars": 83,
+      "forks": 18,
+      "pushed_at": "2026-04-22T02:36:52Z",
+      "license": "LGPL-3.0"
+    },
+    {
+      "full_name": "Thomvanoorschot/zigma",
+      "html_url": "https://github.com/Thomvanoorschot/zigma",
+      "description": "Zigma is an algorithmic trading framework built with the Zig programming language, leveraging an actor-based concurrency model. It aims to provide an efficient, low-latency system for algorithmic trading through components handling market data, strategy execution, order management, risk, and data persistence.",
+      "language": "Zig",
+      "stars": 100,
+      "forks": 8,
+      "pushed_at": "2025-08-03T12:15:11Z",
+      "license": "MIT"
+    },
+    {
+      "full_name": "Cortex-Trading-Systems/polymarket-copy-trading-bot-clob-ai",
+      "html_url": "https://github.com/Cortex-Trading-Systems/polymarket-copy-trading-bot-clob-ai",
+      "description": "Advanced Polymarket Copy Trading Bot & CLOB Automation Engine. Integrated with Claude 4.0 Omni for AI-driven sentiment analysis, sub-85ms execution, and real-time whale mirroring on Polygon network. Optimized for HFT liquidity provision and algorithmic prediction market trading.",
+      "language": "Python",
+      "stars": 41,
+      "forks": 11,
+      "pushed_at": "2026-05-22T10:48:15Z",
+      "license": "MIT"
+    },
+    {
+      "full_name": "jesuschelbezmaski7/polymarket-trading-bot-desktop-crypto",
+      "html_url": "https://github.com/jesuschelbezmaski7/polymarket-trading-bot-desktop-crypto",
+      "description": "An elite, high-performance 2026 desktop application engineered for automated Polymarket prediction trading. This high-speed, low-latency solution features advanced liquidity analysis and instant order execution across all crypto prediction categories for a premium, algorithmic trading experience.",
+      "language": null,
+      "stars": 58,
+      "forks": 1,
+      "pushed_at": "2026-03-24T22:18:35Z",
+      "license": null
+    },
+    {
+      "full_name": "paaak/TradeConnector",
+      "html_url": "https://github.com/paaak/TradeConnector",
+      "description": "Cloud-native, algorithmic trade execution platform, harnessing data-driven insights for adaptive, centralized market access Portal.",
+      "language": "TypeScript",
+      "stars": 24,
+      "forks": 0,
+      "pushed_at": "2025-10-20T05:06:14Z",
+      "license": "MIT"
+    },
+    {
+      "full_name": "Manudecara/Algo-Trading",
+      "html_url": "https://github.com/Manudecara/Algo-Trading",
+      "description": "This is my github repository where I post trading strategies, tutorials and research on quantitative finance with R, C++ and Python. Some of the topics explored include: machine learning, high frequency trading, NLP, technical analysis and more. Hope you enjoy it!",
+      "language": "R",
+      "stars": 146,
+      "forks": 37,
+      "pushed_at": "2021-09-15T15:46:50Z",
+      "license": "MIT"
+    },
+    {
+      "full_name": "JeffreyHyer/grandmaster",
+      "html_url": "https://github.com/JeffreyHyer/grandmaster",
+      "description": ":crystal_ball::moneybag: Backtesting and execution of algorithmic trading strategies in Node.js",
+      "language": "JavaScript",
+      "stars": 46,
+      "forks": 17,
+      "pushed_at": "2022-12-15T20:04:33Z",
+      "license": "MIT"
+    },
+    {
+      "full_name": "stephengineer/Trade-Study-Execution-and-Analysis",
+      "html_url": "https://github.com/stephengineer/Trade-Study-Execution-and-Analysis",
+      "description": ":moneybag: Designed a website to conduct and store trade studies using Vue.js, HTML, CSS, and JavaScript. Created algorithms with Analytical Hierarchy Process and analyzed subsequently data to identify trends using Java and MatLab.",
+      "language": "HTML",
+      "stars": 39,
+      "forks": 2,
+      "pushed_at": "2019-08-08T00:26:20Z",
+      "license": null
+    }
+  ],
+  "Machine Learning for Trading": [
+    {
+      "full_name": "tensortrade-org/tensortrade",
+      "html_url": "https://github.com/tensortrade-org/tensortrade",
+      "description": "An open source reinforcement learning framework for training, evaluating, and deploying robust trading agents.",
+      "language": "Python",
+      "stars": 6283,
+      "forks": 1235,
+      "pushed_at": "2026-02-19T16:21:00Z",
+      "license": "Apache-2.0"
+    },
+    {
+      "full_name": "hudson-and-thames/mlfinlab",
+      "html_url": "https://github.com/hudson-and-thames/mlfinlab",
+      "description": "MlFinLab helps portfolio managers and traders who want to leverage the power of machine learning by providing reproducible, interpretable, and easy to use tools. ",
+      "language": "Python",
+      "stars": 4778,
+      "forks": 1259,
+      "pushed_at": "2023-10-02T03:05:19Z",
+      "license": "NOASSERTION"
+    },
+    {
+      "full_name": "TradeMaster-NTU/TradeMaster",
+      "html_url": "https://github.com/TradeMaster-NTU/TradeMaster",
+      "description": "TradeMaster is an open-source platform for quantitative trading empowered by reinforcement learning :fire: :zap: :rainbow:",
+      "language": "Jupyter Notebook",
+      "stars": 2740,
+      "forks": 518,
+      "pushed_at": "2025-06-04T03:57:56Z",
+      "license": "Apache-2.0"
+    },
+    {
+      "full_name": "rorysroes/SGX-Full-OrderBook-Tick-Data-Trading-Strategy",
+      "html_url": "https://github.com/rorysroes/SGX-Full-OrderBook-Tick-Data-Trading-Strategy",
+      "description": "Providing the solutions for high-frequency trading (HFT) strategies using data science approaches (Machine Learning) on Full Orderbook Tick Data.",
+      "language": "Jupyter Notebook",
+      "stars": 2278,
+      "forks": 694,
+      "pushed_at": "2022-08-27T20:48:46Z",
+      "license": null
+    },
+    {
+      "full_name": "robertmartin8/MachineLearningStocks",
+      "html_url": "https://github.com/robertmartin8/MachineLearningStocks",
+      "description": "Using python and scikit-learn to make stock predictions",
+      "language": "Python",
+      "stars": 1949,
+      "forks": 541,
+      "pushed_at": "2024-06-17T22:43:10Z",
+      "license": "MIT"
+    },
+    {
+      "full_name": "notadamking/RLTrader",
+      "html_url": "https://github.com/notadamking/RLTrader",
+      "description": "A cryptocurrency trading environment using deep reinforcement learning and OpenAI's gym",
+      "language": "Python",
+      "stars": 1860,
+      "forks": 547,
+      "pushed_at": "2022-01-22T05:01:41Z",
+      "license": "GPL-3.0"
+    },
+    {
+      "full_name": "deependersingla/deep_trader",
+      "html_url": "https://github.com/deependersingla/deep_trader",
+      "description": "This project uses reinforcement learning on stock market and agent tries to learn trading. The goal is to check if the agent can learn to read tape. The project is dedicated to hero in life great Jesse Livermore. ",
+      "language": "Python",
+      "stars": 1494,
+      "forks": 498,
+      "pushed_at": "2018-01-22T14:35:51Z",
+      "license": null
+    },
+    {
+      "full_name": "Ceruleanacg/Personae",
+      "html_url": "https://github.com/Ceruleanacg/Personae",
+      "description": "📈 Personae is a repo of implements and environment of Deep Reinforcement Learning & Supervised Learning for Quantitative Trading.",
+      "language": "Python",
+      "stars": 1403,
+      "forks": 339,
+      "pushed_at": "2018-11-29T17:06:12Z",
+      "license": "MIT"
+    },
+    {
+      "full_name": "TreborNamor/TradingView-Machine-Learning-GUI",
+      "html_url": "https://github.com/TreborNamor/TradingView-Machine-Learning-GUI",
+      "description": "HyperView is a terminal-first TradingView strategy lab for downloading market data, backtesting Python strategies with Pine-like behavior, and optimizing SL/TP parameters.",
+      "language": "Python",
+      "stars": 948,
+      "forks": 259,
+      "pushed_at": "2026-03-26T17:30:09Z",
+      "license": "MIT"
+    },
+    {
+      "full_name": "kkyon/botflow",
+      "html_url": "https://github.com/kkyon/botflow",
+      "description": "Python Fast Dataflow programming  framework for Data pipeline work( Web Crawler,Machine Learning,Quantitative Trading.etc)",
+      "language": "Python",
+      "stars": 1196,
+      "forks": 102,
+      "pushed_at": "2026-02-03T02:17:56Z",
+      "license": "NOASSERTION"
+    },
+    {
+      "full_name": "sadighian/crypto-rl",
+      "html_url": "https://github.com/sadighian/crypto-rl",
+      "description": "Deep Reinforcement Learning toolkit: record and replay cryptocurrency limit order book data & train a DDQN agent",
+      "language": "Python",
+      "stars": 953,
+      "forks": 237,
+      "pushed_at": "2022-01-12T11:56:35Z",
+      "license": null
+    },
+    {
+      "full_name": "Albert-Z-Guo/Deep-Reinforcement-Stock-Trading",
+      "html_url": "https://github.com/Albert-Z-Guo/Deep-Reinforcement-Stock-Trading",
+      "description": "A light-weight deep reinforcement learning framework for portfolio management. This project explores the possibility of applying deep reinforcement learning algorithms to stock trading in a highly modular and scalable framework.",
+      "language": "Jupyter Notebook",
+      "stars": 693,
+      "forks": 158,
+      "pushed_at": "2024-11-06T17:33:17Z",
+      "license": "GPL-3.0"
+    }
+  ],
+  "Crypto Quant": [
+    {
+      "full_name": "Superalgos/Superalgos",
+      "html_url": "https://github.com/Superalgos/Superalgos",
+      "description": "Free, open-source crypto trading bot, automated bitcoin / cryptocurrency trading software, algorithmic trading bots. Visually design your crypto trading bot, leveraging an integrated charting system, data-mining, backtesting, paper trading, and multi-server crypto bot deployments.",
+      "language": "JavaScript",
+      "stars": 5477,
+      "forks": 6065,
+      "pushed_at": "2026-05-25T04:53:05Z",
+      "license": "Apache-2.0"
+    },
+    {
+      "full_name": "StockSharp/StockSharp",
+      "html_url": "https://github.com/StockSharp/StockSharp",
+      "description": "Algorithmic trading and quantitative trading open source platform to develop trading robots (stock markets, forex, crypto, bitcoins, and options).",
+      "language": "C#",
+      "stars": 9994,
+      "forks": 2157,
+      "pushed_at": "2026-05-19T07:33:13Z",
+      "license": "Apache-2.0"
+    },
+    {
+      "full_name": "polakowo/vectorbt",
+      "html_url": "https://github.com/polakowo/vectorbt",
+      "description": "The backtesting engine that gives you an unfair advantage. Run thousands of trading ideas before others finish one.",
+      "language": "Python",
+      "stars": 7678,
+      "forks": 986,
+      "pushed_at": "2026-04-25T11:19:52Z",
+      "license": "NOASSERTION"
+    },
+    {
+      "full_name": "Mathieu2301/TradingView-API",
+      "html_url": "https://github.com/Mathieu2301/TradingView-API",
+      "description": "📈 Get real-time stocks from TradingView",
+      "language": "JavaScript",
+      "stars": 3462,
+      "forks": 692,
+      "pushed_at": "2026-04-11T10:14:50Z",
+      "license": null
+    },
+    {
+      "full_name": "enzoampil/fastquant",
+      "html_url": "https://github.com/enzoampil/fastquant",
+      "description": "fastquant — Backtest and optimize your ML trading strategies with only 3 lines of code!",
+      "language": "Jupyter Notebook",
+      "stars": 1752,
+      "forks": 258,
+      "pushed_at": "2023-09-15T10:23:58Z",
+      "license": "MIT"
+    },
+    {
+      "full_name": "xFFFFF/Gekko-Strategies",
+      "html_url": "https://github.com/xFFFFF/Gekko-Strategies",
+      "description": "Strategies to Gekko trading bot with backtests results and some useful tools.",
+      "language": "JavaScript",
+      "stars": 1418,
+      "forks": 402,
+      "pushed_at": "2020-01-09T12:04:14Z",
+      "license": null
+    },
+    {
+      "full_name": "DaveSkender/Stock.Indicators",
+      "html_url": "https://github.com/DaveSkender/Stock.Indicators",
+      "description": "Stock Indicators for .NET is a C# NuGet package that transforms raw equity, commodity, forex, or cryptocurrency financial market price quotes into technical indicators and trading insights. You'll need this essential data in the investment tools that you're building for algorithmic trading, technical analysis, machine learning, or visual charting.",
+      "language": "C#",
+      "stars": 1207,
+      "forks": 265,
+      "pushed_at": "2026-05-25T09:45:25Z",
+      "license": "Apache-2.0"
+    },
+    {
+      "full_name": "coding-kitties/investing-algorithm-framework",
+      "html_url": "https://github.com/coding-kitties/investing-algorithm-framework",
+      "description": "Framework for developing, backtesting, and deploying automated trading algorithms and trading bots.",
+      "language": "Python",
+      "stars": 1225,
+      "forks": 179,
+      "pushed_at": "2026-05-24T15:18:31Z",
+      "license": "Apache-2.0"
+    },
+    {
+      "full_name": "ZENALC/algobot",
+      "html_url": "https://github.com/ZENALC/algobot",
+      "description": "Cryptocurrency trading bot with a graphical user interface with support for simulations, backtests, optimizations, and running live bots.",
+      "language": "Python",
+      "stars": 953,
+      "forks": 176,
+      "pushed_at": "2023-02-11T01:58:20Z",
+      "license": "GPL-3.0"
+    }
+  ],
+  "Data and Feeds": [
+    {
+      "full_name": "Fincept-Corporation/FinceptTerminal",
+      "html_url": "https://github.com/Fincept-Corporation/FinceptTerminal",
+      "description": "FinceptTerminal is a modern finance application offering advanced market analytics, investment research, and economic data tools, designed for interactive exploration and data-driven decision-making in a user-friendly environment.",
+      "language": "Python",
+      "stars": 23699,
+      "forks": 3266,
+      "pushed_at": "2026-05-25T04:12:51Z",
+      "license": "NOASSERTION"
+    },
+    {
+      "full_name": "RomelTorres/alpha_vantage",
+      "html_url": "https://github.com/RomelTorres/alpha_vantage",
+      "description": "A python wrapper for Alpha Vantage API for financial data.",
+      "language": "Python",
+      "stars": 4819,
+      "forks": 778,
+      "pushed_at": "2026-05-20T15:45:29Z",
+      "license": "MIT"
+    },
+    {
+      "full_name": "FinMind/FinMind",
+      "html_url": "https://github.com/FinMind/FinMind",
+      "description": "Open Data, more than 50 financial data. 提供超過 50 個金融資料(台股為主)，每天更新 https://finmind.github.io/",
+      "language": "Jupyter Notebook",
+      "stars": 2584,
+      "forks": 411,
+      "pushed_at": "2026-05-23T15:54:12Z",
+      "license": "Apache-2.0"
+    },
+    {
+      "full_name": "Finnhub-Stock-API/finnhub-python",
+      "html_url": "https://github.com/Finnhub-Stock-API/finnhub-python",
+      "description": "Finnhub Python API Client. Finnhub API provides institutional-grade financial data to investors, fintech startups and investment firms. We support real-time stock price, global fundamentals, global ETFs holdings and alternative data. https://finnhub.io/docs/api",
+      "language": "Python",
+      "stars": 1013,
+      "forks": 156,
+      "pushed_at": "2026-04-22T07:17:40Z",
+      "license": "Apache-2.0"
+    },
+    {
+      "full_name": "twelvedata/twelvedata-python",
+      "html_url": "https://github.com/twelvedata/twelvedata-python",
+      "description": "Twelve Data Python Client - Financial data API & WebSocket",
+      "language": "Python",
+      "stars": 729,
+      "forks": 108,
+      "pushed_at": "2026-04-27T16:14:04Z",
+      "license": "MIT"
+    },
+    {
+      "full_name": "phamdinhkhanh/vnquant",
+      "html_url": "https://github.com/phamdinhkhanh/vnquant",
+      "description": "VietNam Data Stock Market Price",
+      "language": "Python",
+      "stars": 471,
+      "forks": 199,
+      "pushed_at": "2025-07-11T03:47:15Z",
+      "license": null
+    },
+    {
+      "full_name": "joaquinbejar/OrderBook-rs",
+      "html_url": "https://github.com/joaquinbejar/OrderBook-rs",
+      "description": "A high-performance, thread-safe limit order book implementation written in Rust. This project provides a comprehensive order matching engine designed for low-latency trading systems, with a focus on concurrent access patterns and lock-free data structures.",
+      "language": "Rust",
+      "stars": 462,
+      "forks": 79,
+      "pushed_at": "2026-05-03T03:17:46Z",
+      "license": "MIT"
+    },
+    {
+      "full_name": "theOGognf/finagg",
+      "html_url": "https://github.com/theOGognf/finagg",
+      "description": "A Python package for aggregating and normalizing historical data from popular and free financial APIs.",
+      "language": "Python",
+      "stars": 535,
+      "forks": 34,
+      "pushed_at": "2026-03-22T14:40:04Z",
+      "license": "Apache-2.0"
+    },
+    {
+      "full_name": "ryantcullen/stock-bot",
+      "html_url": "https://github.com/ryantcullen/stock-bot",
+      "description": "An open-source Python backtesting engine for designing and evaluating daily stock trading algorithms against real historical market data.",
+      "language": "Python",
+      "stars": 305,
+      "forks": 87,
+      "pushed_at": "2026-02-25T20:26:16Z",
+      "license": "AGPL-3.0"
+    },
+    {
+      "full_name": "Elenchev/order-book-heatmap",
+      "html_url": "https://github.com/Elenchev/order-book-heatmap",
+      "description": "OrderBook Heatmap visualizes the limit order book, compares resting limit orders and shows a time & sales log with live market data streamed directly from the Binance WS API. This was a short exploratory project. Keep in mind that a lot of work is needed for this to work in all market conditions.",
+      "language": "JavaScript",
+      "stars": 501,
+      "forks": 113,
+      "pushed_at": "2021-03-09T13:43:14Z",
+      "license": "BSD-2-Clause"
+    },
+    {
+      "full_name": "hydrosquall/tiingo-python",
+      "html_url": "https://github.com/hydrosquall/tiingo-python",
+      "description": "Python client for interacting with the Tiingo Financial Data API (stock ticker and news data)",
+      "language": "Python",
+      "stars": 308,
+      "forks": 59,
+      "pushed_at": "2025-12-14T05:20:08Z",
+      "license": "MIT"
+    },
+    {
+      "full_name": "rsandx/AlphaSuite",
+      "html_url": "https://github.com/rsandx/AlphaSuite",
+      "description": "AlphaSuite is an open-source quantitative analysis platform that gives you the power to build, test, and deploy professional-grade trading strategies. It's designed for traders and analysts who want to move beyond simple backtests and develop a genuine, data-driven edge in the financial markets.",
+      "language": "Python",
+      "stars": 222,
+      "forks": 87,
+      "pushed_at": "2026-03-03T05:24:35Z",
+      "license": "MIT"
+    }
+  ],
+  "Academic Resources": [
+    {
+      "full_name": "nickmccullum/algorithmic-trading-python",
+      "html_url": "https://github.com/nickmccullum/algorithmic-trading-python",
+      "description": "The repository for freeCodeCamp's YouTube course, Algorithmic Trading in Python",
+      "language": "Jupyter Notebook",
+      "stars": 2835,
+      "forks": 2568,
+      "pushed_at": "2024-06-20T07:31:16Z",
+      "license": null
+    },
+    {
+      "full_name": "AliHabibnia/Algorithmic_Trading_with_Python",
+      "html_url": "https://github.com/AliHabibnia/Algorithmic_Trading_with_Python",
+      "description": "This comprehensive, hands-on course provides a thorough exploration into the world of algorithmic trading, aimed at students, professionals, and enthusiasts with a basic understanding of Python programming and financial markets.",
+      "language": "Jupyter Notebook",
+      "stars": 493,
+      "forks": 125,
+      "pushed_at": "2026-02-23T04:59:28Z",
+      "license": "MIT"
+    },
+    {
+      "full_name": "LinkedInLearning/practical-python-for-algorithmic-trading-4403633",
+      "html_url": "https://github.com/LinkedInLearning/practical-python-for-algorithmic-trading-4403633",
+      "description": "This is a repository for the LinkedIn Learning course Practical Python for Algorithmic Trading",
+      "language": "Jupyter Notebook",
+      "stars": 97,
+      "forks": 150,
+      "pushed_at": "2025-08-01T07:24:18Z",
+      "license": "NOASSERTION"
+    },
+    {
+      "full_name": "charlesrambo/advances_in_financial_ML",
+      "html_url": "https://github.com/charlesrambo/advances_in_financial_ML",
+      "description": "Code for Lopez de Prado's book Advances in Financial Machine Learning. Rewritten for my understanding and clarity.",
+      "language": "Python",
+      "stars": 78,
+      "forks": 27,
+      "pushed_at": "2024-08-13T15:30:37Z",
+      "license": null
+    },
+    {
+      "full_name": "quantra-go-algo/quantra-courses",
+      "html_url": "https://github.com/quantra-go-algo/quantra-courses",
+      "description": "Free courses and resources on algorithmic trading and quantitative finance by Quantra.",
+      "language": "Jupyter Notebook",
+      "stars": 69,
+      "forks": 11,
+      "pushed_at": "2025-03-04T13:12:49Z",
+      "license": "Apache-2.0"
+    }
+  ],
+  "Utilities": [
+    {
+      "full_name": "akfamily/akshare",
+      "html_url": "https://github.com/akfamily/akshare",
+      "description": "AKShare is an elegant and simple financial data interface library for Python, built for human beings! 开源财经数据接口库",
+      "language": "Python",
+      "stars": 19686,
+      "forks": 3202,
+      "pushed_at": "2026-05-20T09:54:59Z",
+      "license": "MIT"
+    },
+    {
+      "full_name": "google/tf-quant-finance",
+      "html_url": "https://github.com/google/tf-quant-finance",
+      "description": "High-performance TensorFlow library for quantitative finance.",
+      "language": "Python",
+      "stars": 5365,
+      "forks": 684,
+      "pushed_at": "2026-02-12T16:22:10Z",
+      "license": "Apache-2.0"
+    },
+    {
+      "full_name": "domokane/FinancePy",
+      "html_url": "https://github.com/domokane/FinancePy",
+      "description": "A Python Finance Library that focuses on the pricing and risk-management of Financial Derivatives, including fixed-income, equity, FX and credit derivatives. ",
+      "language": "Jupyter Notebook",
+      "stars": 2949,
+      "forks": 404,
+      "pushed_at": "2026-05-24T12:39:02Z",
+      "license": "GPL-3.0"
+    },
+    {
+      "full_name": "joshyattridge/smart-money-concepts",
+      "html_url": "https://github.com/joshyattridge/smart-money-concepts",
+      "description": "Discover our Python package designed for algorithmic trading. It brings ICT's smart money concepts to Python, offering a range of indicators for your algorithmic trading strategies.",
+      "language": "Python",
+      "stars": 1680,
+      "forks": 746,
+      "pushed_at": "2026-04-03T14:16:51Z",
+      "license": "MIT"
+    },
+    {
+      "full_name": "achillesrasquinha/bulbea",
+      "html_url": "https://github.com/achillesrasquinha/bulbea",
+      "description": ":boar: :bear: Deep Learning based Python Library for Stock Market Prediction and Modelling",
+      "language": "Python",
+      "stars": 2283,
+      "forks": 487,
+      "pushed_at": "2021-01-17T09:07:36Z",
+      "license": "NOASSERTION"
+    },
+    {
+      "full_name": "dbrojas/optlib",
+      "html_url": "https://github.com/dbrojas/optlib",
+      "description": "A library for financial options pricing written in Python.",
+      "language": "Python",
+      "stars": 1432,
+      "forks": 215,
+      "pushed_at": "2022-11-18T19:12:59Z",
+      "license": "MIT"
+    },
+    {
+      "full_name": "tukuaiai/tradecat-public",
+      "html_url": "https://github.com/tukuaiai/tradecat-public",
+      "description": "交易猫数据系统",
+      "language": "Python",
+      "stars": 952,
+      "forks": 241,
+      "pushed_at": "2026-05-20T07:27:47Z",
+      "license": "MIT"
+    },
+    {
+      "full_name": "PyPatel/Options-Trading-Strategies-in-Python",
+      "html_url": "https://github.com/PyPatel/Options-Trading-Strategies-in-Python",
+      "description": "Developing Options Trading Strategies using Technical Indicators and Quantitative Methods",
+      "language": "Python",
+      "stars": 1007,
+      "forks": 246,
+      "pushed_at": "2024-04-22T20:12:29Z",
+      "license": null
+    },
+    {
+      "full_name": "VarunS2002/Python-NSE-Option-Chain-Analyzer",
+      "html_url": "https://github.com/VarunS2002/Python-NSE-Option-Chain-Analyzer",
+      "description": "The NSE has a website which displays the option chain in near real-time. This program retrieves this data from the NSE site and then generates useful analysis of the Option Chain for the specified Index or Stock. It also continuously refreshes the Option Chain and visually displays the trend in various indicators useful for Technical Analysis.",
+      "language": "Python",
+      "stars": 623,
+      "forks": 257,
+      "pushed_at": "2026-05-22T19:57:33Z",
+      "license": "GPL-3.0"
+    },
+    {
+      "full_name": "areed1192/td-ameritrade-python-api",
+      "html_url": "https://github.com/areed1192/td-ameritrade-python-api",
+      "description": "Unofficial Python API client library for TD Ameritrade. This library allows for easy access of the Standard API and allows users to build data pipelines for the Streaming API.",
+      "language": "Python",
+      "stars": 670,
+      "forks": 248,
+      "pushed_at": "2023-05-23T00:14:50Z",
+      "license": "MIT"
+    },
+    {
+      "full_name": "femtotrader/pandas_talib",
+      "html_url": "https://github.com/femtotrader/pandas_talib",
+      "description": "A Python Pandas implementation of technical analysis indicators",
+      "language": "Python",
+      "stars": 780,
+      "forks": 204,
+      "pushed_at": "2018-05-30T12:05:04Z",
+      "license": "MIT"
+    },
+    {
+      "full_name": "kylejusticemagnuson/pyti",
+      "html_url": "https://github.com/kylejusticemagnuson/pyti",
+      "description": "Python library of various financial technical indicators",
+      "language": "Python",
+      "stars": 664,
+      "forks": 161,
+      "pushed_at": "2020-10-21T17:22:54Z",
+      "license": "MIT"
+    }
+  ]
 }
