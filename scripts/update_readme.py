@@ -139,7 +139,11 @@ def request_json(url: str, headers: dict[str, str]) -> dict[str, Any]:
         reset = response.headers.get("X-RateLimit-Reset")
         if reset:
             reset_time = dt.datetime.fromtimestamp(int(reset), tz=dt.UTC)
-            raise RuntimeError(f"GitHub rate limit hit. Resets at {reset_time.isoformat()}")
+            wait_seconds = (reset_time - dt.datetime.now(dt.UTC)).total_seconds()
+            if wait_seconds > 0:
+                print(f"Rate limit hit. Sleeping {wait_seconds:.0f}s until {reset_time.strftime('%H:%M:%S UTC')}...", file=sys.stderr)
+                time.sleep(wait_seconds + 1.0)
+                return request_json(url, headers)
         raise RuntimeError(f"GitHub API returned 403: {response.text[:300]}")
 
     if response.status_code >= 400:
@@ -258,7 +262,7 @@ def collect_repositories() -> dict[str, list[dict[str, Any]]]:
                 seen.add(full_name)
                 grouped[category][full_name] = repo
 
-            time.sleep(1.2)
+            time.sleep(2.5)
 
     final: dict[str, list[dict[str, Any]]] = {}
 
