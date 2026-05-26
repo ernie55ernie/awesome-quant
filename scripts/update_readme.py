@@ -22,6 +22,7 @@ import os
 import sys
 import time
 import re
+import xml.etree.ElementTree as ET
 from pathlib import Path
 from typing import Any
 from urllib.parse import quote, urlparse
@@ -37,6 +38,12 @@ GITHUB_API = "https://api.github.com"
 
 GITHUB_REPO_RE = re.compile(
     r"https?://github\.com/([A-Za-z0-9_.-]+)/([A-Za-z0-9_.-]+)"
+)
+ARXIV_RE = re.compile(
+    r"https?://arxiv\.org/abs/(\d+\.\d+)"
+)
+SSRN_RE = re.compile(
+    r"https?://papers\.ssrn\.com/sol3/papers\.cfm\?abstract_id=(\d+)"
 )
 
 CATEGORIES: dict[str, list[str]] = {
@@ -90,6 +97,7 @@ CATEGORIES: dict[str, list[str]] = {
         'financial data API Python stars:>100 fork:false archived:false',
         'limit order book data stars:>20 fork:false archived:false',
     ],
+    "Research Papers & Articles": [],
     "Academic Resources": [
         'quantitative finance course stars:>50 fork:false archived:false',
         'financial machine learning book code stars:>50 fork:false archived:false',
@@ -202,6 +210,69 @@ def fetch_repo_metadata(owner: str, repo: str, headers: dict[str, str]) -> dict[
         return None
 
 
+def fetch_arxiv_metadata(arxiv_id: str) -> dict[str, Any] | None:
+    url = f"http://export.arxiv.org/api/query?id_list={arxiv_id}"
+    try:
+        response = requests.get(url, timeout=30)
+        if response.status_code == 200:
+            root = ET.fromstring(response.text)
+            ns = {'atom': 'http://www.w3.org/2005/Atom'}
+            entry = root.find('atom:entry', ns)
+            if entry is not None:
+                title_elem = entry.find('atom:title', ns)
+                title = title_elem.text.replace('\n', ' ').strip() if title_elem is not None else "Unknown Title"
+                authors = []
+                for author in entry.findall('atom:author', ns):
+                    name_elem = author.find('atom:name', ns)
+                    if name_elem is not None and name_elem.text:
+                        authors.append(name_elem.text)
+                
+                pub_elem = entry.find('atom:published', ns)
+                published = pub_elem.text[:10] if pub_elem is not None else "N/A"
+                
+                sum_elem = entry.find('atom:summary', ns)
+                desc = sum_elem.text.replace('\n', ' ').strip() if sum_elem is not None else ""
+                # Shorten description if too long
+                if len(desc) > 300:
+                    desc = desc[:297] + "..."
+                
+                return {
+                    "type": "paper",
+                    "source": "arxiv",
+                    "full_name": title,
+                    "html_url": f"https://arxiv.org/abs/{arxiv_id}",
+                    "description": f"Authors: {', '.join(authors)}. {desc}",
+                    "pushed_at": published + "T00:00:00Z" if published != "N/A" else None,
+                    "authors": authors
+                }
+    except Exception as exc:
+        print(f"Failed arxiv: {arxiv_id} — {exc}", file=sys.stderr)
+    return None
+
+
+def fetch_ssrn_metadata(ssrn_id: str) -> dict[str, Any] | None:
+    url = f"https://papers.ssrn.com/sol3/papers.cfm?abstract_id={ssrn_id}"
+    try:
+        # SSRN blocks headless requests often, add a common User-Agent
+        response = requests.get(url, timeout=30, headers={"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"})
+        if response.status_code == 200:
+            match = re.search(r"<title>(.*?)</title>", response.text, re.IGNORECASE)
+            title = match.group(1).strip() if match else f"SSRN Paper {ssrn_id}"
+            title = title.split(" :: SSRN")[0]
+            title = html.unescape(title)
+            return {
+                "type": "paper",
+                "source": "ssrn",
+                "full_name": title,
+                "html_url": url,
+                "description": "SSRN Research Paper",
+                "pushed_at": None,
+            }
+    except Exception as exc:
+        print(f"Failed ssrn: {ssrn_id} — {exc}", file=sys.stderr)
+    return None
+
+
 def fetch_readme_text(owner: str, repo: str, default_branch: str = "main") -> str:
     candidates = [
         f"https://raw.githubusercontent.com/{owner}/{repo}/{default_branch}/README.md",
@@ -219,12 +290,22 @@ def fetch_readme_text(owner: str, repo: str, default_branch: str = "main") -> st
     return ""
 
 
-def extract_github_links(markdown_text: str) -> set[str]:
+def extract_links(markdown_text: str) -> set[tuple[str, str, str]]:
+    """Returns a set of (type, url, id) tuples."""
     links = set()
     for match in GITHUB_REPO_RE.finditer(markdown_text):
         normalized = normalize_github_repo_url(match.group(0))
         if normalized:
-            links.add(normalized)
+            owner, repo = match.group(1), match.group(2)
+            repo = repo.removesuffix(".git")
+            links.add(("github", normalized, f"{owner}/{repo}"))
+            
+    for match in ARXIV_RE.finditer(markdown_text):
+        links.add(("arxiv", match.group(0), match.group(1)))
+        
+    for match in SSRN_RE.finditer(markdown_text):
+        links.add(("ssrn", match.group(0), match.group(1)))
+        
     return links
 
 
@@ -255,6 +336,9 @@ def clean_text(value: str | None) -> str:
 
 
 def is_bad_repo(repo: dict[str, Any]) -> bool:
+    if repo.get("type") == "paper":
+        return False  # Do not apply repo-specific rules to papers
+        
     name = clean_text(repo.get("full_name")).lower()
     desc = clean_text(repo.get("description")).lower()
     text = f"{name} {desc}"
@@ -310,6 +394,12 @@ def classify_repo(repo: dict[str, Any]) -> str:
 
 
 def repo_score(repo: dict[str, Any]) -> float:
+    if repo.get("type") == "paper":
+        # Papers don't have stars. Give them a baseline score so they can be sorted by recency
+        pushed_days = days_since(repo.get("pushed_at"))
+        recency_score = max(0.0, 1.0 - pushed_days / MAX_DAYS_SINCE_PUSH)
+        return 500.0 + recency_score * 100.0
+
     stars = repo.get("stargazers_count", 0)
     forks = repo.get("forks_count", 0)
     open_issues = repo.get("open_issues_count", 0)
@@ -382,33 +472,58 @@ def collect_repositories() -> dict[str, list[dict[str, Any]]]:
 
             default_branch = seed_meta.get("default_branch") or "main"
             readme_text = fetch_readme_text(owner, repo, default_branch)
-            for linked_url in extract_github_links(readme_text):
-                if linked_url == seed_normalized:
+            for link_type, linked_url, link_id in extract_links(readme_text):
+                if link_type == "github" and linked_url == seed_normalized:
                     continue
-                if linked_url not in discovered:
-                    discovered[linked_url] = {"count": 1}
+                
+                # Use a unique identifier key mapping to the type
+                unique_key = f"{link_type}:{link_id}"
+                if unique_key not in discovered:
+                    discovered[unique_key] = {"type": link_type, "url": linked_url, "id": link_id, "count": 1}
                 else:
-                    discovered[linked_url]["count"] += 1
+                    discovered[unique_key]["count"] += 1
             time.sleep(1.5)
 
-        for repo_url, item in discovered.items():
-            parsed = repo_api_path(repo_url)
-            if not parsed:
-                continue
-            owner, repo = parsed
-            full_name = f"{owner}/{repo}"
-            if full_name in seen:
-                continue
-
-            meta = fetch_repo_metadata(owner, repo, headers)
-            time.sleep(1.0)
-            if not meta or is_bad_repo(meta):
-                continue
+        for unique_key, item in discovered.items():
+            link_type = item["type"]
+            link_id = item["id"]
+            repo_url = item["url"]
             
-            meta["seed_discovered"] = True
-            category = classify_repo(meta)
-            grouped[category][full_name] = meta
-            seen.add(full_name)
+            if link_type == "github":
+                if link_id in seen:
+                    continue
+                owner, repo = link_id.split("/")
+                meta = fetch_repo_metadata(owner, repo, headers)
+                time.sleep(1.0)
+                if not meta or is_bad_repo(meta):
+                    continue
+                meta["type"] = "github"
+                meta["seed_discovered"] = True
+                category = classify_repo(meta)
+                grouped[category][link_id] = meta
+                seen.add(link_id)
+            elif link_type == "arxiv":
+                if link_id in seen:
+                    continue
+                meta = fetch_arxiv_metadata(link_id)
+                time.sleep(1.0)
+                if not meta:
+                    continue
+                meta["seed_discovered"] = True
+                category = "Research Papers & Articles"
+                grouped[category][repo_url] = meta
+                seen.add(link_id)
+            elif link_type == "ssrn":
+                if link_id in seen:
+                    continue
+                meta = fetch_ssrn_metadata(link_id)
+                time.sleep(1.0)
+                if not meta:
+                    continue
+                meta["seed_discovered"] = True
+                category = "Research Papers & Articles"
+                grouped[category][repo_url] = meta
+                seen.add(link_id)
 
     final: dict[str, list[dict[str, Any]]] = {}
     for category, repos_by_name in grouped.items():
@@ -423,6 +538,13 @@ def repo_to_markdown(repo: dict[str, Any]) -> str:
     name = clean_text(repo.get("full_name"))
     url = repo.get("html_url", "")
     desc = clean_text(repo.get("description")) or "No description provided."
+    
+    if repo.get("type") == "paper":
+        pushed_at = repo.get("pushed_at")
+        pushed_date = pushed_at[:10] if pushed_at else "N/A"
+        date_str = f" · published {pushed_date}" if pushed_date != "N/A" else ""
+        return f"- [{name}]({url}) — {desc}{date_str}"
+
     language = repo.get("language") or "N/A"
     stars = repo.get("stargazers_count", 0)
     forks = repo.get("forks_count", 0)
@@ -503,6 +625,7 @@ def save_data(grouped: dict[str, list[dict[str, Any]]]) -> None:
         compact[category] = [
             {
                 "full_name": repo.get("full_name"),
+                "type": repo.get("type", "github"),
                 "html_url": repo.get("html_url"),
                 "description": repo.get("description"),
                 "language": repo.get("language"),

@@ -62,6 +62,7 @@ A curated list of quantitative research, trading research, and market microstruc
 - Machine Learning for Trading
 - Crypto Quant
 - Data and Feeds
+- Research Papers & Articles
 - Academic Resources
 - Interview / Learning
 - LLM / AI Agents for Finance
@@ -138,6 +139,7 @@ Instructions:
    - Machine Learning for Trading
    - Crypto Quant
    - Data and Feeds
+   - Research Papers & Articles
    - Academic Resources
    - Interview / Learning
    - LLM / AI Agents for Finance
