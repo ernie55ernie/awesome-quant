@@ -16,7 +16,7 @@ The list is automatically refreshed from GitHub repository metadata.
 - [Machine Learning for Trading](#machine-learning-for-trading)
 - [Crypto Quant](#crypto-quant)
 - [Data and Feeds](#data-and-feeds)
-- [Research Papers & Articles](#research-papers-and-articles)
+- [Research Papers & Articles](#research-papers--articles)
 - [Academic Resources](#academic-resources)
 - [Interview / Learning](#interview--learning)
 - [LLM / AI Agents for Finance](#llm--ai-agents-for-finance)

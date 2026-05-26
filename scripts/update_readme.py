@@ -563,7 +563,7 @@ def repo_to_markdown(repo: dict[str, Any]) -> str:
 def generate_readme(grouped: dict[str, list[dict[str, Any]]]) -> str:
     now = dt.datetime.now(dt.UTC).strftime("%Y-%m-%d %H:%M UTC")
     contents = "\n".join(
-        f"- [{category}](#{category.lower().replace(' ', '-').replace('&', 'and').replace('/', '')})"
+        f"- [{category}](#{re.sub(r'[^a-z0-9 -]', '', category.lower()).replace(' ', '-')})"
         for category in grouped
     )
 
