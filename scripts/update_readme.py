@@ -291,6 +291,28 @@ def fetch_ssrn_metadata(ssrn_id: str) -> dict[str, Any] | None:
     return None
 
 
+def fetch_serpapi_scholar(query: str, api_key: str) -> list[dict[str, Any]]:
+    url = "https://serpapi.com/search"
+    params = {
+        "engine": "google_scholar",
+        "q": query,
+        "api_key": api_key,
+        "num": 5
+    }
+    try:
+        response = requests.get(url, params=params, timeout=30)
+        if response.status_code == 200:
+            data = response.json()
+            return data.get("organic_results", [])
+        elif response.status_code == 401:
+            print("SerpApi Error: Invalid API key.", file=sys.stderr)
+        else:
+            print(f"SerpApi Error {response.status_code}: {response.text[:200]}", file=sys.stderr)
+    except Exception as exc:
+        print(f"Failed SerpApi: {query} — {exc}", file=sys.stderr)
+    return []
+
+
 def fetch_readme_text(owner: str, repo: str, default_branch: str = "main") -> str:
     candidates = [
         f"https://raw.githubusercontent.com/{owner}/{repo}/{default_branch}/README.md",
@@ -542,6 +564,48 @@ def collect_repositories() -> dict[str, list[dict[str, Any]]]:
                 category = "Research Papers & Articles"
                 grouped[category][repo_url] = meta
                 seen.add(link_id)
+
+    # 3. SerpApi Discovery
+    serpapi_key = get_api_key("SERPAPI_KEY")
+    if not serpapi_key:
+        print("Skipping SerpApi discovery because SERPAPI_KEY is not set.", file=sys.stderr)
+    else:
+        keywords = [
+            "quantitative finance",
+            "algorithmic trading",
+            "market microstructure",
+            "financial machine learning"
+        ]
+        for kw in keywords:
+            print(f"Fetching Google Scholar for: {kw}", file=sys.stderr)
+            results = fetch_serpapi_scholar(kw, serpapi_key)
+            for res in results:
+                link = res.get("link")
+                if not link:
+                    continue
+                if link in seen:
+                    continue
+                
+                title = res.get("title", "Unknown Title")
+                pub_info = res.get("publication_info", {}).get("summary", "")
+                snippet = res.get("snippet", "")
+                
+                desc = f"{pub_info}. {snippet}".strip()
+                desc = " ".join(desc.split())
+                
+                meta = {
+                    "type": "paper",
+                    "source": "scholar",
+                    "full_name": title,
+                    "html_url": link,
+                    "description": desc,
+                    "pushed_at": None,
+                    "seed_discovered": True,
+                }
+                category = "Research Papers & Articles"
+                grouped[category][link] = meta
+                seen.add(link)
+            time.sleep(1.0)
 
     final: dict[str, list[dict[str, Any]]] = {}
     for category, repos_by_name in grouped.items():
