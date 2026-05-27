@@ -436,9 +436,10 @@ def classify_repo(repo: dict[str, Any]) -> str:
 def repo_score(repo: dict[str, Any]) -> float:
     if repo.get("type") == "paper":
         # Papers don't have stars. Give them a baseline score so they can be sorted by recency
-        pushed_days = days_since(repo.get("pushed_at"))
+        pushed_days = days_since(repo.get("pushed_at")) if repo.get("pushed_at") else 0
         recency_score = max(0.0, 1.0 - pushed_days / MAX_DAYS_SINCE_PUSH)
-        return 500.0 + recency_score * 100.0
+        boost = 200.0 if repo.get("source") == "scholar" else 0.0
+        return 500.0 + recency_score * 100.0 + boost
 
     stars = repo.get("stargazers_count", 0)
     forks = repo.get("forks_count", 0)
@@ -611,7 +612,8 @@ def collect_repositories() -> dict[str, list[dict[str, Any]]]:
     for category, repos_by_name in grouped.items():
         repos = list(repos_by_name.values())
         repos.sort(key=repo_score, reverse=True)
-        final[category] = repos[:CATEGORY_LIMIT]
+        limit = 50 if category == "Research Papers & Articles" else CATEGORY_LIMIT
+        final[category] = repos[:limit]
 
     return final
 

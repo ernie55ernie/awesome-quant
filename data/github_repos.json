@@ -6,8 +6,8 @@
       "html_url": "https://github.com/TauricResearch/TradingAgents",
       "description": "TradingAgents: Multi-Agents LLM Financial Trading Framework",
       "language": "Python",
-      "stars": 80103,
-      "forks": 15597,
+      "stars": 80109,
+      "forks": 15598,
       "pushed_at": "2026-05-17T07:54:07Z",
       "license": "Apache-2.0"
     },
@@ -50,7 +50,7 @@
       "html_url": "https://github.com/akfamily/akquant",
       "description": "AKQuant is a high-performance quantitative research and trading framework built on Rust and Python! 开源量化回测框架",
       "language": "Python",
-      "stars": 1328,
+      "stars": 1331,
       "forks": 170,
       "pushed_at": "2026-05-27T11:14:20Z",
       "license": "MIT"
@@ -151,8 +151,8 @@
       "html_url": "https://github.com/mementum/backtrader",
       "description": "Python Backtesting library for trading strategies",
       "language": "Python",
-      "stars": 21714,
-      "forks": 5091,
+      "stars": 21715,
+      "forks": 5092,
       "pushed_at": "2024-08-19T17:47:36Z",
       "license": "GPL-3.0"
     },
@@ -173,8 +173,8 @@
       "html_url": "https://github.com/HKUDS/Vibe-Trading",
       "description": "\"Vibe-Trading: Your Personal Trading Agent\"",
       "language": "Python",
-      "stars": 8827,
-      "forks": 1811,
+      "stars": 8830,
+      "forks": 1812,
       "pushed_at": "2026-05-27T12:07:14Z",
       "license": "MIT"
     },
@@ -206,7 +206,7 @@
       "html_url": "https://github.com/brokermr810/QuantDinger",
       "description": "AI quantitative trading platform for crypto, stocks, and forex with backtesting, live trading, market data, and multi-agent research.vibe-trading ,trading-agents,ai-trader,ai-trading",
       "language": "Python",
-      "stars": 6724,
+      "stars": 6734,
       "forks": 1460,
       "pushed_at": "2026-05-26T17:49:57Z",
       "license": "Apache-2.0"
@@ -1133,7 +1133,7 @@
       "language": "C++",
       "stars": 195284,
       "forks": 75340,
-      "pushed_at": "2026-05-27T15:46:37Z",
+      "pushed_at": "2026-05-27T16:09:30Z",
       "license": "Apache-2.0"
     },
     {
@@ -1155,7 +1155,7 @@
       "language": "Python",
       "stars": 64061,
       "forks": 19776,
-      "pushed_at": "2026-05-27T02:47:13Z",
+      "pushed_at": "2026-05-27T16:11:38Z",
       "license": "Apache-2.0"
     },
     {
@@ -1175,7 +1175,7 @@
       "html_url": "https://github.com/lutzroeder/netron",
       "description": "Visualizer for neural network, deep learning and machine learning models",
       "language": "JavaScript",
-      "stars": 32985,
+      "stars": 32986,
       "forks": 3122,
       "pushed_at": "2026-05-27T01:36:31Z",
       "license": "MIT"
@@ -1186,7 +1186,7 @@
       "html_url": "https://github.com/stefan-jansen/machine-learning-for-trading",
       "description": "Code for Machine Learning for Algorithmic Trading, 2nd edition.",
       "language": "Jupyter Notebook",
-      "stars": 17405,
+      "stars": 17406,
       "forks": 5139,
       "pushed_at": "2024-08-18T21:54:07Z",
       "license": null
@@ -1366,7 +1366,7 @@
       "language": "Java",
       "stars": 42660,
       "forks": 8708,
-      "pushed_at": "2026-05-27T15:28:26Z",
+      "pushed_at": "2026-05-27T16:08:10Z",
       "license": "MIT"
     },
     {
@@ -1431,7 +1431,7 @@
       "description": "This is a database of 300.000+ symbols containing Equities, ETFs, Funds, Indices, Currencies, Cryptocurrencies and Money Markets.",
       "language": "Python",
       "stars": 7657,
-      "forks": 776,
+      "forks": 777,
       "pushed_at": "2026-05-24T12:54:04Z",
       "license": "MIT"
     },
@@ -1575,8 +1575,8 @@
       "html_url": "https://github.com/Fincept-Corporation/FinceptTerminal",
       "description": "FinceptTerminal is a modern finance application offering advanced market analytics, investment research, and economic data tools, designed for interactive exploration and data-driven decision-making in a user-friendly environment.",
       "language": "Python",
-      "stars": 24243,
-      "forks": 3351,
+      "stars": 24245,
+      "forks": 3352,
       "pushed_at": "2026-05-27T04:42:16Z",
       "license": "NOASSERTION"
     },
@@ -1586,7 +1586,7 @@
       "html_url": "https://github.com/ranaroussi/yfinance",
       "description": "Download market data from Yahoo! Finance's API",
       "language": "Python",
-      "stars": 23863,
+      "stars": 23864,
       "forks": 3279,
       "pushed_at": "2026-05-25T20:55:38Z",
       "license": "Apache-2.0"
@@ -1792,47 +1792,223 @@
   ],
   "Research Papers & Articles": [
     {
-      "full_name": "QuantCode-Bench: A Benchmark for Evaluating the Ability of Large Language Models to Generate Executable Algorithmic Trading Strategies",
+      "full_name": "Paul Wilmott on quantitative finance",
       "type": "paper",
-      "html_url": "https://arxiv.org/abs/2604.15151",
-      "description": "Authors: Alexey Khoroshilov, Alexey Chernysh, Orkhan Ekhtibarov, Nini Kamkia, Dmitry Zmitrovich. Large language models have demonstrated strong performance on general-purpose programming tasks, yet their ability to generate executable algorithmic trading strategies remains underexplored. Unlike standard code benchmarks, trading-strategy generation requires simultaneous mastery of domain-spec...",
+      "html_url": "https://books.google.com/books?hl=en&lr=&id=zdLDAQAAQBAJ&oi=fnd&pg=PP44&dq=quantitative+finance&ots=sNtjrkhd2D&sig=D5mMIosn6NBI9mBDVN9SuY_Jm_g",
+      "description": "P Wilmott - 2013 - books.google.com. … This is the foundation for most quantitative finance theory and I will be building on this foundation for much, but by no means all, of the book. Chapter 6: Partial Differential Equations …",
       "language": null,
       "stars": null,
       "forks": null,
-      "pushed_at": "2026-04-16T00:00:00Z",
+      "pushed_at": null,
       "license": null
     },
     {
-      "full_name": "QuantaAlpha: An Evolutionary Framework for LLM-Driven Alpha Mining",
+      "full_name": "Paul Wilmott introduces quantitative finance",
       "type": "paper",
-      "html_url": "https://arxiv.org/abs/2602.07085",
-      "description": "Authors: Jun Han, Shuo Zhang, Wei Li, Yifan Dong, Tu Hu, Yumo Zhu, Xiaomin Yu, Xin Guo, Zhaowei Liu, Kunyi Wang, Jingping Liu, Tianyi Jiang, Ruichuan An, Sen Hu, Zhi Yang, Ronghao Che, Huacan Wang. Financial markets are noisy and non-stationary, making alpha mining highly sensitive to backtest noise and regime shifts. While recent agentic frameworks improve automation, they often lack controllable multi-round search and reliable reuse of validated experience. To address these challenges, we...",
+      "html_url": "https://books.google.com/books?hl=en&lr=&id=7UuPAQAAQBAJ&oi=fnd&pg=PR23&dq=quantitative+finance&ots=nPnv_ZuC5q&sig=Crstxk_7v7WeM-tW2wp9Q3m7KwY",
+      "description": "P Wilmott - 2013 - books.google.com. … Financial Times as ‘cult derivatives lecturer,' is one of the world's leading experts on quantitative finance … PWIQF2 is an accessible introduction to the classical side of quantitative finance …",
       "language": null,
       "stars": null,
       "forks": null,
-      "pushed_at": "2026-02-06T00:00:00Z",
+      "pushed_at": null,
       "license": null
     },
     {
-      "full_name": "FinDeepForecast: A Live Multi-Agent System for Benchmarking Deep Research Agents in Financial Forecasting",
+      "full_name": "Machine learning for quantitative finance applications: A survey",
       "type": "paper",
-      "html_url": "https://arxiv.org/abs/2601.05039",
-      "description": "Authors: Xiangyu Li, Xuan Yao, Guohao Qi, Fengbin Zhu, Kelvin J. L. Koa, Xiang Yao Ng, Ziyang Liu, Xingyu Ni, Chang Liu, Yonghui Yang, Yang Zhang, Wenjie Wang, Fuli Feng, Chao Wang, Huanbo Luan, Xiaofen Xing, Xiangmin Xu, Tat-Seng Chua, Ke-Wei Huang. Deep Research (DR) Agents powered by advanced Large Language Models (LLMs) have fundamentally shifted the paradigm for completing complex research tasks. Yet, a comprehensive and live evaluation of their forecasting performance on real-world, research-oriented tasks in high-stakes domains (e.g., ...",
+      "html_url": "https://www.mdpi.com/2076-3417/9/24/5574",
+      "description": "F Rundo, F Trenta, AL Di Stallo, S Battiato - Applied Sciences, 2019 - mdpi.com. … financial markets has led to an urgent demand for developing innovative models to understand financial … (ML) techniques in the field of quantitative finance showing that these methods …",
       "language": null,
       "stars": null,
       "forks": null,
-      "pushed_at": "2026-01-08T00:00:00Z",
+      "pushed_at": null,
       "license": null
     },
     {
-      "full_name": "StockMem: An Event-Reflection Memory Framework for Stock Forecasting",
+      "full_name": "Applied quantitative finance",
       "type": "paper",
-      "html_url": "https://arxiv.org/abs/2512.02720",
-      "description": "Authors: He Wang, Wenyilin Xiao, Songqiao Han, Hailiang Huang. Stock price prediction is challenging due to market volatility and its sensitivity to real-time events. While large language models (LLMs) offer new avenues for text-based forecasting, their application in finance is hindered by noisy news data and the lack of explicit answers in text. General-pu...",
+      "html_url": "https://link.springer.com/content/pdf/10.1007/978-3-540-69179-2.pdf",
+      "description": "L Overbeck, WK Härdle, N Hautsch - 2009 - Springer. … Since modern statistical methods, like eg copulae estimation, are increasingly important in quantitative finance such as in credit risk management, we have put more weight on the …",
       "language": null,
       "stars": null,
       "forks": null,
-      "pushed_at": "2025-12-02T00:00:00Z",
+      "pushed_at": null,
+      "license": null
+    },
+    {
+      "full_name": "A benchmark approach to quantitative finance",
+      "type": "paper",
+      "html_url": "https://books.google.com/books?hl=en&lr=&id=ZABv5sBn7Y4C&oi=fnd&pg=PR7&dq=quantitative+finance&ots=rKp0x2DPlx&sig=JaFf0dAYZTohTEO-MGaRayznIGw",
+      "description": "E Platen, D Heath - 2006 - books.google.com. … quantitative methods and technologies emerge. This book aims to provide an introduction to quantitative finance… framework typically used in financial modeling, derivative pricing, …",
+      "language": null,
+      "stars": null,
+      "forks": null,
+      "pushed_at": null,
+      "license": null
+    },
+    {
+      "full_name": "Algorithmic trading",
+      "type": "paper",
+      "html_url": "https://ieeexplore.ieee.org/abstract/document/5696713/",
+      "description": "G Nuti, M Mirghaemi, P Treleaven, C Yingsaeree - Computer, 2011 - ieeexplore.ieee.org. … of this trading process can be conducted by humans, by humans+algorithms, or fully by algorithms. … and to computer professionals, this paper attempts to demystify Algorithmic Trading. …",
+      "language": null,
+      "stars": null,
+      "forks": null,
+      "pushed_at": null,
+      "license": null
+    },
+    {
+      "full_name": "Algorithmic trading: winning strategies and their rationale",
+      "type": "paper",
+      "html_url": "https://books.google.com/books?hl=en&lr=&id=CIwCTVqEj4oC&oi=fnd&pg=PR9&dq=algorithmic+trading&ots=kVEKKsCxDI&sig=AAQW6vP_MEi1U5U8gn8klpfHHQg",
+      "description": "EP Chan - 2013 - books.google.com. … n his well-received first book Quantitative Trading, Dr. Ernest Chan addressed the essential techniques an algorithmic trader needs to succeed at this demanding endeavor. While some …",
+      "language": null,
+      "stars": null,
+      "forks": null,
+      "pushed_at": null,
+      "license": null
+    },
+    {
+      "full_name": "Algorithmic trading review",
+      "type": "paper",
+      "html_url": "https://dl.acm.org/doi/abs/10.1145/2500117",
+      "description": "P Treleaven, M Galas, V Lalchand - Communications of the ACM, 2013 - dl.acm.org. … This has been a fascinating research area at University College London, where for eight years algorithmic trading systems and an Algorithmic Trading/Risk platform7 have been …",
+      "language": null,
+      "stars": null,
+      "forks": null,
+      "pushed_at": null,
+      "license": null
+    },
+    {
+      "full_name": "Rise of the machines: Algorithmic trading in the foreign exchange market",
+      "type": "paper",
+      "html_url": "https://onlinelibrary.wiley.com/doi/abs/10.1111/jofi.12186",
+      "description": "AP Chaboud, B Chiquoine… - The Journal of …, 2014 - Wiley Online Library. … higher adverse selection costs on slower traders. In contrast, the reduction in … algorithmic provision of liquidity. We also find evidence consistent with the strategies of algorithmic traders …",
+      "language": null,
+      "stars": null,
+      "forks": null,
+      "pushed_at": null,
+      "license": null
+    },
+    {
+      "full_name": "Algorithmic trading and the market for liquidity",
+      "type": "paper",
+      "html_url": "https://www.cambridge.org/core/journals/journal-of-financial-and-quantitative-analysis/article/algorithmic-trading-and-the-market-for-liquidity/C1A34D3767436529EA4F23DB1780273C",
+      "description": "T Hendershott, R Riordan - Journal of financial and quantitative …, 2013 - cambridge.org. … We examine the role of algorithmic traders (ATs) in liquidity … ATs more actively monitor market liquidity than human traders. … , and more likely to initiate trades. ATs react more quickly to …",
+      "language": null,
+      "stars": null,
+      "forks": null,
+      "pushed_at": null,
+      "license": null
+    },
+    {
+      "full_name": "Market microstructure: A survey",
+      "type": "paper",
+      "html_url": "https://www.sciencedirect.com/science/article/pii/S1386418100000070",
+      "description": "A Madhavan - Journal of financial markets, 2000 - Elsevier. Market microstructure studies the process by … market microstructure relating to: (1)price formation, including the dynamic process by which prices come to impound information, (2)market …",
+      "language": null,
+      "stars": null,
+      "forks": null,
+      "pushed_at": null,
+      "license": null
+    },
+    {
+      "full_name": "Market microstructure",
+      "type": "paper",
+      "html_url": "https://www.sciencedirect.com/science/article/pii/0304405X76900064",
+      "description": "MB Garman - Journal of financial Economics, 1976 - Elsevier. It is assumed that a collection of market agents can be treated as a statistical ensemble. Their market activities are depicted as the stochastic generation of market orders according to a …",
+      "language": null,
+      "stars": null,
+      "forks": null,
+      "pushed_at": null,
+      "license": null
+    },
+    {
+      "full_name": "High frequency market microstructure",
+      "type": "paper",
+      "html_url": "https://www.sciencedirect.com/science/article/pii/S0304405X15000045",
+      "description": "M O'hara - Journal of financial economics, 2015 - Elsevier. … traders and markets. I discuss some of the gaps that arise when thinking about microstructure … I suggest that, like everything else in the markets, research must also change to reflect the …",
+      "language": null,
+      "stars": null,
+      "forks": null,
+      "pushed_at": null,
+      "license": null
+    },
+    {
+      "full_name": "Market microstructure",
+      "type": "paper",
+      "html_url": "https://www.sciencedirect.com/science/article/pii/S1574010203010136",
+      "description": "HR Stoll - Handbook of the Economics of Finance, 2003 - Elsevier. … a single market versus the forces leading to multiple markets. Most of this chapter deals with the microstructure of equities markets. In Section 9, the microstructure of other markets is …",
+      "language": null,
+      "stars": null,
+      "forks": null,
+      "pushed_at": null,
+      "license": null
+    },
+    {
+      "full_name": "Market microstructure",
+      "type": "paper",
+      "html_url": "https://www.sciencedirect.com/science/article/pii/S0927050705800568",
+      "description": "D Easley, M O'Hara - Handbooks in operations research and management …, 1995 - Elsevier. … of the market microstructure literature. The recent interest in markets in general and market … investigations, any attempt to survey market microstructure in its totality would be doomed to …",
+      "language": null,
+      "stars": null,
+      "forks": null,
+      "pushed_at": null,
+      "license": null
+    },
+    {
+      "full_name": "Financial machine learning",
+      "type": "paper",
+      "html_url": "https://www.emerald.com/ftfin/article/13/3-4/205/1324290",
+      "description": "B Kelly, D Xiu - Foundations and Trends® in Finance, 2023 - emerald.com. … We survey the nascent literature on machine learning in the study of financial … financial economists interested in grasping machine learning tools, as well as for statisticians and machine …",
+      "language": null,
+      "stars": null,
+      "forks": null,
+      "pushed_at": null,
+      "license": null
+    },
+    {
+      "full_name": "Advances in financial machine learning",
+      "type": "paper",
+      "html_url": "https://books.google.com/books?hl=en&lr=&id=oU9KDwAAQBAJ&oi=fnd&pg=PR21&dq=financial+machine+learning&ots=7VKM_2wAcw&sig=0okUovjvQaA8DAYnSWggI5sI9zw",
+      "description": "ML De Prado - 2018 - books.google.com. … and process of financial machine learning. For academics and practitioners alike, this book fills an important gap in our understanding of investment management in the machine age.\" …",
+      "language": null,
+      "stars": null,
+      "forks": null,
+      "pushed_at": null,
+      "license": null
+    },
+    {
+      "full_name": "Machine learning in financial crisis prediction: a survey",
+      "type": "paper",
+      "html_url": "https://ieeexplore.ieee.org/abstract/document/6069610/",
+      "description": "WY Lin, YH Hu, CF Tsai - IEEE Transactions on Systems, Man …, 2011 - ieeexplore.ieee.org. … of view of machine learning, the aim to predict financial crises is to develop well-performing classifiers. Because it is difficult to collect large numbers of real cases of financial crisis (ie, …",
+      "language": null,
+      "stars": null,
+      "forks": null,
+      "pushed_at": null,
+      "license": null
+    },
+    {
+      "full_name": "Machine learning for financial risk management: a survey",
+      "type": "paper",
+      "html_url": "https://ieeexplore.ieee.org/abstract/document/9249416/",
+      "description": "A Mashrur, W Luo, NA Zaidi, A Robles-Kelly - Ieee Access, 2020 - ieeexplore.ieee.org. … rapidly growing literature of machine learning research for financial risk management. The … of financial-risk-management tasks and connect them with relevant machine learning methods…",
+      "language": null,
+      "stars": null,
+      "forks": null,
+      "pushed_at": null,
+      "license": null
+    },
+    {
+      "full_name": "Machine learning in finance",
+      "type": "paper",
+      "html_url": "https://link.springer.com/content/pdf/10.1007/978-3-030-41068-1.pdf",
+      "description": "MF Dixon, I Halperin, P Bilokon - 2020 - Springer. … time series analysis, investment science, and financial risk management. Only through the … how machine learning theory informs the practice of financial modeling. • Machine learning is …",
+      "language": null,
+      "stars": null,
+      "forks": null,
+      "pushed_at": null,
       "license": null
     },
     {
@@ -1844,50 +2020,6 @@
       "stars": null,
       "forks": null,
       "pushed_at": "2025-11-10T00:00:00Z",
-      "license": null
-    },
-    {
-      "full_name": "RETuning: Upgrading Inference-Time Scaling for Stock Movement Prediction with Large Language Models",
-      "type": "paper",
-      "html_url": "https://arxiv.org/abs/2510.21604",
-      "description": "Authors: Xueyuan Lin, Cehao Yang, Ye Ma, Ming Li, Rongjunchen Zhang, Yang Ni, Xiaojun Wu, Chengjin Xu, Jian Guo, Hui Xiong. Recently, large language models (LLMs) have demonstrated outstanding reasoning capabilities on mathematical and coding tasks. However, their application to financial tasks-especially the most fundamental task of stock movement prediction-remains underexplored. We study a three-class classificatio...",
-      "language": null,
-      "stars": null,
-      "forks": null,
-      "pushed_at": "2025-10-24T00:00:00Z",
-      "license": null
-    },
-    {
-      "full_name": "Trading-R1: Financial Trading with LLM Reasoning via Reinforcement Learning",
-      "type": "paper",
-      "html_url": "https://arxiv.org/abs/2509.11420",
-      "description": "Authors: Yijia Xiao, Edward Sun, Tong Chen, Fang Wu, Di Luo, Wei Wang. Developing professional, structured reasoning on par with human financial analysts and traders remains a central challenge in AI for finance, where markets demand interpretability and trust. Traditional time-series models lack explainability, while LLMs face challenges in turning natural-language...",
-      "language": null,
-      "stars": null,
-      "forks": null,
-      "pushed_at": "2025-09-14T00:00:00Z",
-      "license": null
-    },
-    {
-      "full_name": "QuantAgent: Price-Driven Multi-Agent LLMs for High-Frequency Trading",
-      "type": "paper",
-      "html_url": "https://arxiv.org/abs/2509.09995",
-      "description": "Authors: Fei Xiong, Xiang Zhang, Aosong Feng, Siqi Sun, Chenyu You. Recent advances in Large Language Models (LLMs) have shown remarkable capabilities in financial reasoning and market understanding. Multi-agent LLM frameworks such as TradingAgent and FINMEM augment these models to long-horizon investment tasks by leveraging fundamental and sentiment-based inputs...",
-      "language": null,
-      "stars": null,
-      "forks": null,
-      "pushed_at": "2025-09-12T00:00:00Z",
-      "license": null
-    },
-    {
-      "full_name": "AlphaAgents: Large Language Model based Multi-Agents for Equity Portfolio Constructions",
-      "type": "paper",
-      "html_url": "https://arxiv.org/abs/2508.11152",
-      "description": "Authors: Tianjiao Zhao, Jingrao Lyu, Stokes Jones, Harrison Garber, Stefano Pasquali, Dhagash Mehta. The field of artificial intelligence (AI) agents is evolving rapidly, driven by the capabilities of Large Language Models (LLMs) to autonomously perform and refine tasks with human-like efficiency and adaptability. In this context, multi-agent collaboration has emerged as a promising approach, en...",
-      "language": null,
-      "stars": null,
-      "forks": null,
-      "pushed_at": "2025-08-15T00:00:00Z",
       "license": null
     },
     {
@@ -1924,28 +2056,6 @@
       "license": null
     },
     {
-      "full_name": "A Reflective LLM-based Agent to Guide Zero-shot Cryptocurrency Trading",
-      "type": "paper",
-      "html_url": "https://arxiv.org/abs/2407.09546",
-      "description": "Authors: Yuan Li, Bingqiao Luo, Qian Wang, Nuo Chen, Xu Liu, Bingsheng He. The utilization of Large Language Models (LLMs) in financial trading has primarily been concentrated within the stock market, aiding in economic and financial decisions. Yet, the unique opportunities presented by the cryptocurrency market, noted for its on-chain data's transparency and the critic...",
-      "language": null,
-      "stars": null,
-      "forks": null,
-      "pushed_at": "2024-06-27T00:00:00Z",
-      "license": null
-    },
-    {
-      "full_name": "A Multimodal Foundation Agent for Financial Trading: Tool-Augmented, Diversified, and Generalist",
-      "type": "paper",
-      "html_url": "https://arxiv.org/abs/2402.18485",
-      "description": "Authors: Wentao Zhang, Lingxuan Zhao, Haochong Xia, Shuo Sun, Jiaze Sun, Molei Qin, Xinyi Li, Yuqing Zhao, Yilei Zhao, Xinyu Cai, Longtao Zheng, Xinrun Wang, Bo An. Financial trading is a crucial component of the markets, informed by a multimodal information landscape encompassing news, prices, and Kline charts, and encompasses diverse tasks such as quantitative trading and high-frequency trading with various assets. While advanced AI techniques like deep le...",
-      "language": null,
-      "stars": null,
-      "forks": null,
-      "pushed_at": "2024-02-28T00:00:00Z",
-      "license": null
-    },
-    {
       "full_name": "FinRL: A Deep Reinforcement Learning Library for Automated Stock Trading in Quantitative Finance",
       "type": "paper",
       "html_url": "https://arxiv.org/abs/2011.09607",
@@ -1968,39 +2078,6 @@
       "license": null
     },
     {
-      "full_name": "AAMDRL: Augmented Asset Management with Deep Reinforcement Learning",
-      "type": "paper",
-      "html_url": "https://arxiv.org/abs/2010.08497",
-      "description": "Authors: Eric Benhamou, David Saltiel, Sandrine Ungari, Abhishek Mukhopadhyay, Jamal Atif. Can an agent learn efficiently in a noisy and self adapting environment with sequential, non-stationary and non-homogeneous observations? Through trading bots, we illustrate how Deep Reinforcement Learning (DRL) can tackle this challenge. Our contributions are threefold: (i) the use of contextual...",
-      "language": null,
-      "stars": null,
-      "forks": null,
-      "pushed_at": "2020-09-30T00:00:00Z",
-      "license": null
-    },
-    {
-      "full_name": "Deep Stock Predictions",
-      "type": "paper",
-      "html_url": "https://arxiv.org/abs/2006.04992",
-      "description": "Authors: Akash Doshi, Alexander Issa, Puneet Sachdeva, Sina Rafati, Somnath Rakshit. Forecasting stock prices can be interpreted as a time series prediction problem, for which Long Short Term Memory (LSTM) neural networks are often used due to their architecture specifically built to solve such problems. In this paper, we consider the design of a trading strategy that performs po...",
-      "language": null,
-      "stars": null,
-      "forks": null,
-      "pushed_at": "2020-06-08T00:00:00Z",
-      "license": null
-    },
-    {
-      "full_name": "An Application of Deep Reinforcement Learning to Algorithmic Trading",
-      "type": "paper",
-      "html_url": "https://arxiv.org/abs/2004.06627",
-      "description": "Authors: Thibaut Théate, Damien Ernst. This scientific research paper presents an innovative approach based on deep reinforcement learning (DRL) to solve the algorithmic trading problem of determining the optimal trading position at any point in time during a trading activity in stock markets. It proposes a novel DRL trading strategy ...",
-      "language": null,
-      "stars": null,
-      "forks": null,
-      "pushed_at": "2020-04-07T00:00:00Z",
-      "license": null
-    },
-    {
       "full_name": "Application of Deep Q-Network in Portfolio Management",
       "type": "paper",
       "html_url": "https://arxiv.org/abs/2003.06365",
@@ -2009,6 +2086,94 @@
       "stars": null,
       "forks": null,
       "pushed_at": "2020-03-13T00:00:00Z",
+      "license": null
+    },
+    {
+      "full_name": "G-Learner and GIRL: Goal Based Wealth Management with Reinforcement Learning",
+      "type": "paper",
+      "html_url": "https://arxiv.org/abs/2002.10990",
+      "description": "Authors: Matthew Dixon, Igor Halperin. We present a reinforcement learning approach to goal based wealth management problems such as optimization of retirement plans or target dated funds. In such problems, an investor seeks to achieve a financial goal by making periodic investments in the portfolio while being employed, and periodica...",
+      "language": null,
+      "stars": null,
+      "forks": null,
+      "pushed_at": "2020-02-25T00:00:00Z",
+      "license": null
+    },
+    {
+      "full_name": "Deep Hedging: Learning to Simulate Equity Option Markets",
+      "type": "paper",
+      "html_url": "https://arxiv.org/abs/1911.01700",
+      "description": "Authors: Magnus Wiese, Lianjun Bai, Ben Wood, Hans Buehler. We construct realistic equity option market simulators based on generative adversarial networks (GANs). We consider recurrent and temporal convolutional architectures, and assess the impact of state compression. Option market simulators are highly relevant because they allow us to extend the limi...",
+      "language": null,
+      "stars": null,
+      "forks": null,
+      "pushed_at": "2019-11-05T00:00:00Z",
+      "license": null
+    },
+    {
+      "full_name": "Evaluating the Performance of Machine Learning Algorithms in Financial Market Forecasting: A Comprehensive Survey",
+      "type": "paper",
+      "html_url": "https://arxiv.org/abs/1906.07786",
+      "description": "Authors: Lukas Ryll, Sebastian Seidens. With increasing competition and pace in the financial markets, robust forecasting methods are becoming more and more valuable to investors. While machine learning algorithms offer a proven way of modeling non-linearities in time series, their advantages against common stochastic models in the dom...",
+      "language": null,
+      "stars": null,
+      "forks": null,
+      "pushed_at": "2019-06-18T00:00:00Z",
+      "license": null
+    },
+    {
+      "full_name": "Enhancing Time Series Momentum Strategies Using Deep Neural Networks",
+      "type": "paper",
+      "html_url": "https://arxiv.org/abs/1904.04912",
+      "description": "Authors: Bryan Lim, Stefan Zohren, Stephen Roberts. While time series momentum is a well-studied phenomenon in finance, common strategies require the explicit definition of both a trend estimator and a position sizing rule. In this paper, we introduce Deep Momentum Networks -- a hybrid approach which injects deep learning based trading rules into ...",
+      "language": null,
+      "stars": null,
+      "forks": null,
+      "pushed_at": "2019-04-09T00:00:00Z",
+      "license": null
+    },
+    {
+      "full_name": "Deep Learning in Asset Pricing",
+      "type": "paper",
+      "html_url": "https://arxiv.org/abs/1904.00745",
+      "description": "Authors: Luyang Chen, Markus Pelger, Jason Zhu. We use deep neural networks to estimate an asset pricing model for individual stock returns that takes advantage of the vast amount of conditioning information, while keeping a fully flexible form and accounting for time-variation. The key innovations are to use the fundamental no-arbitrage condi...",
+      "language": null,
+      "stars": null,
+      "forks": null,
+      "pushed_at": "2019-03-11T00:00:00Z",
+      "license": null
+    },
+    {
+      "full_name": "Practical Deep Reinforcement Learning Approach for Stock Trading",
+      "type": "paper",
+      "html_url": "https://arxiv.org/abs/1811.07522",
+      "description": "Authors: Xiao-Yang Liu, Zhuoran Xiong, Shan Zhong, Hongyang Yang, Anwar Walid. Stock trading strategy plays a crucial role in investment companies. However, it is challenging to obtain optimal strategy in the complex and dynamic stock market. We explore the potential of deep reinforcement learning to optimize stock trading strategy and thus maximize investment return. 30 st...",
+      "language": null,
+      "stars": null,
+      "forks": null,
+      "pushed_at": "2018-11-19T00:00:00Z",
+      "license": null
+    },
+    {
+      "full_name": "Deep Learning can Replicate Adaptive Traders in a Limit-Order-Book Financial Market",
+      "type": "paper",
+      "html_url": "https://arxiv.org/abs/1811.02880",
+      "description": "Authors: Arthur le Calvez, Dave Cliff. We report successful results from using deep learning neural networks (DLNNs) to learn, purely by observation, the behavior of profitable traders in an electronic market closely modelled on the limit-order-book (LOB) market mechanisms that are commonly found in the real-world global financial mar...",
+      "language": null,
+      "stars": null,
+      "forks": null,
+      "pushed_at": "2018-11-07T00:00:00Z",
+      "license": null
+    },
+    {
+      "full_name": "Listening to Chaotic Whispers: A Deep Learning Framework for News-oriented Stock Trend Prediction",
+      "type": "paper",
+      "html_url": "https://arxiv.org/abs/1712.02136",
+      "description": "Authors: Ziniu Hu, Weiqing Liu, Jiang Bian, Xuanzhe Liu, Tie-Yan Liu. Stock trend prediction plays a critical role in seeking maximized profit from stock investment. However, precise trend prediction is very difficult since the highly volatile and non-stationary nature of stock market. Exploding information on Internet together with advancing development of natural...",
+      "language": null,
+      "stars": null,
+      "forks": null,
+      "pushed_at": "2017-12-06T00:00:00Z",
       "license": null
     }
   ],
@@ -2030,7 +2195,7 @@
       "html_url": "https://github.com/hugo2046/QuantsPlaybook",
       "description": "量化研究-券商金工研报复现",
       "language": "Jupyter Notebook",
-      "stars": 5154,
+      "stars": 5155,
       "forks": 1254,
       "pushed_at": "2026-05-08T07:02:40Z",
       "license": null
@@ -2063,7 +2228,7 @@
       "html_url": "https://github.com/cerlymarco/MEDIUM_NoteBook",
       "description": "Repository containing notebooks of my posts on Medium",
       "language": "Jupyter Notebook",
-      "stars": 2137,
+      "stars": 2138,
       "forks": 974,
       "pushed_at": "2024-09-22T08:08:30Z",
       "license": "MIT"
@@ -2263,7 +2428,7 @@
       "html_url": "https://github.com/Nixtla/mlforecast",
       "description": "Scalable machine 🤖 learning for time series forecasting.",
       "language": "Python",
-      "stars": 1225,
+      "stars": 1226,
       "forks": 126,
       "pushed_at": "2026-05-26T14:12:12Z",
       "license": "Apache-2.0"
@@ -2353,9 +2518,9 @@
       "html_url": "https://github.com/OpenBB-finance/OpenBB",
       "description": "Financial data platform for analysts, quants and AI agents.",
       "language": "Python",
-      "stars": 68161,
+      "stars": 68165,
       "forks": 6865,
-      "pushed_at": "2026-05-27T15:39:01Z",
+      "pushed_at": "2026-05-27T15:53:42Z",
       "license": "NOASSERTION"
     },
     {
@@ -2364,9 +2529,9 @@
       "html_url": "https://github.com/OpenBB-finance/OpenBB",
       "description": "Financial data platform for analysts, quants and AI agents.",
       "language": "Python",
-      "stars": 68161,
+      "stars": 68162,
       "forks": 6865,
-      "pushed_at": "2026-05-27T15:39:01Z",
+      "pushed_at": "2026-05-27T15:53:42Z",
       "license": "NOASSERTION"
     },
     {
@@ -2375,8 +2540,8 @@
       "html_url": "https://github.com/microsoft/qlib",
       "description": "Qlib is an AI-oriented Quant investment platform that aims to use AI tech to empower Quant Research, from exploring ideas to implementing productions. Qlib supports diverse ML modeling paradigms, including supervised learning, market dynamics modeling, and RL, and is now equipped with https://github.com/microsoft/RD-Agent to automate R&D process.",
       "language": "Python",
-      "stars": 43574,
-      "forks": 6870,
+      "stars": 43576,
+      "forks": 6871,
       "pushed_at": "2026-04-22T07:08:01Z",
       "license": "MIT"
     },
@@ -2386,7 +2551,7 @@
       "html_url": "https://github.com/virattt/dexter",
       "description": "An autonomous agent for deep financial research",
       "language": "TypeScript",
-      "stars": 26573,
+      "stars": 26574,
       "forks": 3283,
       "pushed_at": "2026-05-24T14:41:41Z",
       "license": null
@@ -2408,7 +2573,7 @@
       "html_url": "https://github.com/HKUDS/AI-Trader",
       "description": "\"AI-Trader: 100% Fully-Automated Agent-Native Trading\"  ",
       "language": "Python",
-      "stars": 18824,
+      "stars": 18825,
       "forks": 2870,
       "pushed_at": "2026-05-21T07:24:05Z",
       "license": null
@@ -2430,7 +2595,7 @@
       "html_url": "https://github.com/ValueCell-ai/valuecell",
       "description": "ValueCell is a community-driven, multi-agent platform for financial applications.",
       "language": "Python",
-      "stars": 10730,
+      "stars": 10731,
       "forks": 1805,
       "pushed_at": "2026-03-09T08:30:21Z",
       "license": "Apache-2.0"
@@ -2587,7 +2752,7 @@
       "description": "Zipline, a Pythonic Algorithmic Trading Library",
       "language": "Python",
       "stars": 19811,
-      "forks": 5000,
+      "forks": 5001,
       "pushed_at": "2024-02-13T08:02:51Z",
       "license": "Apache-2.0"
     },
@@ -2597,9 +2762,9 @@
       "html_url": "https://github.com/nautechsystems/nautilus_trader",
       "description": "Production-grade Rust-native trading engine with deterministic event-driven architecture",
       "language": "Rust",
-      "stars": 23066,
+      "stars": 23067,
       "forks": 2887,
-      "pushed_at": "2026-05-27T15:27:17Z",
+      "pushed_at": "2026-05-27T16:01:36Z",
       "license": "LGPL-3.0"
     },
     {
@@ -2608,7 +2773,7 @@
       "html_url": "https://github.com/akfamily/akshare",
       "description": "AKShare is an elegant and simple financial data interface library for Python, built for human beings! 开源财经数据接口库",
       "language": "Python",
-      "stars": 19763,
+      "stars": 19764,
       "forks": 3208,
       "pushed_at": "2026-05-27T10:10:40Z",
       "license": "MIT"
@@ -2630,7 +2795,7 @@
       "html_url": "https://github.com/akfamily/akshare",
       "description": "AKShare is an elegant and simple financial data interface library for Python, built for human beings! 开源财经数据接口库",
       "language": "Python",
-      "stars": 19762,
+      "stars": 19764,
       "forks": 3208,
       "pushed_at": "2026-05-27T10:10:40Z",
       "license": "MIT"
@@ -2652,7 +2817,7 @@
       "html_url": "https://github.com/waditu/tushare",
       "description": "TuShare is a utility for crawling historical data of China stocks",
       "language": "Python",
-      "stars": 15040,
+      "stars": 15041,
       "forks": 4436,
       "pushed_at": "2024-03-13T14:31:20Z",
       "license": "BSD-3-Clause"
@@ -2674,7 +2839,7 @@
       "html_url": "https://github.com/go-echarts/go-echarts",
       "description": "🎨 The adorable charts library for Golang.",
       "language": "Go",
-      "stars": 7615,
+      "stars": 7616,
       "forks": 591,
       "pushed_at": "2026-05-11T00:29:17Z",
       "license": "MIT"
@@ -2762,7 +2927,7 @@
       "html_url": "https://github.com/domokane/FinancePy",
       "description": "A Python Finance Library that focuses on the pricing and risk-management of Financial Derivatives, including fixed-income, equity, FX and credit derivatives. ",
       "language": "Jupyter Notebook",
-      "stars": 2956,
+      "stars": 2957,
       "forks": 404,
       "pushed_at": "2026-05-26T10:36:59Z",
       "license": "GPL-3.0"
@@ -3019,7 +3184,7 @@
       "html_url": "https://github.com/sindresorhus/awesome",
       "description": "😎 Awesome lists about all kinds of interesting topics",
       "language": null,
-      "stars": 470493,
+      "stars": 470505,
       "forks": 35184,
       "pushed_at": "2026-05-05T14:47:44Z",
       "license": "CC0-1.0"
@@ -3030,7 +3195,7 @@
       "html_url": "https://github.com/vinta/awesome-python",
       "description": "An opinionated list of Python frameworks, libraries, tools, and resources",
       "language": "Python",
-      "stars": 299831,
+      "stars": 299838,
       "forks": 27982,
       "pushed_at": "2026-05-27T08:29:17Z",
       "license": "NOASSERTION"
@@ -3043,7 +3208,7 @@
       "language": "Python",
       "stars": 100203,
       "forks": 27888,
-      "pushed_at": "2026-05-27T15:44:37Z",
+      "pushed_at": "2026-05-27T16:05:51Z",
       "license": "NOASSERTION"
     },
     {
@@ -3052,7 +3217,7 @@
       "html_url": "https://github.com/fffaraz/awesome-cpp",
       "description": "A curated list of awesome C++ (or C) frameworks, libraries, resources, and shiny things. Inspired by awesome-... stuff.",
       "language": null,
-      "stars": 71484,
+      "stars": 71485,
       "forks": 8297,
       "pushed_at": "2026-05-24T07:14:04Z",
       "license": "MIT"
@@ -3063,8 +3228,8 @@
       "html_url": "https://github.com/virattt/ai-hedge-fund",
       "description": "An AI Hedge Fund Team",
       "language": "Python",
-      "stars": 59294,
-      "forks": 10449,
+      "stars": 59293,
+      "forks": 10450,
       "pushed_at": "2026-05-19T14:55:53Z",
       "license": null
     },
@@ -3074,9 +3239,9 @@
       "html_url": "https://github.com/koala73/worldmonitor",
       "description": "Real-time global intelligence dashboard. AI-powered news aggregation, geopolitical monitoring, and infrastructure tracking in a unified situational awareness interface",
       "language": "TypeScript",
-      "stars": 54980,
-      "forks": 8845,
-      "pushed_at": "2026-05-27T15:34:01Z",
+      "stars": 54981,
+      "forks": 8846,
+      "pushed_at": "2026-05-27T16:08:43Z",
       "license": "NOASSERTION"
     },
     {
@@ -3085,7 +3250,7 @@
       "html_url": "https://github.com/vnpy/vnpy",
       "description": "基于Python的开源量化交易平台开发框架",
       "language": "Python",
-      "stars": 41025,
+      "stars": 41027,
       "forks": 11788,
       "pushed_at": "2026-05-17T08:05:41Z",
       "license": "MIT"
@@ -3108,7 +3273,7 @@
       "description": "The fundamental package for scientific computing with Python.",
       "language": "Python",
       "stars": 32099,
-      "forks": 12390,
+      "forks": 12391,
       "pushed_at": "2026-05-27T15:12:39Z",
       "license": "NOASSERTION"
     },
@@ -3140,8 +3305,8 @@
       "html_url": "https://github.com/shiyu-coder/Kronos",
       "description": "Kronos: A Foundation Model for the Language of Financial Markets",
       "language": "Python",
-      "stars": 26763,
-      "forks": 4641,
+      "stars": 26779,
+      "forks": 4642,
       "pushed_at": "2026-04-13T12:38:49Z",
       "license": "MIT"
     },
@@ -3173,7 +3338,7 @@
       "html_url": "https://github.com/bbfamily/abu",
       "description": "阿布量化交易系统(股票，期权，期货，比特币，机器学习) 基于python的开源量化交易，量化投资架构",
       "language": "Python",
-      "stars": 17283,
+      "stars": 17285,
       "forks": 4571,
       "pushed_at": "2026-01-24T09:00:29Z",
       "license": "GPL-3.0"
@@ -3186,7 +3351,7 @@
       "language": "C",
       "stars": 22730,
       "forks": 1094,
-      "pushed_at": "2026-05-27T14:55:09Z",
+      "pushed_at": "2026-05-27T15:38:10Z",
       "license": "NOASSERTION"
     },
     {
@@ -3206,7 +3371,7 @@
       "html_url": "https://github.com/google-research/timesfm",
       "description": "TimesFM (Time Series Foundation Model) is a pretrained time-series foundation model developed by Google Research for time-series forecasting.",
       "language": "Python",
-      "stars": 20219,
+      "stars": 20221,
       "forks": 1964,
       "pushed_at": "2026-05-19T19:56:37Z",
       "license": "Apache-2.0"
@@ -3217,7 +3382,7 @@
       "html_url": "https://github.com/emirpasic/gods",
       "description": "GoDS (Go Data Structures) - Sets, Lists, Stacks, Maps, Trees, Queues, and much more",
       "language": "Go",
-      "stars": 17431,
+      "stars": 17430,
       "forks": 1824,
       "pushed_at": "2025-03-12T00:01:29Z",
       "license": "NOASSERTION"
