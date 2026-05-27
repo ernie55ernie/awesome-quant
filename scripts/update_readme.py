@@ -33,6 +33,24 @@ README_PATH = Path("README.md")
 DATA_DIR = Path("data")
 DATA_PATH = DATA_DIR / "github_repos.json"
 SEED_SOURCES_PATH = Path("data/seed_sources.txt")
+CONFIG_PATH = Path("api_keys.json")
+
+def load_config() -> dict[str, str]:
+    if CONFIG_PATH.exists():
+        try:
+            with open(CONFIG_PATH, "r", encoding="utf-8") as f:
+                return json.load(f)
+        except json.JSONDecodeError as exc:
+            print(f"Warning: Failed to parse {CONFIG_PATH}: {exc}", file=sys.stderr)
+    return {}
+
+CONFIG = load_config()
+
+def get_api_key(service: str) -> str | None:
+    token = os.getenv(service)
+    if token:
+        return token
+    return CONFIG.get(service)
 
 GITHUB_API = "https://api.github.com"
 
@@ -139,7 +157,7 @@ def github_headers() -> dict[str, str]:
         "User-Agent": "awesome-quant-updater",
         "X-GitHub-Api-Version": "2022-11-28",
     }
-    token = os.getenv("GITHUB_TOKEN")
+    token = get_api_key("GITHUB_TOKEN")
     if token:
         headers["Authorization"] = f"Bearer {token}"
     return headers
@@ -450,8 +468,8 @@ def collect_repositories() -> dict[str, list[dict[str, Any]]]:
             time.sleep(2.5)
 
     # 2. Seed Sources Discovery
-    if not os.getenv("GITHUB_TOKEN"):
-        print("Skipping seed source discovery because GITHUB_TOKEN is not set.", file=sys.stderr)
+    if not get_api_key("GITHUB_TOKEN"):
+        print("Skipping seed source discovery because GITHUB_TOKEN is not set in env or api_keys.json.", file=sys.stderr)
     else:
         seed_sources = load_seed_sources()
         discovered: dict[str, dict[str, Any]] = {}
