@@ -571,12 +571,31 @@ def collect_repositories() -> dict[str, list[dict[str, Any]]]:
     if not serpapi_key:
         print("Skipping SerpApi discovery because SERPAPI_KEY is not set.", file=sys.stderr)
     else:
-        keywords = [
-            "quantitative finance",
-            "algorithmic trading",
-            "market microstructure",
-            "financial machine learning"
-        ]
+        keywords_path = Path("data/scholar_keywords.txt")
+        if not keywords_path.exists():
+            print(f"Skipping SerpApi discovery because {keywords_path} does not exist.", file=sys.stderr)
+            keywords = []
+        else:
+            with open(keywords_path, "r", encoding="utf-8") as f:
+                all_keywords = [line.strip() for line in f if line.strip()]
+            if len(all_keywords) > 0:
+                day_offset = dt.date.today().toordinal() % max(1, len(all_keywords) // 4)
+                start_idx = day_offset * 4
+                keywords = all_keywords[start_idx : start_idx + 4]
+            else:
+                keywords = []
+        
+        category = "Research Papers & Articles"
+        if category in grouped:
+            urls_to_remove = []
+            for url, repo in grouped[category].items():
+                if repo.get("search_keyword") in keywords:
+                    urls_to_remove.append(url)
+            for url in urls_to_remove:
+                del grouped[category][url]
+                if url in seen:
+                    seen.remove(url)
+
         for kw in keywords:
             print(f"Fetching Google Scholar for: {kw}", file=sys.stderr)
             results = fetch_serpapi_scholar(kw, serpapi_key)
@@ -597,6 +616,7 @@ def collect_repositories() -> dict[str, list[dict[str, Any]]]:
                 meta = {
                     "type": "paper",
                     "source": "scholar",
+                    "search_keyword": kw,
                     "full_name": title,
                     "html_url": link,
                     "description": desc,
@@ -710,6 +730,8 @@ def save_data(grouped: dict[str, list[dict[str, Any]]]) -> None:
             {
                 "full_name": repo.get("full_name"),
                 "type": repo.get("type", "github"),
+                "source": repo.get("source"),
+                "search_keyword": repo.get("search_keyword"),
                 "html_url": repo.get("html_url"),
                 "description": repo.get("description"),
                 "language": repo.get("language"),
@@ -717,6 +739,7 @@ def save_data(grouped: dict[str, list[dict[str, Any]]]) -> None:
                 "forks": repo.get("forks_count"),
                 "pushed_at": repo.get("pushed_at"),
                 "license": (repo.get("license") or {}).get("spdx_id"),
+                "seed_discovered": repo.get("seed_discovered"),
             }
             for repo in repos
         ]

@@ -1,0 +1,120 @@
+algorithmic trading
+high frequency trading
+low latency trading
+market microstructure
+limit order book dynamics
+order flow imbalance
+statistical arbitrage
+pairs trading
+mean reversion trading
+trend following strategy
+momentum trading
+intraday trading algorithms
+execution algorithms
+VWAP execution
+TWAP execution
+optimal execution
+market making models
+Avellaneda Stoikov model
+tick data analysis
+trade and quote data
+spoofing detection
+flash crash analysis
+dark pools
+alternative trading systems
+smart order routing
+quantitative finance
+mathematical finance
+stochastic calculus in finance
+options pricing
+Black Scholes model
+implied volatility surface
+local volatility models
+stochastic volatility models
+Heston model
+SABR model
+jump diffusion models
+interest rate models
+Heath Jarrow Morton
+LIBOR market model
+credit risk modeling
+structural models of default
+reduced form default models
+copulas in finance
+pricing exotic options
+Monte Carlo simulation finance
+finite difference methods finance
+Greeks hedging
+dynamic hedging
+risk neutral valuation
+martingale pricing
+portfolio optimization
+Markowitz portfolio theory
+mean variance optimization
+Black Litterman model
+risk parity portfolio
+hierarchical risk parity
+Kelly criterion
+capital asset pricing model
+arbitrage pricing theory
+Fama French factor models
+smart beta strategies
+factor investing
+multi factor models
+value at risk
+conditional value at risk
+expected shortfall
+extreme value theory finance
+stress testing finance
+systemic risk network
+liquidity risk
+drawdown control
+active portfolio management
+transaction cost analysis
+tracking error optimization
+robust portfolio optimization
+financial machine learning
+deep learning in finance
+neural networks for time series
+LSTM stock prediction
+transformers in finance
+reinforcement learning trading
+deep reinforcement learning finance
+generative AI in finance
+LLMs for financial sentiment
+natural language processing finance
+financial text mining
+earnings call sentiment analysis
+news analytics trading
+support vector machines finance
+random forests stock prediction
+gradient boosting finance
+XGBoost trading
+hidden Markov models finance
+regime switching models
+Bayesian inference finance
+Gaussian processes finance
+clustering financial time series
+principal component analysis finance
+independent component analysis finance
+autoencoders for anomaly detection finance
+alternative data finance
+satellite imagery commodity trading
+credit card transaction data finance
+web scraping financial data
+social media sentiment stock market
+ESG investing data
+cryptocurrency quantitative trading
+Bitcoin algorithmic trading
+DeFi yield farming strategies
+automated market makers
+constant product market maker
+DEX arbitrage
+on chain data analysis
+crypto volatility forecasting
+crypto market microstructure
+stablecoin algorithmic mechanisms
+Ethereum MEV
+maximal extractable value
+flash loans arbitrage
+crypto portfolio optimization
