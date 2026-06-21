@@ -519,9 +519,9 @@ def repo_score(repo: dict[str, Any]) -> float:
         boost = 200.0 if repo.get("source") == "scholar" else 0.0
         return 500.0 + recency_score * 100.0 + boost
 
-    stars = repo.get("stargazers_count", 0)
-    forks = repo.get("forks_count", 0)
-    open_issues = repo.get("open_issues_count", 0)
+    stars = repo.get("stargazers_count") or 0
+    forks = repo.get("forks_count") or 0
+    open_issues = repo.get("open_issues_count") or 0
     pushed_days = days_since(repo.get("pushed_at"))
     recency_score = max(0.0, 1.0 - pushed_days / MAX_DAYS_SINCE_PUSH)
     
