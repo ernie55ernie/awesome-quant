@@ -458,7 +458,7 @@ def is_bad_repo(repo: dict[str, Any]) -> bool:
         return True
     if repo.get("archived") or repo.get("fork"):
         return True
-    if repo.get("stargazers_count", 0) < MIN_STARS:
+    if (repo.get("stargazers_count") or 0) < MIN_STARS:
         return True
     if days_since(repo.get("pushed_at")) > MAX_DAYS_SINCE_PUSH:
         return True
@@ -783,7 +783,7 @@ def repo_to_markdown(repo: dict[str, Any]) -> str:
     desc = clean_text(repo.get("description")) or "No description provided."
     
     if repo.get("source") == "huggingface":
-        likes = repo.get("stargazers_count", 0) or 0
+        likes = repo.get("stargazers_count") or 0
         downloads = repo.get("downloads") or 0
         pushed_at = repo.get("pushed_at")
         pushed_date = pushed_at[:10] if pushed_at else "N/A"
@@ -800,8 +800,8 @@ def repo_to_markdown(repo: dict[str, Any]) -> str:
         return f"- [{name}]({url}) — {desc}{date_str}"
 
     language = repo.get("language") or "N/A"
-    stars = repo.get("stargazers_count", 0)
-    forks = repo.get("forks_count", 0)
+    stars = repo.get("stargazers_count") or 0
+    forks = repo.get("forks_count") or 0
     pushed_at = repo.get("pushed_at")
     pushed_date = pushed_at[:10] if pushed_at else "N/A"
     license_info = repo.get("license")
