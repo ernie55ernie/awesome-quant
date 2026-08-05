@@ -563,6 +563,7 @@ def collect_repositories() -> dict[str, list[dict[str, Any]]]:
                             name = repo.get("full_name")
                             if name:
                                 seen.add(name)
+                            seen.add(url)
                         else:
                             seen.add(url)
         except Exception as exc:
@@ -582,12 +583,14 @@ def collect_repositories() -> dict[str, list[dict[str, Any]]]:
 
             for repo in repos:
                 full_name = repo.get("full_name")
-                if not full_name or is_bad_repo(repo):
+                html_url = repo.get("html_url")
+                if not full_name or not html_url or is_bad_repo(repo):
                     continue
-                if full_name in seen:
+                if full_name in seen or html_url in seen:
                     continue
                 seen.add(full_name)
-                grouped[category][full_name] = repo
+                seen.add(html_url)
+                grouped[category][html_url] = repo
             time.sleep(2.5)
 
     # 2. Seed Sources Discovery
@@ -641,8 +644,11 @@ def collect_repositories() -> dict[str, list[dict[str, Any]]]:
                 meta["type"] = "github"
                 meta["seed_discovered"] = True
                 category = classify_repo(meta)
-                grouped[category][link_id] = meta
+                html_url = meta.get("html_url")
+                grouped[category][html_url] = meta
                 seen.add(link_id)
+                if html_url:
+                    seen.add(html_url)
             elif link_type == "arxiv":
                 if link_id in seen:
                     continue
