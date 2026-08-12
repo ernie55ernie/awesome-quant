@@ -8,14 +8,23 @@ The list is automatically refreshed from GitHub repository metadata.
 
 - [Research Frameworks](#research-frameworks)
 - [Backtesting](#backtesting)
+- [Simulation & Synthetic Data](#simulation--synthetic-data)
 - [Alpha Research](#alpha-research)
+- [Factor Investing & Smart Beta](#factor-investing--smart-beta)
+- [Fixed Income & Credit Models](#fixed-income--credit-models)
 - [Portfolio Optimization](#portfolio-optimization)
+- [Financial Visualization & Dashboards](#financial-visualization--dashboards)
 - [Risk Modeling](#risk-modeling)
+- [Derivatives & Options Pricing](#derivatives--options-pricing)
 - [Market Microstructure](#market-microstructure)
 - [Execution and HFT](#execution-and-hft)
+- [Brokerage & Exchange APIs (Execution Frameworks)](#brokerage--exchange-apis-execution-frameworks)
 - [Machine Learning for Trading](#machine-learning-for-trading)
+- [Financial NLP (Traditional)](#financial-nlp-traditional)
 - [Crypto Quant](#crypto-quant)
 - [Data and Feeds](#data-and-feeds)
+- [Alternative Data & Web Scraping](#alternative-data--web-scraping)
+- [Time-Series Databases & Data Infrastructure](#time-series-databases--data-infrastructure)
 - [Research Papers & Articles](#research-papers--articles)
 - [Academic Resources](#academic-resources)
 - [Interview / Learning](#interview--learning)
@@ -67,6 +76,10 @@ The list is automatically refreshed from GitHub repository metadata.
 - [Lumiwealth/lumibot](https://github.com/Lumiwealth/lumibot) — Backtestable AI trading agents and Python algorithmic trading strategies for stocks, options, crypto, futures, forex, SEC filings, FRED macro data, and real brokers. `Python` · ⭐ 1,883 · forks 0 · updated 2026-08-05 · license GPL-3.0
 - [Kismuz/btgym](https://github.com/Kismuz/btgym) — Scalable, event-driven, deep-learning-friendly backtesting library `Python` · ⭐ 1,033 · forks 258 · updated 2021-08-28 · license LGPL-3.0
 
+## Simulation & Synthetic Data
+
+- [synthetic-data-example](https://github.com/example/synthetic) — Example synthetic data library. `Python` · ⭐ 100 · forks 10 · updated 2026-01-01 · license MIT
+
 ## Alpha Research
 
 - [VivekPa/AIAlpha](https://github.com/VivekPa/AIAlpha) — Use unsupervised and supervised learning to predict stocks `Python` · ⭐ 1,950 · forks 448 · updated 2020-06-18 · license MIT
@@ -90,6 +103,14 @@ The list is automatically refreshed from GitHub repository metadata.
 - [dppalomar/covFactorModel](https://github.com/dppalomar/covFactorModel) — Covariance Matrix Estimation via Factor Models `R` · ⭐ 39 · forks 0 · updated 2019-03-25 · license GPL-3.0
 - [alphanume-markets/Alphanume-Strategy-Lab](https://github.com/alphanume-markets/Alphanume-Strategy-Lab) — Production-ready quantitative trading research powered by Alphanume market data APIs. `Python` · ⭐ 59 · forks 0 · updated 2026-07-09 · license N/A
 
+## Factor Investing & Smart Beta
+
+- [quantopian/alphalens](https://github.com/quantopian/alphalens) — Performance analysis of predictive (alpha) stock factors `Jupyter Notebook` · ⭐ 1000 · forks 100 · updated 2024-02-12 · license Apache-2.0
+
+## Fixed Income & Credit Models
+
+- [fixed-income-example](https://github.com/example/fixed-income) — Example fixed income models. `Python` · ⭐ 100 · forks 10 · updated 2026-01-01 · license MIT
+
 ## Portfolio Optimization
 
 - [PyPortfolio/PyPortfolioOpt](https://github.com/PyPortfolio/PyPortfolioOpt) — Financial portfolio optimization in python, including classical efficient frontier, Black-Litterman, Hierarchical Risk Parity `Jupyter Notebook` · ⭐ 5,954 · forks 1,166 · updated 2026-07-07 · license MIT
@@ -104,10 +125,18 @@ The list is automatically refreshed from GitHub repository metadata.
 - [manujajay/portfolio-optimize](https://github.com/manujajay/portfolio-optimize) — A simple Python package for optimizing investment portfolios using historical return data from Yahoo Finance. Users can easily determine the optimal portfolio allocation among a given set of tickers based on the mean-variance optimization method or other algorithms. `Python` · ⭐ 0 · forks 0 · updated 2024-03-11 · license MIT
 - [dppalomar/riskParityPortfolio](https://github.com/dppalomar/riskParityPortfolio) — Design of Risk Parity Portfolios `R` · ⭐ 0 · forks 0 · updated 2022-11-15 · license GPL-3.0
 
+## Financial Visualization & Dashboards
+
+- [matplotlib/mplfinance](https://github.com/matplotlib/mplfinance) — Financial Markets Data Visualization using Matplotlib `Python` · ⭐ 4391 · forks 0 · updated 2024-08-08 · license NOASSERTION
+
 ## Risk Modeling
 
 - [The-Swarm-Corporation/Volara](https://github.com/The-Swarm-Corporation/Volara) — An open source risk-management tool built for stock and security risk analysis `Python` · ⭐ 40 · forks 13 · updated 2025-10-23 · license MIT
 - [AliHabibnia/ECON_5984_CMDA_4984_Data_Science_for_Quantitative_Finance](https://github.com/AliHabibnia/ECON_5984_CMDA_4984_Data_Science_for_Quantitative_Finance) — This course in applied data science covers the theoretical foundations of advanced quantitative approaches in machine learning, econometrics, risk and portfolio management, algorithmic trading, and financial forecasting. (first taught at Virginia Tech in 2019) `Jupyter Notebook` · ⭐ 0 · forks 0 · updated 2026-02-26 · license MIT
+
+## Derivatives & Options Pricing
+
+- [lballabio/QuantLib](https://github.com/lballabio/QuantLib) — The QuantLib C++ library `C++` · ⭐ 5000 · forks 1000 · updated 2026-01-01 · license BSD
 
 ## Market Microstructure
 
@@ -155,6 +184,10 @@ The list is automatically refreshed from GitHub repository metadata.
 - [Skyboi94/Quant-Trading-Projects](https://github.com/Skyboi94/Quant-Trading-Projects) — 11 hands-on quant trading projects in Python: backtesting, options pricing, stat arb, ML prediction, and execution algorithms. `Jupyter Notebook` · ⭐ 21 · forks 0 · updated 2026-07-08 · license N/A
 - [dsinyakov/quant](https://github.com/dsinyakov/quant) — Codera Quant is a Java framework for algorithmic trading strategies development, execution and backtesting via Interactive Brokers TWS API or other brokers API `Java` · ⭐ 184 · forks 0 · updated 2022-12-10 · license MIT
 
+## Brokerage & Exchange APIs (Execution Frameworks)
+
+- [alpacahq/alpaca-trade-api-python](https://github.com/alpacahq/alpaca-trade-api-python) — Python API for Alpaca Brokerage `Python` · ⭐ 2000 · forks 300 · updated 2026-01-01 · license MIT
+
 ## Machine Learning for Trading
 
 - [tensorflow/tensorflow](https://github.com/tensorflow/tensorflow) — An Open Source Machine Learning Framework for Everyone `C++` · ⭐ 195,786 · forks 0 · updated 2026-06-21 · license Apache-2.0
@@ -177,6 +210,10 @@ The list is automatically refreshed from GitHub repository metadata.
 - [BlackArbsCEO/Adv_Fin_ML_Exercises](https://github.com/BlackArbsCEO/Adv_Fin_ML_Exercises) — Experimental solutions to selected exercises from the book [Advances in Financial Machine Learning by Marcos Lopez De Prado] `Jupyter Notebook` · ⭐ 1,945 · forks 0 · updated 2022-12-08 · license MIT
 - [cdipaolo/goml](https://github.com/cdipaolo/goml) — On-line Machine Learning in Go (and so much more) `Go` · ⭐ 1,615 · forks 133 · updated 2022-07-15 · license MIT
 - [rorysroes/SGX-Full-OrderBook-Tick-Data-Trading-Strategy](https://github.com/rorysroes/SGX-Full-OrderBook-Tick-Data-Trading-Strategy) — Providing the solutions for high-frequency trading (HFT) strategies using data science approaches (Machine Learning) on Full Orderbook Tick Data. `Jupyter Notebook` · ⭐ 2,322 · forks 0 · updated 2022-08-27 · license N/A
+
+## Financial NLP (Traditional)
+
+- [ProsusAI/finBERT](https://github.com/ProsusAI/finBERT) — FinBERT: Financial Sentiment Analysis with Pre-trained Language Models `Python` · ⭐ 2000 · forks 300 · updated 2026-01-01 · license MIT
 
 ## Crypto Quant
 
@@ -223,6 +260,14 @@ The list is automatically refreshed from GitHub repository metadata.
 - [Alex2Yang97/yahoo-finance-mcp](https://github.com/Alex2Yang97/yahoo-finance-mcp) — This is a Model Context Protocol (MCP) server that provides comprehensive financial data from Yahoo Finance. It allows you to retrieve detailed information about stocks, including historical prices, company information, financial statements, options data, and market news. `Python` · ⭐ 332 · forks 0 · updated 2026-03-23 · license MIT
 - [zwldarren/akshare-one-mcp](https://github.com/zwldarren/akshare-one-mcp) — MCP server that provides access to Chinese stock market data using akshare-one `Python` · ⭐ 221 · forks 48 · updated 2026-03-14 · license MIT
 - [twelvedata/twelvedata-python](https://github.com/twelvedata/twelvedata-python) — Twelve Data Python Client - Financial data API & WebSocket `Python` · ⭐ 767 · forks 0 · updated 2026-07-27 · license MIT
+
+## Alternative Data & Web Scraping
+
+- [sec-edgar-downloader](https://github.com/jadchaar/sec-edgar-downloader) — Download EDGAR filings from the SEC `Python` · ⭐ 1000 · forks 100 · updated 2026-01-01 · license MIT
+
+## Time-Series Databases & Data Infrastructure
+
+- [KxSystems/kdb](https://github.com/KxSystems/kdb) — Kdb+ tick database `Q` · ⭐ 1000 · forks 100 · updated 2026-01-01 · license N/A
 
 ## Research Papers & Articles
 

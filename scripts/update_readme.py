@@ -81,20 +81,40 @@ CATEGORIES: dict[str, list[str]] = {
         'backtest quantitative finance stars:>200 fork:false archived:false',
         'event driven backtesting trading stars:>100 fork:false archived:false',
     ],
+    "Simulation & Synthetic Data": [
+        'financial synthetic data stars:>20 fork:false archived:false',
+        'market simulation trading stars:>20 fork:false archived:false',
+    ],
     "Alpha Research": [
         'alpha research quantitative trading stars:>50 fork:false archived:false',
         'factor investing research Python stars:>50 fork:false archived:false',
         'stock factor model quantitative stars:>50 fork:false archived:false',
+    ],
+    "Factor Investing & Smart Beta": [
+        'smart beta quantitative finance stars:>20 fork:false archived:false',
+        'factor investing portfolio stars:>20 fork:false archived:false',
+    ],
+    "Fixed Income & Credit Models": [
+        'fixed income quantitative finance stars:>20 fork:false archived:false',
+        'credit risk model trading stars:>20 fork:false archived:false',
     ],
     "Portfolio Optimization": [
         'portfolio optimization quantitative finance stars:>100 fork:false archived:false',
         'mean variance optimization Python stars:>50 fork:false archived:false',
         'risk parity portfolio optimization stars:>50 fork:false archived:false',
     ],
+    "Financial Visualization & Dashboards": [
+        'financial data visualization Python stars:>50 fork:false archived:false',
+        'quantitative finance dashboard stars:>20 fork:false archived:false',
+    ],
     "Risk Modeling": [
         'financial risk model Python stars:>100 fork:false archived:false',
         'value at risk quantitative finance stars:>50 fork:false archived:false',
         'risk management quantitative finance stars:>50 fork:false archived:false',
+    ],
+    "Derivatives & Options Pricing": [
+        'options pricing Python stars:>50 fork:false archived:false',
+        'implied volatility quantitative finance stars:>20 fork:false archived:false',
     ],
     "Market Microstructure": [
         'market microstructure trading stars:>20 fork:false archived:false',
@@ -106,10 +126,17 @@ CATEGORIES: dict[str, list[str]] = {
         'trade execution algorithm stars:>20 fork:false archived:false',
         'market making trading bot research stars:>50 fork:false archived:false',
     ],
+    "Brokerage & Exchange APIs (Execution Frameworks)": [
+        'algorithmic trading broker api stars:>50 fork:false archived:false',
+    ],
     "Machine Learning for Trading": [
         'machine learning trading Python stars:>500 fork:false archived:false',
         'deep learning trading quantitative finance stars:>100 fork:false archived:false',
         'reinforcement learning trading stars:>100 fork:false archived:false',
+    ],
+    "Financial NLP (Traditional)": [
+        'financial sentiment analysis nlp stars:>20 fork:false archived:false',
+        'sec edgar parsing nlp stars:>20 fork:false archived:false',
     ],
     "Crypto Quant": [
         'crypto quantitative trading research stars:>50 fork:false archived:false',
@@ -120,6 +147,13 @@ CATEGORIES: dict[str, list[str]] = {
         'market data Python trading stars:>100 fork:false archived:false',
         'financial data API Python stars:>100 fork:false archived:false',
         'limit order book data stars:>20 fork:false archived:false',
+    ],
+    "Alternative Data & Web Scraping": [
+        'alternative data quantitative finance stars:>20 fork:false archived:false',
+        'financial web scraper stars:>20 fork:false archived:false',
+    ],
+    "Time-Series Databases & Data Infrastructure": [
+        'time series database trading stars:>20 fork:false archived:false',
     ],
     "Research Papers & Articles": [],
     "Academic Resources": [
