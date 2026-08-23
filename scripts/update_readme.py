@@ -90,6 +90,14 @@ CATEGORIES: dict[str, list[str]] = {
         'factor investing research Python stars:>50 fork:false archived:false',
         'stock factor model quantitative stars:>50 fork:false archived:false',
     ],
+    "Statistical Arbitrage": [
+        'statistical arbitrage python stars:>20 fork:false archived:false',
+        'pairs trading quantitative stars:>20 fork:false archived:false',
+    ],
+    "Time Series Analysis & Econometrics": [
+        'econometrics python stars:>20 fork:false archived:false',
+        'time series analysis finance stars:>20 fork:false archived:false',
+    ],
     "Factor Investing & Smart Beta": [
         'smart beta quantitative finance stars:>20 fork:false archived:false',
         'factor investing portfolio stars:>20 fork:false archived:false',
@@ -142,6 +150,10 @@ CATEGORIES: dict[str, list[str]] = {
         'crypto quantitative trading research stars:>50 fork:false archived:false',
         'cryptocurrency backtesting trading stars:>100 fork:false archived:false',
         'defi quantitative research stars:>20 fork:false archived:false',
+    ],
+    "DeFi & MEV": [
+        'mev maximal extractable value stars:>20 fork:false archived:false',
+        'amm automated market maker quantitative stars:>20 fork:false archived:false',
     ],
     "Data and Feeds": [
         'market data Python trading stars:>100 fork:false archived:false',
@@ -512,6 +524,10 @@ def classify_repo(repo: dict[str, Any]) -> str:
         return "Backtesting"
     if "factor" in text or "alpha" in text:
         return "Alpha Research"
+    if "statistical arbitrage" in text or "pairs trading" in text or "stat arb" in text:
+        return "Statistical Arbitrage"
+    if "econometrics" in text or "time series analysis" in text or "cointegration" in text:
+        return "Time Series Analysis & Econometrics"
     if "portfolio" in text and ("optimiz" in text or "allocation" in text or "parity" in text):
         return "Portfolio Optimization"
     if "risk" in text and ("model" in text or "manag" in text or "value at" in text):
@@ -524,6 +540,8 @@ def classify_repo(repo: dict[str, Any]) -> str:
         return "LLM / AI Agents for Finance"
     if "deep learning" in text or "reinforcement learning" in text or "machine learning" in text:
         return "Machine Learning for Trading"
+    if "mev" in text or "maximal extractable value" in text or "amm" in text or "automated market maker" in text or "impermanent loss" in text:
+        return "DeFi & MEV"
     if "crypto" in text or "bitcoin" in text or "defi" in text:
         return "Crypto Quant"
     if "data" in text and ("api" in text or "feed" in text or "market" in text):

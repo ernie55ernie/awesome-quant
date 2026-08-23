@@ -10,6 +10,8 @@ The list is automatically refreshed from GitHub repository metadata.
 - [Backtesting](#backtesting)
 - [Simulation & Synthetic Data](#simulation--synthetic-data)
 - [Alpha Research](#alpha-research)
+- [Statistical Arbitrage](#statistical-arbitrage)
+- [Time Series Analysis & Econometrics](#time-series-analysis--econometrics)
 - [Factor Investing & Smart Beta](#factor-investing--smart-beta)
 - [Fixed Income & Credit Models](#fixed-income--credit-models)
 - [Portfolio Optimization](#portfolio-optimization)
@@ -22,6 +24,7 @@ The list is automatically refreshed from GitHub repository metadata.
 - [Machine Learning for Trading](#machine-learning-for-trading)
 - [Financial NLP (Traditional)](#financial-nlp-traditional)
 - [Crypto Quant](#crypto-quant)
+- [DeFi & MEV](#defi--mev)
 - [Data and Feeds](#data-and-feeds)
 - [Alternative Data & Web Scraping](#alternative-data--web-scraping)
 - [Time-Series Databases & Data Infrastructure](#time-series-databases--data-infrastructure)
@@ -112,6 +115,10 @@ The list is automatically refreshed from GitHub repository metadata.
 - [ram-ki/101_formulaic_alphas](https://github.com/ram-ki/101_formulaic_alphas) — Implemention of 101 formulaic alphas using qstrader `Python` · ⭐ 0 · forks 0 · updated 2022-07-11 · license N/A
 - [dppalomar/covFactorModel](https://github.com/dppalomar/covFactorModel) — Covariance Matrix Estimation via Factor Models `R` · ⭐ 39 · forks 0 · updated 2019-03-25 · license GPL-3.0
 - [alphanume-markets/Alphanume-Strategy-Lab](https://github.com/alphanume-markets/Alphanume-Strategy-Lab) — Production-ready quantitative trading research powered by Alphanume market data APIs. `Python` · ⭐ 59 · forks 0 · updated 2026-07-09 · license N/A
+
+## Statistical Arbitrage
+
+## Time Series Analysis & Econometrics
 
 ## Factor Investing & Smart Beta
 
@@ -268,6 +275,8 @@ _No repositories found in this update._
 - [OffcierCia/ultimate-defi-research-base](https://github.com/OffcierCia/ultimate-defi-research-base) — Here we collect and discuss the best DeFI & Blockchain researches and tools. Feel free to DM me on Twitter or open pool request. `N/A` · ⭐ 2,198 · forks 0 · updated 2026-03-14 · license NOASSERTION
 - [nntaoli-project/goex](https://github.com/nntaoli-project/goex) — Cryptocurrency Exchange REST API SDK Wrapper Implemented With the golang, Supporting OKX, Binance `Go` · ⭐ 1,989 · forks 0 · updated 2026-06-01 · license MIT
 - [bitcoinvsalts/node-binance-trader](https://github.com/bitcoinvsalts/node-binance-trader) — 💰 Cryptocurrency Trading Strategy & Portfolio Management Development Framework for Binance. 🤖 `TypeScript` · ⭐ 1,225 · forks 370 · updated 2024-08-19 · license MIT
+
+## DeFi & MEV
 
 ## Data and Feeds
 

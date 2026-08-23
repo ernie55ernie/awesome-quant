@@ -55,12 +55,15 @@ A curated list of quantitative research, trading research, and market microstruc
 - Research Frameworks
 - Backtesting
 - Alpha Research
+- Statistical Arbitrage
+- Time Series Analysis & Econometrics
 - Portfolio Optimization
 - Risk Modeling
 - Market Microstructure
 - Execution and HFT
 - Machine Learning for Trading
 - Crypto Quant
+- DeFi & MEV
 - Data and Feeds
 - Research Papers & Articles
 - Academic Resources
@@ -132,12 +135,15 @@ Instructions:
    - Research Frameworks
    - Backtesting
    - Alpha Research
+   - Statistical Arbitrage
+   - Time Series Analysis & Econometrics
    - Portfolio Optimization
    - Risk Modeling
    - Market Microstructure
    - Execution and HFT
    - Machine Learning for Trading
    - Crypto Quant
+   - DeFi & MEV
    - Data and Feeds
    - Research Papers & Articles
    - Academic Resources
