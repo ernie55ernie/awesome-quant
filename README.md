@@ -146,7 +146,8 @@ The list is automatically refreshed from GitHub repository metadata.
 
 ## Factor Investing & Smart Beta
 
-_No repositories found in this update._
+- [prmkowalski/filib](https://github.com/prmkowalski/filib) — Factor Investing Library. `Python` · ⭐ 29
+- [aldousbirchall/MachineLearning_SmartBeta_Pipeline](https://github.com/aldousbirchall/MachineLearning_SmartBeta_Pipeline) — ML pipeline for SmartBeta momentum factor on equity portfolio. `Python` · ⭐ 10
 
 ## Fixed Income & Credit Models
 
