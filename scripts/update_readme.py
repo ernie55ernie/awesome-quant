@@ -85,6 +85,10 @@ CATEGORIES: dict[str, list[str]] = {
         'financial synthetic data stars:>20 fork:false archived:false',
         'market simulation trading stars:>20 fork:false archived:false',
     ],
+    "Performance Analytics & Attribution": [
+        'performance attribution quantitative finance stars:>20 fork:false archived:false',
+        'portfolio performance analytics stars:>20 fork:false archived:false',
+    ],
     "Alpha Research": [
         'alpha research quantitative trading stars:>50 fork:false archived:false',
         'factor investing research Python stars:>50 fork:false archived:false',
@@ -93,6 +97,14 @@ CATEGORIES: dict[str, list[str]] = {
     "Statistical Arbitrage": [
         'statistical arbitrage python stars:>20 fork:false archived:false',
         'pairs trading quantitative stars:>20 fork:false archived:false',
+    ],
+    "Event-Driven Trading": [
+        'event driven trading stars:>20 fork:false archived:false',
+        'corporate action quantitative trading stars:>20 fork:false archived:false',
+    ],
+    "Market Making & Liquidity Provision": [
+        'market making strategy stars:>20 fork:false archived:false',
+        'liquidity provision quantitative stars:>20 fork:false archived:false',
     ],
     "Time Series Analysis & Econometrics": [
         'econometrics python stars:>20 fork:false archived:false',
@@ -105,6 +117,10 @@ CATEGORIES: dict[str, list[str]] = {
     "Fixed Income & Credit Models": [
         'fixed income quantitative finance stars:>20 fork:false archived:false',
         'credit risk model trading stars:>20 fork:false archived:false',
+    ],
+    "Foreign Exchange (FX) & Commodities": [
+        'foreign exchange quantitative trading stars:>20 fork:false archived:false',
+        'commodities quantitative finance stars:>20 fork:false archived:false',
     ],
     "Portfolio Optimization": [
         'portfolio optimization quantitative finance stars:>100 fork:false archived:false',
@@ -134,6 +150,14 @@ CATEGORIES: dict[str, list[str]] = {
         'trade execution algorithm stars:>20 fork:false archived:false',
         'market making trading bot research stars:>50 fork:false archived:false',
     ],
+    "Transaction Cost Analysis (TCA) & Market Impact": [
+        'transaction cost analysis finance stars:>10 fork:false archived:false',
+        'market impact model quantitative stars:>10 fork:false archived:false',
+    ],
+    "Hardware Acceleration (FPGA & GPU)": [
+        'fpga high frequency trading stars:>10 fork:false archived:false',
+        'gpu quantitative finance stars:>10 fork:false archived:false',
+    ],
     "Brokerage & Exchange APIs (Execution Frameworks)": [
         'algorithmic trading broker api stars:>50 fork:false archived:false',
     ],
@@ -141,6 +165,9 @@ CATEGORIES: dict[str, list[str]] = {
         'machine learning trading Python stars:>500 fork:false archived:false',
         'deep learning trading quantitative finance stars:>100 fork:false archived:false',
         'reinforcement learning trading stars:>100 fork:false archived:false',
+    ],
+    "Reinforcement Learning for Trading": [
+        'finrl stars:>100 fork:false archived:false',
     ],
     "Financial NLP (Traditional)": [
         'financial sentiment analysis nlp stars:>20 fork:false archived:false',
@@ -167,6 +194,10 @@ CATEGORIES: dict[str, list[str]] = {
     "Time-Series Databases & Data Infrastructure": [
         'time series database trading stars:>20 fork:false archived:false',
     ],
+    "MLOps & Data Pipelines for Finance": [
+        'mlops quantitative finance stars:>10 fork:false archived:false',
+        'feature store finance stars:>10 fork:false archived:false',
+    ],
     "Research Papers & Articles": [],
     "Academic Resources": [
         'quantitative finance course stars:>50 fork:false archived:false',
@@ -175,6 +206,10 @@ CATEGORIES: dict[str, list[str]] = {
     ],
     "Interview / Learning": [],
     "LLM / AI Agents for Finance": [],
+    "Quantum Finance": [
+        'quantum computing finance stars:>10 fork:false archived:false',
+        'quantum quantitative finance stars:>10 fork:false archived:false',
+    ],
     "Utilities": [
         'technical indicators Python stars:>500 fork:false archived:false',
         'trading indicators Python stars:>100 fork:false archived:false',
@@ -182,6 +217,7 @@ CATEGORIES: dict[str, list[str]] = {
     ],
     "Source Lists": [],
     "Candidates to Review": [],
+    "AI Models & Datasets": [],
 }
 
 NEGATIVE_KEYWORDS = {

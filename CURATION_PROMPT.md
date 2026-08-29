@@ -54,24 +54,43 @@ A curated list of quantitative research, trading research, and market microstruc
 
 - Research Frameworks
 - Backtesting
+- Simulation & Synthetic Data
+- Performance Analytics & Attribution
 - Alpha Research
 - Statistical Arbitrage
+- Event-Driven Trading
+- Market Making & Liquidity Provision
 - Time Series Analysis & Econometrics
+- Factor Investing & Smart Beta
+- Fixed Income & Credit Models
+- Foreign Exchange (FX) & Commodities
 - Portfolio Optimization
+- Financial Visualization & Dashboards
 - Risk Modeling
+- Derivatives & Options Pricing
 - Market Microstructure
 - Execution and HFT
+- Transaction Cost Analysis (TCA) & Market Impact
+- Hardware Acceleration (FPGA & GPU)
+- Brokerage & Exchange APIs (Execution Frameworks)
 - Machine Learning for Trading
+- Reinforcement Learning for Trading
+- Financial NLP (Traditional)
 - Crypto Quant
 - DeFi & MEV
 - Data and Feeds
+- Alternative Data & Web Scraping
+- Time-Series Databases & Data Infrastructure
+- MLOps & Data Pipelines for Finance
 - Research Papers & Articles
 - Academic Resources
 - Interview / Learning
 - LLM / AI Agents for Finance
+- Quantum Finance
 - Utilities
 - Source Lists
 - Candidates to Review
+- AI Models & Datasets
 
 For each resource, use this format:
 

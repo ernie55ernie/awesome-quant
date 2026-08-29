@@ -1,41 +1,46 @@
-# Awesome Quant
 
-A curated list of quantitative research, trading research, and market microstructure resources.
-
-The list is automatically refreshed from GitHub repository metadata.
 
 ## Contents
 
 - [Research Frameworks](#research-frameworks)
 - [Backtesting](#backtesting)
-- [Simulation & Synthetic Data](#simulation--synthetic-data)
+- [Simulation & Synthetic Data](#simulation-synthetic-data)
+- [Performance Analytics & Attribution](#performance-analytics-attribution)
 - [Alpha Research](#alpha-research)
 - [Statistical Arbitrage](#statistical-arbitrage)
-- [Time Series Analysis & Econometrics](#time-series-analysis--econometrics)
-- [Factor Investing & Smart Beta](#factor-investing--smart-beta)
-- [Fixed Income & Credit Models](#fixed-income--credit-models)
+- [Event-Driven Trading](#event-driven-trading)
+- [Market Making & Liquidity Provision](#market-making-liquidity-provision)
+- [Time Series Analysis & Econometrics](#time-series-analysis-econometrics)
+- [Factor Investing & Smart Beta](#factor-investing-smart-beta)
+- [Fixed Income & Credit Models](#fixed-income-credit-models)
+- [Foreign Exchange (FX) & Commodities](#foreign-exchange-fx-commodities)
 - [Portfolio Optimization](#portfolio-optimization)
-- [Financial Visualization & Dashboards](#financial-visualization--dashboards)
+- [Financial Visualization & Dashboards](#financial-visualization-dashboards)
 - [Risk Modeling](#risk-modeling)
-- [Derivatives & Options Pricing](#derivatives--options-pricing)
+- [Derivatives & Options Pricing](#derivatives-options-pricing)
 - [Market Microstructure](#market-microstructure)
 - [Execution and HFT](#execution-and-hft)
-- [Brokerage & Exchange APIs (Execution Frameworks)](#brokerage--exchange-apis-execution-frameworks)
+- [Transaction Cost Analysis (TCA) & Market Impact](#transaction-cost-analysis-tca-market-impact)
+- [Hardware Acceleration (FPGA & GPU)](#hardware-acceleration-fpga-gpu)
+- [Brokerage & Exchange APIs (Execution Frameworks)](#brokerage-exchange-apis-execution-frameworks)
 - [Machine Learning for Trading](#machine-learning-for-trading)
+- [Reinforcement Learning for Trading](#reinforcement-learning-for-trading)
 - [Financial NLP (Traditional)](#financial-nlp-traditional)
 - [Crypto Quant](#crypto-quant)
-- [DeFi & MEV](#defi--mev)
+- [DeFi & MEV](#defi-mev)
 - [Data and Feeds](#data-and-feeds)
-- [Alternative Data & Web Scraping](#alternative-data--web-scraping)
-- [Time-Series Databases & Data Infrastructure](#time-series-databases--data-infrastructure)
-- [Research Papers & Articles](#research-papers--articles)
+- [Alternative Data & Web Scraping](#alternative-data-web-scraping)
+- [Time-Series Databases & Data Infrastructure](#time-series-databases-data-infrastructure)
+- [MLOps & Data Pipelines for Finance](#mlops-data-pipelines-for-finance)
+- [Research Papers & Articles](#research-papers-articles)
 - [Academic Resources](#academic-resources)
-- [Interview / Learning](#interview--learning)
-- [LLM / AI Agents for Finance](#llm--ai-agents-for-finance)
+- [Interview / Learning](#interview-learning)
+- [LLM / AI Agents for Finance](#llm-ai-agents-for-finance)
+- [Quantum Finance](#quantum-finance)
 - [Utilities](#utilities)
 - [Source Lists](#source-lists)
 - [Candidates to Review](#candidates-to-review)
-- [AI Models & Datasets](#ai-models--datasets)
+- [AI Models & Datasets](#ai-models-datasets)
 
 ## Research Frameworks
 
@@ -93,6 +98,9 @@ The list is automatically refreshed from GitHub repository metadata.
 - [hoangsonww/Stock-Market-Simulator](https://github.com/hoangsonww/Stock-Market-Simulator) — 📈 This repository hosts a Stock Market Simulation in Python, providing tools to mimic market behaviors, portfolio management, and trading strategies. It serves as an educational resource for learning about financial markets and algorithmic trading, offering a practical platform for testing theories and strategies in a risk-free environment. `Python` · ⭐ 23 · forks 0 · updated 2023-03-27 · license EPL-2.0
 - [JohnNay/predMarket](https://github.com/JohnNay/predMarket) — Computational simulation framework for analyzing trading behavior in climate prediction markets `HTML` · ⭐ 24 · forks 0 · updated 2020-07-12 · license N/A
 
+## Performance Analytics & Attribution
+
+
 ## Alpha Research
 
 - [VivekPa/AIAlpha](https://github.com/VivekPa/AIAlpha) — Use unsupervised and supervised learning to predict stocks `Python` · ⭐ 1,956 · forks 449 · updated 2020-06-18 · license MIT
@@ -124,6 +132,12 @@ The list is automatically refreshed from GitHub repository metadata.
 - [kanupriyaanand/Pairs_Trading_Quant](https://github.com/kanupriyaanand/Pairs_Trading_Quant) — A pairs trade is a market neutral trading strategy enabling traders to profit from virtually any market conditions. This strategy is categorized as a statistical arbitrage and convergence trading strategy. `Python` · ⭐ 23 · forks 0 · updated 2021-11-21 · license MIT
 - [sapphire921/HFT-Pairs-Trading](https://github.com/sapphire921/HFT-Pairs-Trading) — High Frequency Pairs Trading Based on Statistical Arbitrage (Python) :moneybag: `Jupyter Notebook` · ⭐ 106 · forks 0 · updated 2019-02-27 · license N/A
 
+## Event-Driven Trading
+
+
+## Market Making & Liquidity Provision
+
+
 ## Time Series Analysis & Econometrics
 
 - [statsmodels/statsmodels](https://github.com/statsmodels/statsmodels) — Statsmodels: statistical modeling and econometrics in Python `Python` · ⭐ 11,589 · forks 0 · updated 2026-08-24 · license BSD-3-Clause
@@ -152,6 +166,9 @@ _No repositories found in this update._
 ## Fixed Income & Credit Models
 
 - [rust-dd/stochastic-rs](https://github.com/rust-dd/stochastic-rs) — High-performance quantitative finance in Rust — 120+ stochastic processes, option pricing, calibration, fixed income, risk & copulas, with SIMD/GPU acceleration and Python bindings. `Rust` · ⭐ 178 · forks 0 · updated 2026-08-11 · license MIT
+
+## Foreign Exchange (FX) & Commodities
+
 
 ## Portfolio Optimization
 
@@ -242,6 +259,12 @@ _No repositories found in this update._
 - [ghgr/HFT_Bitcoin](https://github.com/ghgr/HFT_Bitcoin) — Analysis of High Frequency Trading on Bitcoin exchanges `Jupyter Notebook` · ⭐ 0 · forks 0 · updated 2017-08-21 · license N/A
 - [klaush26/okx-trade-script-executor](https://github.com/klaush26/okx-trade-script-executor) — A browser-based trading automation utility for OKX. Streamline algorithmic and manual crypto trades, configure custom API settings, and run a local execution suite. `HTML` · ⭐ 40 · forks 0 · updated 2026-08-07 · license GPL-3.0
 
+## Transaction Cost Analysis (TCA) & Market Impact
+
+
+## Hardware Acceleration (FPGA & GPU)
+
+
 ## Brokerage & Exchange APIs (Execution Frameworks)
 
 - [rediar/InteractiveBrokers-Algo-Trading-API](https://github.com/rediar/InteractiveBrokers-Algo-Trading-API) — Java/MySQL real-time algorithmic trading using Interactive Brokers API `Java` · ⭐ 275 · forks 0 · updated 2023-06-12 · license Apache-2.0
@@ -270,6 +293,9 @@ _No repositories found in this update._
 - [asavinov/intelligent-trading-bot](https://github.com/asavinov/intelligent-trading-bot) — Intelligent Trading Bot: Automatically generating signals and trading based on machine learning and feature engineering `Python` · ⭐ 1,843 · forks 0 · updated 2026-08-04 · license MIT
 - [BlackArbsCEO/Adv_Fin_ML_Exercises](https://github.com/BlackArbsCEO/Adv_Fin_ML_Exercises) — Experimental solutions to selected exercises from the book [Advances in Financial Machine Learning by Marcos Lopez De Prado] `Jupyter Notebook` · ⭐ 1,945 · forks 0 · updated 2022-12-08 · license MIT
 - [rorysroes/SGX-Full-OrderBook-Tick-Data-Trading-Strategy](https://github.com/rorysroes/SGX-Full-OrderBook-Tick-Data-Trading-Strategy) — Providing the solutions for high-frequency trading (HFT) strategies using data science approaches (Machine Learning) on Full Orderbook Tick Data. `Jupyter Notebook` · ⭐ 2,322 · forks 0 · updated 2022-08-27 · license N/A
+
+## Reinforcement Learning for Trading
+
 
 ## Financial NLP (Traditional)
 
@@ -348,6 +374,9 @@ _No repositories found in this update._
 
 - [kevinlawler/kerf1](https://github.com/kevinlawler/kerf1) — Kerf (Kerf1) is a columnar tick database and time-series language for Linux/OSX/BSD/iOS/Android. It is written in C and natively speaks JSON and SQL. Kerf can be used for trading platforms, feedhandlers, low-latency networking, high-volume analysis of realtime and historical data, logfile processing, and more. `C` · ⭐ 547 · forks 0 · updated 2024-09-03 · license N/A
 - [kevinlawler/kerf](https://github.com/kevinlawler/kerf) — Kerf (Kerf2) is a columnar tick database and time-series language for Linux/OSX/BSD/iOS/Android. It is written in C++ and natively speaks JSON and SQL. Kerf can be used for trading platforms, feedhandlers, low-latency networking, high-volume analysis of realtime and historical data, logfile processing, and more. `C++` · ⭐ 38 · forks 0 · updated 2026-02-27 · license BSD-2-Clause
+
+## MLOps & Data Pipelines for Finance
+
 
 ## Research Papers & Articles
 
@@ -461,6 +490,9 @@ _No repositories found in this update._
 - [ariadng/metatrader-mcp-server](https://github.com/ariadng/metatrader-mcp-server) — Model Context Protocol (MCP) to enable AI LLMs to trade using MetaTrader platform `Python` · ⭐ 685 · forks 0 · updated 2026-03-28 · license MIT
 - [FinStep-AI/ContestTrade](https://github.com/FinStep-AI/ContestTrade) — A Multi-Agent Trading System Based on Internal Contest Mechanism `Python` · ⭐ 678 · forks 0 · updated 2025-12-22 · license Apache-2.0
 - [aliyun/qwen-dianjin](https://github.com/aliyun/qwen-dianjin) — Qwen DianJin: LLMs for the Financial Industry by Alibaba Cloud（通义点金：阿里云金融大模型） `Python` · ⭐ 594 · forks 0 · updated 2026-07-06 · license N/A
+
+## Quantum Finance
+
 
 ## Utilities
 
