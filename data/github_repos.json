@@ -577,6 +577,22 @@
       "pushed_at": "2026-09-04T21:29:55Z",
       "license": "GPL-3.0",
       "seed_discovered": null
+    },
+    {
+      "full_name": "manifoldbt/manifoldbt",
+      "type": "github",
+      "source": null,
+      "search_keyword": null,
+      "html_url": "https://github.com/manifoldbt/manifoldbt",
+      "description": "Rust-powered backtesting engine for quantitative research",
+      "language": "Python",
+      "stars": 41,
+      "stargazers_count": 41,
+      "downloads": null,
+      "forks": 7,
+      "pushed_at": "2026-10-16T20:49:23Z",
+      "license": "NOASSERTION",
+      "seed_discovered": null
     }
   ],
   "Simulation & Synthetic Data": [
