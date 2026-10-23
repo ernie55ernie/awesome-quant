@@ -648,6 +648,9 @@ def collect_repositories() -> dict[str, list[dict[str, Any]]]:
                     if url:
                         grouped[cat][url] = repo
                         if repo.get("type") == "github":
+                            stars = repo.get("stargazers_count") or repo.get("stars") or 0
+                            if stars == 0 or repo.get("stars") == 0 or repo.get("stargazers_count") is None:
+                                continue
                             name = repo.get("full_name")
                             if name:
                                 seen.add(name)
