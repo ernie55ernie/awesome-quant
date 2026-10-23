@@ -607,8 +607,8 @@ def repo_score(repo: dict[str, Any]) -> float:
         boost = 200.0 if repo.get("source") == "scholar" else 0.0
         return 500.0 + recency_score * 100.0 + boost
 
-    stars = repo.get("stargazers_count") or 0
-    forks = repo.get("forks_count") or 0
+    forks = repo.get("forks_count") or repo.get("forks") or 0
+    stars = repo.get("stargazers_count") or repo.get("stars") or 0
     open_issues = repo.get("open_issues_count") or 0
     pushed_days = days_since(repo.get("pushed_at"))
     recency_score = max(0.0, 1.0 - pushed_days / MAX_DAYS_SINCE_PUSH)
@@ -895,8 +895,8 @@ def repo_to_markdown(repo: dict[str, Any]) -> str:
         return f"- [{name}]({url}) — {desc}{date_str}"
 
     language = repo.get("language") or "N/A"
-    stars = repo.get("stargazers_count") or 0
-    forks = repo.get("forks_count") or 0
+    forks = repo.get("forks_count") or repo.get("forks") or 0
+    stars = repo.get("stargazers_count") or repo.get("stars") or 0
     pushed_at = repo.get("pushed_at")
     pushed_date = pushed_at[:10] if pushed_at else "N/A"
     license_info = repo.get("license")
@@ -983,6 +983,9 @@ def save_data(grouped: dict[str, list[dict[str, Any]]]) -> None:
             else:
                 license_id = (license_info or {}).get("spdx_id")
                 
+            forks = repo.get("forks_count") or repo.get("forks") or 0
+            stars = repo.get("stargazers_count") or repo.get("stars") or 0
+
             compact[category].append({
                 "full_name": repo.get("full_name"),
                 "type": repo.get("type", "github"),
@@ -991,10 +994,11 @@ def save_data(grouped: dict[str, list[dict[str, Any]]]) -> None:
                 "html_url": repo.get("html_url"),
                 "description": repo.get("description"),
                 "language": repo.get("language"),
-                "stars": repo.get("stargazers_count"),
-                "stargazers_count": repo.get("stargazers_count"),
+                "stars": stars,
+                "stargazers_count": stars,
                 "downloads": repo.get("downloads"),
-                "forks": repo.get("forks_count"),
+                "forks": forks,
+                "forks_count": forks,
                 "pushed_at": repo.get("pushed_at"),
                 "license": license_id,
                 "seed_discovered": repo.get("seed_discovered"),
