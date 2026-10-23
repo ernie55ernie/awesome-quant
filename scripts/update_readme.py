@@ -550,6 +550,11 @@ def is_bad_repo(repo: dict[str, Any]) -> bool:
 
 
 def classify_repo(repo: dict[str, Any]) -> str:
+    if repo.get("type") == "paper" or repo.get("source") in ("arxiv", "ssrn", "scholar"):
+        return "Research Papers & Articles"
+    if repo.get("source") == "huggingface" or repo.get("type") in ("huggingface", "huggingface_dataset"):
+        return "AI Models & Datasets"
+
     name = clean_text(repo.get("full_name")).lower()
     desc = clean_text(repo.get("description")).lower()
     text = f"{name} {desc}"
@@ -558,37 +563,75 @@ def classify_repo(repo: dict[str, Any]) -> str:
         return "Research Frameworks"
     if "backtest" in text:
         return "Backtesting"
+    if "simulation" in text and ("market" in text or "trading" in text or "exchange" in text or "synthetic" in text) or "synthetic data" in text:
+        return "Simulation & Synthetic Data"
+    if "performance attribution" in text or "portfolio analytics" in text or "tearsheet" in text or "quantstats" in text or "pyfolio" in text:
+        return "Performance Analytics & Attribution"
+    if "smart beta" in text or "factor investing" in text or "factor model" in text or "factor portfolio" in text:
+        return "Factor Investing & Smart Beta"
     if "factor" in text or "alpha" in text:
         return "Alpha Research"
     if "statistical arbitrage" in text or "pairs trading" in text or "stat arb" in text:
         return "Statistical Arbitrage"
+    if "event-driven trading" in text or "event driven trading" in text or "corporate action" in text or "earnings" in text and "trading" in text:
+        return "Event-Driven Trading"
+    if "market making" in text or "liquidity provision" in text or "avellaneda-stoikov" in text or "avellaneda stoikov" in text or "market maker" in text:
+        return "Market Making & Liquidity Provision"
     if "econometrics" in text or "time series analysis" in text or "cointegration" in text:
         return "Time Series Analysis & Econometrics"
+    if "fixed income" in text or "bond pricing" in text or "yield curve" in text or "interest rate" in text or "credit risk" in text:
+        return "Fixed Income & Credit Models"
+    if "foreign exchange" in text or "fx trading" in text or "commodit" in text:
+        return "Foreign Exchange (FX) & Commodities"
     if "portfolio" in text and ("optimiz" in text or "allocation" in text or "parity" in text):
         return "Portfolio Optimization"
+    if "candlestick" in text or "financial visualization" in text or "trading dashboard" in text or "mplfinance" in text:
+        return "Financial Visualization & Dashboards"
     if "risk" in text and ("model" in text or "manag" in text or "value at" in text):
         return "Risk Modeling"
+    if "option" in text and ("pricing" in text or "greeks" in text or "volatility" in text or "black scholes" in text or "heston" in text):
+        return "Derivatives & Options Pricing"
     if "microstructure" in text or "order book" in text or "imbalance" in text:
         return "Market Microstructure"
-    if "hft" in text or "high frequency" in text or "execution" in text or "market making" in text:
+    if "transaction cost analysis" in text or "market impact" in text or "slippage model" in text or " tca" in text:
+        return "Transaction Cost Analysis (TCA) & Market Impact"
+    if "fpga" in text or ("gpu" in text and ("acceleration" in text or "cuda" in text or "trading" in text)):
+        return "Hardware Acceleration (FPGA & GPU)"
+    if "broker" in text and "api" in text or "interactive brokers" in text or "ibkr" in text or "alpaca" in text or "ccxt" in text:
+        return "Brokerage & Exchange APIs (Execution Frameworks)"
+    if "hft" in text or "high frequency" in text or "execution" in text:
         return "Execution and HFT"
     if "llm" in text or "agent" in text or "gpt" in text or "large language" in text:
         return "LLM / AI Agents for Finance"
-    if "deep learning" in text or "reinforcement learning" in text or "machine learning" in text:
+    if "reinforcement learning" in text or "finrl" in text or "drl" in text and "trading" in text:
+        return "Reinforcement Learning for Trading"
+    if ("nlp" in text or "sentiment" in text) and ("finance" in text or "financial" in text or "sec" in text or "edgar" in text or "10-k" in text):
+        return "Financial NLP (Traditional)"
+    if "deep learning" in text or "machine learning" in text:
         return "Machine Learning for Trading"
     if "mev" in text or "maximal extractable value" in text or "amm" in text or "automated market maker" in text or "impermanent loss" in text:
         return "DeFi & MEV"
     if "crypto" in text or "bitcoin" in text or "defi" in text:
         return "Crypto Quant"
+    if "time series database" in text or "timeseries database" in text or "tick database" in text or "kdb" in text or "questdb" in text:
+        return "Time-Series Databases & Data Infrastructure"
+    if "alternative data" in text or "scraper" in text and ("finance" in text or "financial" in text or "trading" in text):
+        return "Alternative Data & Web Scraping"
+    if "feature store" in text or "mlops" in text and ("finance" in text or "trading" in text):
+        return "MLOps & Data Pipelines for Finance"
     if "data" in text and ("api" in text or "feed" in text or "market" in text):
         return "Data and Feeds"
+    if "quantum finance" in text or "quantum computing" in text and ("finance" in text or "trading" in text):
+        return "Quantum Finance"
     if "course" in text or "book" in text or "paper" in text or "academic" in text:
         return "Academic Resources"
     if "interview" in text or "learn" in text or "tutorial" in text:
         return "Interview / Learning"
+    if "awesome-" in name or "curated list" in text or "awesome list" in text:
+        return "Source Lists"
     if "indicator" in text or "library" in text or "util" in text:
         return "Utilities"
-    
+
     return "Candidates to Review"
 
 
