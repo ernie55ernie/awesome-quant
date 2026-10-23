@@ -699,8 +699,9 @@ def collect_repositories() -> dict[str, list[dict[str, Any]]]:
             
             # Record the seed source itself
             seed_normalized = f"https://github.com/{owner}/{repo}"
-            grouped["Source Lists"][f"{owner}/{repo}"] = seed_meta
+            grouped["Source Lists"][seed_normalized] = seed_meta
             seen.add(f"{owner}/{repo}")
+            seen.add(seed_normalized)
 
             default_branch = seed_meta.get("default_branch") or "main"
             readme_text = fetch_readme_text(owner, repo, default_branch)
