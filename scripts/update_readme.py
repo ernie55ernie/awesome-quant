@@ -775,25 +775,25 @@ def collect_repositories() -> dict[str, list[dict[str, Any]]]:
                 grouped[category][repo_url] = meta
                 seen.add(link_id)
 
-    # 3. SerpApi Discovery
+    # 3. Keywords & SerpApi Discovery
+    keywords_path = Path("data/scholar_keywords.txt")
+    if not keywords_path.exists():
+        print(f"Warning: {keywords_path} does not exist.", file=sys.stderr)
+        keywords = []
+    else:
+        with open(keywords_path, "r", encoding="utf-8") as f:
+            all_keywords = [line.strip() for line in f if line.strip()]
+        if len(all_keywords) > 0:
+            day_offset = dt.date.today().toordinal() % max(1, len(all_keywords) // 4)
+            start_idx = day_offset * 4
+            keywords = all_keywords[start_idx : start_idx + 4]
+        else:
+            keywords = []
+
     serpapi_key = get_api_key("SERPAPI_KEY")
     if not serpapi_key:
         print("Skipping SerpApi discovery because SERPAPI_KEY is not set.", file=sys.stderr)
     else:
-        keywords_path = Path("data/scholar_keywords.txt")
-        if not keywords_path.exists():
-            print(f"Skipping SerpApi discovery because {keywords_path} does not exist.", file=sys.stderr)
-            keywords = []
-        else:
-            with open(keywords_path, "r", encoding="utf-8") as f:
-                all_keywords = [line.strip() for line in f if line.strip()]
-            if len(all_keywords) > 0:
-                day_offset = dt.date.today().toordinal() % max(1, len(all_keywords) // 4)
-                start_idx = day_offset * 4
-                keywords = all_keywords[start_idx : start_idx + 4]
-            else:
-                keywords = []
-        
         category = "Research Papers & Articles"
         if category in grouped:
             urls_to_remove = []
@@ -839,7 +839,7 @@ def collect_repositories() -> dict[str, list[dict[str, Any]]]:
 
 
     # 4. Hugging Face Automated Discovery
-    if "keywords" in locals() and keywords:
+    if keywords:
         hf_category = "AI Models & Datasets"
         if hf_category in grouped:
             urls_to_remove = []
