@@ -67,7 +67,7 @@ The list is automatically refreshed from GitHub repository metadata.
 
 ## Backtesting
 
-- [mementum/backtrader](https://github.com/mementum/backtrader) — Python Backtesting library for trading strategies `Python` · ⭐ 23,566 · forks 5,310 · updated 2024-08-19 · license GPL-3.0
+- [mementum/backtrader](https://github.com/mementum/backtrader) — Python Backtesting library for trading strategies `Python` · ⭐ 23,577 · forks 5,309 · updated 2024-08-19 · license GPL-3.0
 - [hummingbot/hummingbot](https://github.com/hummingbot/hummingbot) — Open source software that helps you create and deploy high-frequency crypto trading bots `Python` · ⭐ 18,945 · forks 0 · updated 2026-06-19 · license Apache-2.0
 - [HKUDS/Vibe-Trading](https://github.com/HKUDS/Vibe-Trading) — "Vibe-Trading: Your Personal Trading Agent" `Python` · ⭐ 12,834 · forks 0 · updated 2026-06-20 · license MIT
 - [OpenByteInc/QuantDinger](https://github.com/OpenByteInc/QuantDinger) — AI quantitative trading platform for crypto, stocks, and forex with backtesting, live trading, market data, and multi-agent research.vibe-trading ,trading-agents,ai-trader,ai-trading `Python` · ⭐ 9,794 · forks 0 · updated 2026-07-19 · license Apache-2.0
@@ -77,16 +77,16 @@ The list is automatically refreshed from GitHub repository metadata.
 - [nkaz001/hftbacktest](https://github.com/nkaz001/hftbacktest) — Free, open source, a high frequency trading and market making backtesting and trading bot, which accounts for limit orders, queue positions, and latencies, utilizing full tick data for trades and order books(Level-2 and Level-3), with real-world crypto trading examples for Binance and Bybit `Rust` · ⭐ 4,207 · forks 0 · updated 2025-12-23 · license MIT
 - [mhallsmoore/qstrader](https://github.com/mhallsmoore/qstrader) — QuantStart.com - QSTrader backtesting simulation engine. `Python` · ⭐ 3,396 · forks 0 · updated 2024-06-30 · license MIT
 - [cuemacro/finmarketpy](https://github.com/cuemacro/finmarketpy) — Python library for backtesting trading strategies & analyzing financial markets (formerly pythalesians) `Python` · ⭐ 3,777 · forks 0 · updated 2026-04-16 · license Apache-2.0
-- [blankly-finance/blankly](https://github.com/blankly-finance/blankly) — 🚀 💸 Easily build, backtest and deploy your algo in just a few lines of code. Trade stocks, cryptos, and forex across exchanges w/ one package. `Python` · ⭐ 2,482 · forks 314 · updated 2024-12-30 · license LGPL-3.0
+- [blankly-finance/blankly](https://github.com/blankly-finance/blankly) — 🚀 💸 Easily build, backtest and deploy your algo in just a few lines of code. Trade stocks, cryptos, and forex across exchanges w/ one package. `Python` · ⭐ 2,483 · forks 314 · updated 2024-12-30 · license LGPL-3.0
 - [whittlem/pycryptobot](https://github.com/whittlem/pycryptobot) — Python Crypto Bot (PyCryptoBot) `Python` · ⭐ 2,059 · forks 717 · updated 2026-03-26 · license Apache-2.0
 - [edtechre/pybroker](https://github.com/edtechre/pybroker) — Algorithmic Trading in Python with Machine Learning `Python` · ⭐ 3,430 · forks 0 · updated 2026-05-11 · license NOASSERTION
 - [pmorissette/bt](https://github.com/pmorissette/bt) — bt - flexible backtesting for Python `Python` · ⭐ 2,893 · forks 0 · updated 2026-05-05 · license MIT
 - [letianzj/QuantResearch](https://github.com/letianzj/QuantResearch) — Quantitative analysis, strategies and backtests `Jupyter Notebook` · ⭐ 2,959 · forks 0 · updated 2023-08-26 · license MIT
 - [fasiondog/hikyuu](https://github.com/fasiondog/hikyuu) — Hikyuu Quant Framework 基于C++/Python的超高速开源量化交易研究框架，同时可基于策略部件进行资产重用，快速累积策略资产。 `C++` · ⭐ 3,266 · forks 0 · updated 2026-06-21 · license Apache-2.0
+- [barter-rs/barter-rs](https://github.com/barter-rs/barter-rs) — Open-source Rust framework for building event-driven live-trading & backtesting systems `Rust` · ⭐ 2,357 · forks 387 · updated 2026-08-24 · license MIT
 - [Lumiwealth/lumibot](https://github.com/Lumiwealth/lumibot) — Python trading framework with AI agents that actually place the trade. Backtest, paper and live trade on 12 brokers: stocks, options, futures, forex, crypto and prediction markets. `Python` · ⭐ 2,158 · forks 414 · updated 2026-10-24 · license GPL-3.0
 - [coding-kitties/investing-algorithm-framework](https://github.com/coding-kitties/investing-algorithm-framework) — Framework for quantitative trading. Complete framework for development, backtesting, and deploying automated trading algorithms and trading bots. `Python` · ⭐ 2,192 · forks 311 · updated 2026-10-22 · license Apache-2.0
 - [Yvictor/TradingGym](https://github.com/Yvictor/TradingGym) — Trading and Backtesting environment for training reinforcement learning agent or simple rule base algo. `Python` · ⭐ 1,925 · forks 372 · updated 2024-02-11 · license MIT
-- [cinar/indicator](https://github.com/cinar/indicator) — High-performance technical analysis indicators and backtesting framework in Go. Zero dependencies. ✨ See how! 👀 `Go` · ⭐ 1,661 · forks 0 · updated 2026-09-03 · license AGPL-3.0
 
 ## Simulation & Synthetic Data
 
@@ -226,7 +226,7 @@ The list is automatically refreshed from GitHub repository metadata.
 
 ## Portfolio Optimization
 
-- [PyPortfolio/PyPortfolioOpt](https://github.com/PyPortfolio/PyPortfolioOpt) — Financial portfolio optimization in python, including classical efficient frontier, Black-Litterman, Hierarchical Risk Parity `Jupyter Notebook` · ⭐ 6,121 · forks 1,185 · updated 2026-07-07 · license MIT
+- [PyPortfolio/PyPortfolioOpt](https://github.com/PyPortfolio/PyPortfolioOpt) — Financial portfolio optimization in python, including classical efficient frontier, Black-Litterman, Hierarchical Risk Parity `Jupyter Notebook` · ⭐ 6,124 · forks 1,186 · updated 2026-07-07 · license MIT
 - [dcajasn/Riskfolio-Lib](https://github.com/dcajasn/Riskfolio-Lib) — Portfolio Optimization in Python `C++` · ⭐ 4,561 · forks 728 · updated 2026-10-22 · license BSD-3-Clause
 - [skfolio/skfolio](https://github.com/skfolio/skfolio) — Python library for portfolio optimization built on top of scikit-learn `Python` · ⭐ 2,534 · forks 285 · updated 2026-10-22 · license BSD-3-Clause
 - [jankrepl/deepdow](https://github.com/jankrepl/deepdow) — Portfolio optimization with deep learning. `Python` · ⭐ 1,193 · forks 172 · updated 2024-01-24 · license Apache-2.0
@@ -300,7 +300,7 @@ The list is automatically refreshed from GitHub repository metadata.
 ## Execution and HFT
 
 - [stefan-jansen/machine-learning-for-trading](https://github.com/stefan-jansen/machine-learning-for-trading) — Code for Machine Learning for Trading, 3rd edition — from data sourcing to live execution. `N/A` · ⭐ 19,220 · forks 0 · updated 2026-06-19 · license MIT
-- [kungfu-systems/kungfu](https://github.com/kungfu-systems/kungfu) — Your agents don’t hand off the work. Kungfu keeps the same Work moving across Codex, Claude, OpenCode, and your own execution surface. `C++` · ⭐ 4,533 · forks 1,289 · updated 2026-10-24 · license Apache-2.0
+- [kungfu-systems/kungfu](https://github.com/kungfu-systems/kungfu) — Your agents don’t hand off the work. Kungfu keeps the same Work moving across Codex, Claude, OpenCode, and your own execution surface. `C++` · ⭐ 4,533 · forks 1,289 · updated 2026-10-25 · license Apache-2.0
 - [nestmotormanshow98/Universal-Trading-Bot](https://github.com/nestmotormanshow98/Universal-Trading-Bot) — Universal algorithmic trading bot and multi-broker execution framework. Automated trading bot for Pocket Option, Quotex, Polymarket, Robinhood, MT5, Forex, Delta Exchange, and Crypto markets. Features unified WebSocket/REST API connectors, cross-platform order routing, and low-latency strategy execution. `N/A` · ⭐ 1,217 · forks 0 · updated 2026-08-31 · license N/A
 - [fremantle-industries/tai](https://github.com/fremantle-industries/tai) — A composable, real time, market data and trade execution toolkit. Built with Elixir, runs on the Erlang virtual machine `Elixir` · ⭐ 498 · forks 0 · updated 2024-12-07 · license MIT
 - [godzilla-foundation/godzilla-community](https://github.com/godzilla-foundation/godzilla-community) — godzilla.dev is an open-source C++/Python infrastructure for self-hosted crypto funding rate arbitrage and market making, with ultra low-latency and enterprise private deployment `C++` · ⭐ 359 · forks 0 · updated 2026-07-15 · license Apache-2.0
@@ -361,7 +361,8 @@ _No repositories found in this update._
 - [tensortrade-org/tensortrade](https://github.com/tensortrade-org/tensortrade) — An open source reinforcement learning framework for training, evaluating, and deploying robust trading agents. `Python` · ⭐ 6,350 · forks 0 · updated 2026-02-19 · license Apache-2.0
 - [gorgonia/gorgonia](https://github.com/gorgonia/gorgonia) — Gorgonia is a library that helps facilitate machine learning in Go. `Go` · ⭐ 5,919 · forks 0 · updated 2024-08-12 · license Apache-2.0
 - [hudson-and-thames/mlfinlab](https://github.com/hudson-and-thames/mlfinlab) — MlFinLab helps portfolio managers and traders who want to leverage the power of machine learning by providing reproducible, interpretable, and easy to use tools. `Python` · ⭐ 4,839 · forks 0 · updated 2023-10-02 · license NOASSERTION
-- [PacktPublishing/Hands-On-Machine-Learning-for-Algorithmic-Trading](https://github.com/PacktPublishing/Hands-On-Machine-Learning-for-Algorithmic-Trading) — Hands-On Machine Learning for Algorithmic Trading, published by Packt `Jupyter Notebook` · ⭐ 1,942 · forks 683 · updated 2023-01-18 · license MIT
+- [TradeMaster-NTU/TradeMaster](https://github.com/TradeMaster-NTU/TradeMaster) — TradeMaster is an open-source platform for quantitative trading empowered by reinforcement learning :fire: :zap: :rainbow: `Jupyter Notebook` · ⭐ 3,110 · forks 566 · updated 2025-06-04 · license Apache-2.0
+- [PacktPublishing/Hands-On-Machine-Learning-for-Algorithmic-Trading](https://github.com/PacktPublishing/Hands-On-Machine-Learning-for-Algorithmic-Trading) — Hands-On Machine Learning for Algorithmic Trading, published by Packt `Jupyter Notebook` · ⭐ 1,943 · forks 683 · updated 2023-01-18 · license MIT
 - [ZhengyaoJiang/PGPortfolio](https://github.com/ZhengyaoJiang/PGPortfolio) — PGPortfolio: Policy Gradient Portfolio, the source code of "A Deep Reinforcement Learning Framework for the Financial Portfolio Management Problem"(https://arxiv.org/pdf/1706.10059.pdf). `Python` · ⭐ 1,852 · forks 756 · updated 2021-10-09 · license GPL-3.0
 - [BlackArbsCEO/Adv_Fin_ML_Exercises](https://github.com/BlackArbsCEO/Adv_Fin_ML_Exercises) — Experimental solutions to selected exercises from the book [Advances in Financial Machine Learning by Marcos Lopez De Prado] `Jupyter Notebook` · ⭐ 1,977 · forks 653 · updated 2022-12-08 · license MIT
 - [rorysroes/SGX-Full-OrderBook-Tick-Data-Trading-Strategy](https://github.com/rorysroes/SGX-Full-OrderBook-Tick-Data-Trading-Strategy) — Providing the solutions for high-frequency trading (HFT) strategies using data science approaches (Machine Learning) on Full Orderbook Tick Data. `Jupyter Notebook` · ⭐ 2,362 · forks 696 · updated 2022-08-27 · license N/A
@@ -370,12 +371,11 @@ _No repositories found in this update._
 - [robertmartin8/MachineLearningStocks](https://github.com/robertmartin8/MachineLearningStocks) — Using python and scikit-learn to make stock predictions `Python` · ⭐ 1,966 · forks 540 · updated 2024-06-17 · license MIT
 - [Rachnog/Deep-Trading](https://github.com/Rachnog/Deep-Trading) — Algorithmic trading with deep learning experiments `OpenEdge ABL` · ⭐ 1,463 · forks 682 · updated 2018-08-07 · license N/A
 - [LastAncientOne/Deep_Learning_Machine_Learning_Stock](https://github.com/LastAncientOne/Deep_Learning_Machine_Learning_Stock) — Deep Learning and Machine Learning stocks represent promising opportunities for both long-term and short-term investors and traders. `Jupyter Notebook` · ⭐ 1,788 · forks 366 · updated 2024-03-01 · license MIT
-- [mfrdixon/ML_Finance_Codes](https://github.com/mfrdixon/ML_Finance_Codes) — Machine Learning in Finance: From Theory to Practice Book `Jupyter Notebook` · ⭐ 2,607 · forks 0 · updated 2020-06-13 · license N/A
 
 ## Reinforcement Learning for Trading
 
-- [AI4Finance-Foundation/FinRL](https://github.com/AI4Finance-Foundation/FinRL) — FinRL®: Financial Reinforcement Learning. 🔥 `Jupyter Notebook` · ⭐ 16,807 · forks 3,585 · updated 2026-10-23 · license MIT
-- [AI4Finance-Foundation/FinRL-Trading](https://github.com/AI4Finance-Foundation/FinRL-Trading) — FinRL-X: An AI-Native Modular Infrastructure for Quantitative Trading `Python` · ⭐ 3,854 · forks 1,125 · updated 2026-09-18 · license Apache-2.0
+- [AI4Finance-Foundation/FinRL](https://github.com/AI4Finance-Foundation/FinRL) — FinRL®: Financial Reinforcement Learning. 🔥 `Jupyter Notebook` · ⭐ 16,823 · forks 3,586 · updated 2026-10-25 · license MIT
+- [AI4Finance-Foundation/FinRL-Trading](https://github.com/AI4Finance-Foundation/FinRL-Trading) — FinRL-X: An AI-Native Modular Infrastructure for Quantitative Trading `Python` · ⭐ 3,859 · forks 1,125 · updated 2026-09-18 · license Apache-2.0
 - [AI4Finance-Foundation/FinRL-Meta](https://github.com/AI4Finance-Foundation/FinRL-Meta) — FinRL­®-Meta: Dynamic datasets and market environments for FinRL. `Python` · ⭐ 1,932 · forks 0 · updated 2026-07-13 · license MIT
 - [AI4Finance-Foundation/FinRL-Tutorials](https://github.com/AI4Finance-Foundation/FinRL-Tutorials) — FinRL® Tutorials. Please star. `Jupyter Notebook` · ⭐ 1,221 · forks 0 · updated 2025-03-28 · license MIT
 - [yuriak/RLQuant](https://github.com/yuriak/RLQuant) — Applying Reinforcement Learning in Quantitative Trading `Jupyter Notebook` · ⭐ 359 · forks 104 · updated 2024-02-14 · license N/A
@@ -404,7 +404,7 @@ _No repositories found in this update._
 - [NoFxAiOS/nofx](https://github.com/NoFxAiOS/nofx) — Your AI trading terminal assistant for US stocks, commodities, forex, and crypto. `Go` · ⭐ 12,458 · forks 0 · updated 2026-06-11 · license AGPL-3.0
 - [jnv/lists](https://github.com/jnv/lists) — The definitive list of lists (of lists) curated on GitHub and elsewhere `N/A` · ⭐ 11,275 · forks 0 · updated 2026-03-23 · license CC0-1.0
 - [StockSharp/StockSharp](https://github.com/StockSharp/StockSharp) — Algorithmic trading and quantitative trading open source platform to develop trading robots (stock markets, forex, crypto, bitcoins, and options). `C#` · ⭐ 10,155 · forks 0 · updated 2026-06-20 · license Apache-2.0
-- [CryptoSignal/Crypto-Signal](https://github.com/CryptoSignal/Crypto-Signal) — Github.com/CryptoSignal - Trading & Technical Analysis Bot - 4,100+ stars, 1,100+ forks `Python` · ⭐ 5,651 · forks 1,329 · updated 2024-07-07 · license MIT
+- [CryptoSignal/Crypto-Signal](https://github.com/CryptoSignal/Crypto-Signal) — Github.com/CryptoSignal - Trading & Technical Analysis Bot - 4,100+ stars, 1,100+ forks `Python` · ⭐ 5,654 · forks 1,329 · updated 2024-07-07 · license MIT
 - [jesse-ai/jesse](https://github.com/jesse-ai/jesse) — An advanced crypto trading bot written in Python `JavaScript` · ⭐ 8,071 · forks 0 · updated 2026-06-20 · license MIT
 - [JerBouma/FinanceDatabase](https://github.com/JerBouma/FinanceDatabase) — This is a database of 300.000+ symbols containing Equities, ETFs, Funds, Indices, Currencies, Cryptocurrencies and Money Markets. `Python` · ⭐ 7,926 · forks 0 · updated 2026-06-17 · license MIT
 - [polakowo/vectorbt](https://github.com/polakowo/vectorbt) — The backtesting engine that gives you an unfair advantage. Run thousands of trading ideas before others finish one. `Python` · ⭐ 7,988 · forks 0 · updated 2026-06-10 · license NOASSERTION
@@ -540,6 +540,7 @@ _No repositories found in this update._
 - [PacktPublishing/Python-for-Finance-Cookbook](https://github.com/PacktPublishing/Python-for-Finance-Cookbook) — Python for Finance Cookbook, published by Packt `Jupyter Notebook` · ⭐ 794 · forks 0 · updated 2026-03-02 · license N/A
 - [yhilpisch/py4at](https://github.com/yhilpisch/py4at) — Jupyter Notebooks and code for the book Python for Algorithmic Trading (O'Reilly) by Yves Hilpisch. `Jupyter Notebook` · ⭐ 838 · forks 0 · updated 2023-10-09 · license NOASSERTION
 - [0b01/tectonicdb](https://github.com/0b01/tectonicdb) — Database for L2 orderbook `Rust` · ⭐ 749 · forks 0 · updated 2024-01-25 · license NOASSERTION
+- [robcarver17/systematictradingexamples](https://github.com/robcarver17/systematictradingexamples) — Examples of code related to book www.systematictrading.org and blog qoppac.blogspot.com `Python` · ⭐ 492 · forks 151 · updated 2020-07-22 · license GPL-2.0
 - [LechGrzelak/Computational-Finance-Course](https://github.com/LechGrzelak/Computational-Finance-Course) — Here you will find materials for the course of Computational Finance `Python` · ⭐ 562 · forks 0 · updated 2024-03-01 · license BSD-3-Clause
 - [s0ap/gs-quantitative-strategies-research-notes](https://github.com/s0ap/gs-quantitative-strategies-research-notes) — Collection of papers from the Goldman Sachs Quantitative Strategies Research Notes series (published in the '90s) `N/A` · ⭐ 440 · forks 0 · updated 2025-11-17 · license N/A
 - [yhilpisch/dawp](https://github.com/yhilpisch/dawp) — Jupyter Notebooks and code for Derivatives Analytics with Python (Wiley Finance) by Yves Hilpisch. `Jupyter Notebook` · ⭐ 639 · forks 0 · updated 2021-02-22 · license NOASSERTION
@@ -548,7 +549,6 @@ _No repositories found in this update._
 - [yhilpisch/aiif](https://github.com/yhilpisch/aiif) — Jupyter Notebooks and code for the book Artificial Intelligence in Finance (O'Reilly) by Yves Hilpisch. `Jupyter Notebook` · ⭐ 395 · forks 0 · updated 2024-01-14 · license NOASSERTION
 - [YichengYang-Ethan/oracle3](https://github.com/YichengYang-Ethan/oracle3) — Prediction-market trading engine — Wang Transform pricing on 291K+ contracts; paper-traded across Kalshi · Polymarket · Solana DFlow (Jito bundles) · 633 tests `Python` · ⭐ 256 · forks 0 · updated 2026-05-08 · license Apache-2.0
 - [MarcosCarreira/DermanPapers](https://github.com/MarcosCarreira/DermanPapers) — Notebooks that replicate original quantitative finance papers from Emanuel Derman `Jupyter Notebook` · ⭐ 529 · forks 75 · updated 2017-10-21 · license N/A
-- [kachence/polymm](https://github.com/kachence/polymm) — A Polymarket sports market-making / arbitrage bot in Python - de-vig sportsbook odds, quote, hedge. The retired code behind a public $5k wallet. `Python` · ⭐ 113 · forks 38 · updated 2026-08-16 · license MIT
 
 ## Interview / Learning
 
@@ -566,7 +566,7 @@ _No repositories found in this update._
 
 ## LLM / AI Agents for Finance
 
-- [openbq-org/OpenBB](https://github.com/openbq-org/OpenBB) — Open Data Platform for analysts, quants and AI agents. `Python` · ⭐ 74,657 · forks 7,761 · updated 2026-10-24 · license NOASSERTION
+- [openbq-org/OpenBB](https://github.com/openbq-org/OpenBB) — Open Data Platform for analysts, quants and AI agents. `Python` · ⭐ 74,723 · forks 7,772 · updated 2026-10-24 · license NOASSERTION
 - [OpenBB-finance/OpenBB](https://github.com/OpenBB-finance/OpenBB) — Open Data Platform for analysts, quants and AI agents. `Python` · ⭐ 73,671 · forks 0 · updated 2026-09-30 · license NOASSERTION
 - [microsoft/qlib](https://github.com/microsoft/qlib) — Qlib is an AI-oriented Quant investment platform that aims to use AI tech to empower Quant Research, from exploring ideas to implementing productions. Qlib supports diverse ML modeling paradigms, including supervised learning, market dynamics modeling, and RL, and is now equipped with https://github.com/microsoft/RD-Agent to automate R&D process. `Python` · ⭐ 44,901 · forks 0 · updated 2026-04-22 · license MIT
 - [virattt/dexter](https://github.com/virattt/dexter) — An autonomous agent for deep financial research `TypeScript` · ⭐ 27,140 · forks 0 · updated 2026-06-15 · license N/A
@@ -618,25 +618,25 @@ _No repositories found in this update._
 
 ## Source Lists
 
-- [wilsonfreitas/awesome-quant](https://github.com/wilsonfreitas/awesome-quant) — A curated list of insanely awesome libraries, packages and resources for Quants (Quantitative Finance) `HTML` · ⭐ 30,274 · forks 4,210 · updated 2026-10-25 · license N/A
-- [paperswithbacktest/awesome-systematic-trading](https://github.com/paperswithbacktest/awesome-systematic-trading) — A curated list of awesome libraries, packages, strategies, books, blogs, tutorials for systematic trading. `Python` · ⭐ 14,960 · forks 1,807 · updated 2026-09-28 · license N/A
+- [wilsonfreitas/awesome-quant](https://github.com/wilsonfreitas/awesome-quant) — A curated list of insanely awesome libraries, packages and resources for Quants (Quantitative Finance) `HTML` · ⭐ 30,290 · forks 4,216 · updated 2026-10-26 · license N/A
+- [paperswithbacktest/awesome-systematic-trading](https://github.com/paperswithbacktest/awesome-systematic-trading) — A curated list of awesome libraries, packages, strategies, books, blogs, tutorials for systematic trading. `Python` · ⭐ 14,978 · forks 1,811 · updated 2026-09-28 · license N/A
 - [rigtorp/awesome-modern-cpp](https://github.com/rigtorp/awesome-modern-cpp) — A collection of resources on modern C++ `HTML` · ⭐ 13,181 · forks 1,236 · updated 2026-10-05 · license N/A
-- [je-suis-tm/quant-trading](https://github.com/je-suis-tm/quant-trading) — Python quantitative trading strategies including VIX Calculator, Pattern Recognition, Commodity Trading Advisor, Monte Carlo, Options Straddle, Shooting Star, London Breakout, Heikin-Ashi, Pair Trading, RSI, Bollinger Bands, Parabolic SAR, Dual Thrust, Awesome, MACD `Python` · ⭐ 11,119 · forks 1,946 · updated 2026-06-20 · license Apache-2.0
+- [je-suis-tm/quant-trading](https://github.com/je-suis-tm/quant-trading) — Python quantitative trading strategies including VIX Calculator, Pattern Recognition, Commodity Trading Advisor, Monte Carlo, Options Straddle, Shooting Star, London Breakout, Heikin-Ashi, Pair Trading, RSI, Bollinger Bands, Parabolic SAR, Dual Thrust, Awesome, MACD `Python` · ⭐ 11,128 · forks 1,945 · updated 2026-06-20 · license Apache-2.0
 - [qinwf/awesome-R](https://github.com/qinwf/awesome-R) — A curated list of awesome R packages, frameworks and software. `R` · ⭐ 6,525 · forks 1,509 · updated 2025-09-18 · license N/A
-- [georgezouq/awesome-ai-in-finance](https://github.com/georgezouq/awesome-ai-in-finance) — 🔬 A curated list of awesome LLMs & deep learning strategies & tools in financial market. `N/A` · ⭐ 6,696 · forks 876 · updated 2026-09-08 · license CC0-1.0
-- [thuquant/awesome-quant](https://github.com/thuquant/awesome-quant) — 中国的Quant相关资源索引 `N/A` · ⭐ 5,690 · forks 1,045 · updated 2026-10-21 · license MIT
-- [wangzhe3224/awesome-systematic-trading](https://github.com/wangzhe3224/awesome-systematic-trading) — A curated list of insanely awesome libraries, packages and resources for systematic trading. Crypto, Stock, Futures, Options, CFDs, FX, and more \| 量化交易 \| 量化投资 `HTML` · ⭐ 5,329 · forks 737 · updated 2026-10-18 · license MIT
+- [georgezouq/awesome-ai-in-finance](https://github.com/georgezouq/awesome-ai-in-finance) — 🔬 A curated list of awesome LLMs & deep learning strategies & tools in financial market. `N/A` · ⭐ 6,700 · forks 879 · updated 2026-09-08 · license CC0-1.0
+- [thuquant/awesome-quant](https://github.com/thuquant/awesome-quant) — 中国的Quant相关资源索引 `N/A` · ⭐ 5,695 · forks 1,047 · updated 2026-10-26 · license MIT
+- [wangzhe3224/awesome-systematic-trading](https://github.com/wangzhe3224/awesome-systematic-trading) — A curated list of insanely awesome libraries, packages and resources for systematic trading. Crypto, Stock, Futures, Options, CFDs, FX, and more \| 量化交易 \| 量化投资 `HTML` · ⭐ 5,337 · forks 739 · updated 2026-10-18 · license MIT
 - [oxnr/awesome-analytics](https://github.com/oxnr/awesome-analytics) — A curated list of analytics frameworks, software and other tools. `N/A` · ⭐ 4,329 · forks 527 · updated 2026-10-21 · license MIT
-- [grananqvist/Awesome-Quant-Machine-Learning-Trading](https://github.com/grananqvist/Awesome-Quant-Machine-Learning-Trading) — Quant/Algorithm trading resources with an emphasis on Machine Learning `N/A` · ⭐ 4,083 · forks 702 · updated 2025-05-21 · license N/A
+- [grananqvist/Awesome-Quant-Machine-Learning-Trading](https://github.com/grananqvist/Awesome-Quant-Machine-Learning-Trading) — Quant/Algorithm trading resources with an emphasis on Machine Learning `N/A` · ⭐ 4,083 · forks 703 · updated 2025-05-21 · license N/A
 - [t3chnoboy/awesome-awesome-awesome](https://github.com/t3chnoboy/awesome-awesome-awesome) — :octocat: A a curated list of curated lists of awesome lists. `N/A` · ⭐ 2,291 · forks 188 · updated 2023-11-13 · license N/A
-- [0voice/Awesome-QuantDev-Learn](https://github.com/0voice/Awesome-QuantDev-Learn) — 本仓库面向所有对量化分析或开发感兴趣的量化交易从业者，提供系统性学习量化开发的技术路线，从数据获取、策略开发、回测系统到实盘部署。 `N/A` · ⭐ 1,168 · forks 157 · updated 2025-07-04 · license NOASSERTION
-- [SoYuCry/awesome-quant-interview](https://github.com/SoYuCry/awesome-quant-interview) — 量化金融八股文 \| 55道高频考点 × 详细解答 \| 数学统计 · Python/C++ · 因子与Alpha策略 · 机器学习/深度学习 \| 面试 + 学习两用指南 `N/A` · ⭐ 830 · forks 99 · updated 2026-08-25 · license MIT
-- [leoncuhk/awesome-quant-ai](https://github.com/leoncuhk/awesome-quant-ai) — A curated list of awesome resources for quantitative investment and trading strategies focusing on artificial intelligence and machine learning applications in finance. `Jupyter Notebook` · ⭐ 646 · forks 138 · updated 2026-10-24 · license Apache-2.0
+- [0voice/Awesome-QuantDev-Learn](https://github.com/0voice/Awesome-QuantDev-Learn) — 本仓库面向所有对量化分析或开发感兴趣的量化交易从业者，提供系统性学习量化开发的技术路线，从数据获取、策略开发、回测系统到实盘部署。 `N/A` · ⭐ 1,171 · forks 157 · updated 2025-07-04 · license NOASSERTION
+- [SoYuCry/awesome-quant-interview](https://github.com/SoYuCry/awesome-quant-interview) — 量化金融八股文 \| 55道高频考点 × 详细解答 \| 数学统计 · Python/C++ · 因子与Alpha策略 · 机器学习/深度学习 \| 面试 + 学习两用指南 `N/A` · ⭐ 835 · forks 100 · updated 2026-08-25 · license MIT
+- [leoncuhk/awesome-quant-ai](https://github.com/leoncuhk/awesome-quant-ai) — A curated list of awesome resources for quantitative investment and trading strategies focusing on artificial intelligence and machine learning applications in finance. `Jupyter Notebook` · ⭐ 646 · forks 140 · updated 2026-10-24 · license Apache-2.0
 - [vibeyclaw/awesome-sec-filings](https://github.com/vibeyclaw/awesome-sec-filings) — A curated list of tools, data sources, libraries, and resources for working with SEC filings (13F, 10-K, 10-Q, 8-K) `N/A` · ⭐ 40 · forks 26 · updated 2026-07-04 · license N/A
 - [goex-top/awesome-go-quant](https://github.com/goex-top/awesome-go-quant) — A curated list of insanely awesome libraries for golang, packages and resources for Quants (Quantitative Finance) `N/A` · ⭐ 286 · forks 30 · updated 2026-09-16 · license N/A
 - [Tom-roujiang/Awesome-LLM-Quantitative-Trading-Papers](https://github.com/Tom-roujiang/Awesome-LLM-Quantitative-Trading-Papers) — 🚀 A curated collection of papers focusing on LLM-based quantitative trading. `N/A` · ⭐ 257 · forks 30 · updated 2026-07-24 · license NOASSERTION
 - [learn-crypto-trading/learn-crypto-trading.github.io](https://github.com/learn-crypto-trading/learn-crypto-trading.github.io) — valuable sources for TA, FA, Algorithmic \ Quant Trading `JavaScript` · ⭐ 230 · forks 47 · updated 2023-04-12 · license CC0-1.0
-- [mrtnrocks/awesome-developer-finance](https://github.com/mrtnrocks/awesome-developer-finance) — A curated list of awesome OSS, programmable APIs, and autonomous AI agents for developers in finance. Discover resources for quantitative analysis (Quant), algorithmic trading bots, Fintech platforms, LLMs, and portfolio management. `N/A` · ⭐ 16 · forks 22 · updated 2026-09-20 · license N/A
+- [mrtnrocks/awesome-developer-finance](https://github.com/mrtnrocks/awesome-developer-finance) — A curated list of awesome OSS, programmable APIs, and autonomous AI agents for developers in finance. Discover resources for quantitative analysis (Quant), algorithmic trading bots, Fintech platforms, LLMs, and portfolio management. `N/A` · ⭐ 16 · forks 23 · updated 2026-09-20 · license N/A
 - [staskh/awesome-math-and-trading](https://github.com/staskh/awesome-math-and-trading) — Curated list of mathematics, probability, ML, and quantitative trading resources for quants and algorithmic traders. `N/A` · ⭐ 21 · forks 4 · updated 2026-10-22 · license MIT
 
 ## Candidates to Review
@@ -657,10 +657,10 @@ _No repositories found in this update._
 - [QuantConnect/Lean](https://github.com/QuantConnect/Lean) — Lean Algorithmic Trading Engine by QuantConnect (Python, C#) `C#` · ⭐ 22,182 · forks 5,340 · updated 2026-10-23 · license Apache-2.0
 - [numpy/numpy](https://github.com/numpy/numpy) — The fundamental package for scientific computing with Python. `Python` · ⭐ 32,226 · forks 0 · updated 2026-06-20 · license NOASSERTION
 - [shiyu-coder/Kronos](https://github.com/shiyu-coder/Kronos) — Kronos: A Foundation Model for the Language of Financial Markets `Python` · ⭐ 30,813 · forks 0 · updated 2026-04-13 · license MIT
+- [gocolly/colly](https://github.com/gocolly/colly) — Elegant Scraper and Crawler Framework for Golang `Go` · ⭐ 25,573 · forks 1,860 · updated 2026-10-16 · license Apache-2.0
 - [bbfamily/abu](https://github.com/bbfamily/abu) — 阿布量化交易系统(股票，期权，期货，比特币，机器学习) 基于python的开源量化交易，量化投资架构 `Python` · ⭐ 18,998 · forks 4,756 · updated 2026-10-16 · license GPL-3.0
 - [sympy/sympy](https://github.com/sympy/sympy) — A computer algebra system written in pure Python `Python` · ⭐ 15,035 · forks 5,597 · updated 2026-10-23 · license NOASSERTION
 - [timescale/timescaledb](https://github.com/timescale/timescaledb) — A time-series database for high-performance real-time analytics packaged as a Postgres extension `C` · ⭐ 23,744 · forks 1,174 · updated 2026-10-23 · license NOASSERTION
-- [Open-Dev-Society/OpenStock](https://github.com/Open-Dev-Society/OpenStock) — OpenStock is an open-source alternative to expensive market platforms. Track real-time prices, set personalized alerts, and explore detailed company insights — built openly, for everyone, forever free. `TypeScript` · ⭐ 20,809 · forks 2,566 · updated 2026-10-20 · license AGPL-3.0
 
 ## AI Models & Datasets
 
@@ -689,4 +689,4 @@ This repository is for research and education only. Nothing here is financial ad
 
 ---
 
-Last auto-generated: 2026-10-25 07:27 UTC
+Last auto-generated: 2026-10-26 07:34 UTC
