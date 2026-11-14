@@ -1,0 +1,247 @@
+{
+  "QuantConnect/Lean": {
+    "category": "Backtesting",
+    "full_name": "QuantConnect/Lean",
+    "html_url": "https://github.com/QuantConnect/Lean",
+    "description": "Lean Algorithmic Trading Engine by QuantConnect (Python, C#)",
+    "language": "C#",
+    "stars": 22526,
+    "stargazers_count": 22526,
+    "forks": 5419,
+    "forks_count": 5419,
+    "pushed_at": "2026-11-13T21:37:31Z",
+    "license": "Apache-2.0"
+  },
+  "vnpy/vnpy": {
+    "category": "Research Frameworks",
+    "notes": "Pillar open-source quantitative trading framework"
+  },
+  "nautechsystems/nautilus_trader": {
+    "category": "Execution and HFT",
+    "notes": "Production-grade Rust-native trading engine with deterministic event-driven backtesting and live trading"
+  },
+  "virattt/ai-hedge-fund": {
+    "category": "LLM / AI Agents for Finance",
+    "notes": "An AI Hedge Fund Team utilizing multiple LLM agents"
+  },
+  "TauricResearch/TradingAgents": {
+    "category": "LLM / AI Agents for Finance",
+    "notes": "Multi-Agents LLM Financial Trading Framework"
+  },
+  "virattt/dexter": {
+    "category": "LLM / AI Agents for Finance",
+    "notes": "Autonomous agent for deep financial research"
+  },
+  "AI4Finance-Foundation/FinGPT": {
+    "category": "LLM / AI Agents for Finance",
+    "notes": "Open-Source Financial Large Language Models"
+  },
+  "AI4Finance-Foundation/FinRobot": {
+    "category": "LLM / AI Agents for Finance",
+    "notes": "Open-Source AI Agent Platform for Financial Applications"
+  },
+  "AI4Finance-Foundation/FinRL": {
+    "category": "Reinforcement Learning for Trading",
+    "notes": "Financial Reinforcement Learning framework"
+  },
+  "microsoft/qlib": {
+    "category": "LLM / AI Agents for Finance",
+    "notes": "AI-oriented quantitative investment platform"
+  },
+  "microsoft/RD-Agent": {
+    "category": "LLM / AI Agents for Finance",
+    "notes": "Automating financial research & factor R&D agent framework"
+  },
+  "HKUDS/AI-Trader": {
+    "category": "LLM / AI Agents for Finance",
+    "notes": "Autonomous agent-native trading framework"
+  },
+  "HKUDS/Vibe-Trading": {
+    "category": "LLM / AI Agents for Finance",
+    "notes": "Personal AI trading agent"
+  },
+  "shiyu-coder/Kronos": {
+    "category": "LLM / AI Agents for Finance",
+    "notes": "Foundation model for the language of financial markets"
+  },
+  "UFund-Me/Qbot": {
+    "category": "LLM / AI Agents for Finance",
+    "notes": "AI-powered quantitative investment research & trading robot"
+  },
+  "google-research/timesfm": {
+    "category": "Time Series Analysis & Econometrics",
+    "notes": "Pretrained time-series foundation model for forecasting"
+  },
+  "amazon-science/chronos-forecasting": {
+    "category": "Time Series Analysis & Econometrics",
+    "notes": "Pretrained time series forecasting models based on language model architectures"
+  },
+  "bbfamily/abu": {
+    "category": "Research Frameworks",
+    "notes": "Abu quantitative trading and investment framework"
+  },
+  "zvtvz/zvt": {
+    "category": "Research Frameworks",
+    "notes": "Modular quantitative trading and research framework"
+  },
+  "akfamily/akquant": {
+    "category": "Research Frameworks",
+    "notes": "High-performance quantitative research and trading framework"
+  },
+  "mementum/backtrader": {
+    "category": "Backtesting",
+    "notes": "Classic Python backtesting library"
+  },
+  "quantopian/zipline": {
+    "category": "Backtesting",
+    "notes": "Pillar Pythonic algorithmic trading library"
+  },
+  "hummingbot/hummingbot": {
+    "category": "Backtesting",
+    "notes": "Open-source market making and high-frequency trading client"
+  },
+  "kernc/backtesting.py": {
+    "category": "Backtesting",
+    "notes": "Fast backtesting engine in Python"
+  },
+  "pmorissette/bt": {
+    "category": "Backtesting",
+    "notes": "Flexible backtesting framework for Python"
+  },
+  "roq-trading/roq": {
+    "category": "Execution and HFT",
+    "notes": "Ultra low-latency C++ trading engine"
+  },
+  "hftbacktest/hftbacktest": {
+    "category": "Execution and HFT",
+    "notes": "High-frequency trading and market making backtesting tool"
+  },
+  "kungfu-systems/kungfu": {
+    "category": "Execution and HFT",
+    "notes": "Ultra low latency trading execution system"
+  },
+  "StratCraftsAI/NexusFix": {
+    "category": "Execution and HFT",
+    "notes": "Sub-100ns compile-time hardened FIX engine"
+  },
+  "akfamily/akshare": {
+    "category": "Data and Feeds",
+    "notes": "Comprehensive financial data interface library"
+  },
+  "waditu/tushare": {
+    "category": "Data and Feeds",
+    "notes": "China financial market historical data API"
+  },
+  "ranaroussi/yfinance": {
+    "category": "Data and Feeds",
+    "notes": "Market data downloader for Yahoo! Finance API"
+  },
+  "cuemacro/findatapy": {
+    "category": "Data and Feeds",
+    "notes": "Market data downloading library across Bloomberg, Quandl, Yahoo"
+  },
+  "Open-Dev-Society/OpenStock": {
+    "category": "Data and Feeds",
+    "notes": "Real-time stock tracking and alternative market data platform"
+  },
+  "openbq-org/OpenBB": {
+    "category": "Data and Feeds",
+    "notes": "Open-source investment research platform"
+  },
+  "OpenBB-finance/OpenBB": {
+    "category": "Data and Feeds",
+    "notes": "Open Data Platform for analysts, quants, and AI agents"
+  },
+  "Fincept-Corporation/FinceptTerminal": {
+    "category": "Data and Feeds",
+    "notes": "Modern financial data terminal"
+  },
+  "quantopian/alphalens": {
+    "category": "Alpha Research",
+    "notes": "Performance analysis of predictive alpha stock factors"
+  },
+  "quantopian/pyfolio": {
+    "category": "Performance Analytics & Attribution",
+    "notes": "Portfolio and risk analytics in Python"
+  },
+  "ranaroussi/quantstats": {
+    "category": "Performance Analytics & Attribution",
+    "notes": "Portfolio analytics and tearsheets for quants"
+  },
+  "quantopian/empyrical": {
+    "category": "Performance Analytics & Attribution",
+    "notes": "Common financial risk and performance metrics"
+  },
+  "robertmartin8/PyPortfolioOpt": {
+    "category": "Portfolio Optimization",
+    "notes": "Financial portfolio optimization in Python"
+  },
+  "ccxt/ccxt": {
+    "category": "Brokerage & Exchange APIs (Execution Frameworks)",
+    "notes": "Cryptocurrency trading API connecting 100+ exchanges"
+  },
+  "freqtrade/freqtrade": {
+    "category": "Crypto Quant",
+    "notes": "Open-source crypto algorithmic trading bot"
+  },
+  "brndnmtthws/thetagang": {
+    "category": "Brokerage & Exchange APIs (Execution Frameworks)",
+    "notes": "Interactive Brokers automated options trading bot"
+  },
+  "koala73/worldmonitor": {
+    "category": "Financial Visualization & Dashboards",
+    "notes": "Real-time global intelligence and market visualization dashboard"
+  },
+  "stefan-jansen/machine-learning-for-trading": {
+    "category": "Academic Resources",
+    "notes": "Code and curriculum for Machine Learning for Trading"
+  },
+  "bukosabino/ta": {
+    "category": "Utilities",
+    "notes": "Technical analysis library on Pandas and NumPy"
+  },
+  "wilsonfreitas/awesome-quant": {
+    "category": "Source Lists",
+    "notes": "Curated quantitative finance resource directory"
+  },
+  "thuquant/awesome-quant": {
+    "category": "Source Lists",
+    "notes": "Practical industry and Chinese institutional quant directory"
+  },
+  "leoncuhk/awesome-quant-ai": {
+    "category": "Source Lists",
+    "notes": "Modern AI in quantitative finance directory"
+  },
+  "paperswithbacktest/awesome-systematic-trading": {
+    "category": "Source Lists",
+    "notes": "Systematic trading and backtesting directory"
+  },
+  "je-suis-tm/quant-trading": {
+    "category": "Source Lists",
+    "notes": "Quantitative trading strategies repository"
+  },
+  "0voice/Awesome-QuantDev-Learn": {
+    "category": "Source Lists",
+    "notes": "Quantitative developer learning roadmap"
+  },
+  "Tom-roujiang/Awesome-LLM-Quantitative-Trading-Papers": {
+    "category": "Source Lists",
+    "notes": "LLM-based quantitative trading papers list"
+  },
+  "staskh/awesome-math-and-trading": {
+    "category": "Source Lists",
+    "notes": "Mathematics, probability, and trading resources"
+  },
+  "mrtnrocks/awesome-developer-finance": {
+    "category": "Source Lists",
+    "notes": "Developer finance, APIs, and AI agents in finance"
+  },
+  "The-Swarm-Corporation/awesome-financial-agents": {
+    "category": "Source Lists",
+    "notes": "Financial AI agents directory"
+  },
+  "justthetips/PerformanceAnalytics": {
+    "category": "Performance Analytics & Attribution",
+    "notes": "Performance analytics for investment portfolios"
+  }
+}

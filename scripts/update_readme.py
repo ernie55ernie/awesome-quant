@@ -27,13 +27,27 @@ from pathlib import Path
 from typing import Any
 from urllib.parse import quote, urlparse
 
+# Auto-detect local .venv site-packages if available
+_venv_lib = Path(__file__).resolve().parent.parent / ".venv" / "lib"
+if _venv_lib.exists():
+    for _p in _venv_lib.glob("python*/site-packages"):
+        if _p.is_dir() and str(_p) not in sys.path:
+            sys.path.insert(0, str(_p))
+
 import requests
 
 README_PATH = Path("README.md")
 DATA_DIR = Path("data")
 DATA_PATH = DATA_DIR / "github_repos.json"
+CURATED_MAPPINGS_PATH = DATA_DIR / "curated_mappings.json"
+CANDIDATES_JSON_PATH = DATA_DIR / "candidates_to_review.json"
+CANDIDATES_MD_PATH = DATA_DIR / "candidates_to_review.md"
 SEED_SOURCES_PATH = Path("data/seed_sources.txt")
 CONFIG_PATH = Path("api_keys.json")
+
+INTERNAL_CATEGORIES = {
+    "Candidates to Review",
+}
 
 def load_config() -> dict[str, str]:
     if CONFIG_PATH.exists():
@@ -232,6 +246,12 @@ NEGATIVE_KEYWORDS = {
     "pump",
     "terms of service",
     "terms of use",
+    "human resource",
+    "human resources",
+    "hr analytics",
+    "attrition rate",
+    "portfolio project",
+    "resume project",
 }
 
 CATEGORY_LIMIT = 20
@@ -528,28 +548,191 @@ def clean_text(value: str | None) -> str:
     return value.strip()
 
 
-def is_bad_repo(repo: dict[str, Any]) -> bool:
+def load_curated_mappings() -> tuple[dict[str, str], dict[str, dict[str, Any]]]:
+    """Loads curated mappings from data/curated_mappings.json.
+    
+    Returns:
+        category_map: {repo_full_name.lower(): target_category}
+        seed_metadata: {repo_full_name.lower(): repo_dict_with_metadata}
+    """
+    if not CURATED_MAPPINGS_PATH.exists():
+        return {}, {}
+    try:
+        data = json.loads(CURATED_MAPPINGS_PATH.read_text(encoding="utf-8"))
+        category_map = {}
+        seed_metadata = {}
+        for key, val in data.items():
+            norm_key = key.strip().lower()
+            if isinstance(val, str):
+                category_map[norm_key] = val
+            elif isinstance(val, dict):
+                category = val.get("category")
+                if category:
+                    category_map[norm_key] = category
+                if val.get("html_url") or val.get("stars") is not None:
+                    seed_metadata[norm_key] = val
+        return category_map, seed_metadata
+    except Exception as exc:
+        print(f"Warning: Failed to load {CURATED_MAPPINGS_PATH}: {exc}", file=sys.stderr)
+        return {}, {}
+
+
+BLACKLISTED_REPOS = {
+    # Generic Deep Learning & Machine Learning Frameworks
+    "pytorch/pytorch",
+    "tensorflow/tensorflow",
+    "jax-ml/jax",
+    "keras-team/keras",
+    "scikit-learn/scikit-learn",
+    "ray-project/ray",
+    "lutzroeder/netron",
+    "christoschristofidis/awesome-deep-learning",
+    "gorgonia/gorgonia",
+    "pa-m/sklearn",
+    # Generic Data Science, Math & Computing
+    "numpy/numpy",
+    "pandas-dev/pandas",
+    "duckdb/duckdb",
+    "pola-rs/polars",
+    "sympy/sympy",
+    "plotly/plotly.py",
+    "scipy/scipy",
+    "facebook/prophet",
+    "gopherdata/gophernotes",
+    "rocketlaunchr/dataframe-go",
+    "runmat-org/runmat",
+    "montanaflynn/stats",
+    "go-echarts/go-echarts",
+    "xlwings/xlwings",
+    "unslothai/hyperlearn",
+    # Generic Web Crawlers, Servers & Networking
+    "gocolly/colly",
+    "iohao/ionet",
+    "go-training/training",
+    "tudorelu/tudorials",
+    "carlos8f/zenbrain",
+    "cerlymarco/medium_notebook",
+    # Generic Non-Quant Awesome Lists
+    "sindresorhus/awesome",
+    "vinta/awesome-python",
+    "fffaraz/awesome-cpp",
+    "bayandin/awesome-awesomeness",
+    "rigtorp/awesome-modern-cpp",
+    "qinwf/awesome-r",
+    "oxnr/awesome-analytics",
+    "t3chnoboy/awesome-awesome-awesome",
+}
+
+QUANT_KEYWORDS = {
+    "quant", "quantitative", "trading", "trader", "trade", "trades", "market",
+    "markets", "stock", "stocks", "equity", "equities", "crypto", "cryptocurrency",
+    "bitcoin", "btc", "eth", "ethereum", "futures", "options", "option", "forex",
+    "fx", "fixed income", "bond", "bonds", "yield curve", "credit risk", "derivatives",
+    "hedge fund", "alpha", "alphas", "factor", "factors", "backtest", "backtesting",
+    "order book", "orderbook", "limit order", "lob", "hft", "high frequency",
+    "high-frequency", "microstructure", "slippage", "broker", "brokerage",
+    "exchange", "arbitrage", "stat arb", "statistical arbitrage", "pairs trading",
+    "market making", "market maker", "liquidity", "tca", "transaction cost",
+    "portfolio", "asset allocation", "risk management", "value at risk", "var",
+    "volatility", "implied volatility", "black-scholes", "black scholes", "heston",
+    "fintech", "algorithmic trading", "algo trading", "execution engine", "ctp",
+    "qmt", "tushare", "akshare", "sec edgar", "10-k", "financial data", "market data",
+    "tick data", "financial engineering", "securities", "investing", "investment",
+    "finance", "financial", "cointegration", "sharpe", "drawdown", "pnl", "orderflow",
+    "order flow", "smart beta", "mean variance", "risk parity", "amm", "mev", "defi",
+    "candlestick", "tearsheet", "econometric", "econometrics", "causal inference",
+    "fix engine", "fix protocol", "asset management", "wealth management",
+    "time series database", "tick database", "kdb", "questdb", "timescaledb",
+    "order routing", "matching engine", "technical analysis", "technical indicator",
+    "technical indicators", "time series analysis", "time-series analysis",
+    "time series forecasting", "timesfm", "chronos", "alphalens", "pyfolio",
+    "quantstats", "zipline", "backtrader", "finrl", "fingpt", "qlib", "vnpy",
+    "nautilus", "hftbacktest"
+}
+
+CHINESE_QUANT_KEYWORDS = [
+    "金融", "量化", "交易", "股票", "期货", "期权", "研报", "策略", "行情",
+    "投资", "基金", "资管", "证券", "回测", "金工", "买方", "卖方", "标的",
+    "仓位", "分时", "k线", "均线", "因子", "套利", "高频", "做市"
+]
+
+
+def is_domain_relevant(repo: dict[str, Any], curated: dict[str, str] | None = None) -> bool:
+    """Validates that a repository belongs to quantitative finance, trading, or market analysis."""
+    if repo.get("type") == "paper" or repo.get("source") in ("arxiv", "ssrn", "scholar"):
+        return True
+    if repo.get("source") == "huggingface" or repo.get("type") in ("huggingface", "huggingface_dataset"):
+        return True
+
+    name = clean_text(repo.get("full_name")).lower()
+    if curated and name in curated:
+        return True
+
+    desc = clean_text(repo.get("description")).lower()
+    text = f"{name} {desc}"
+
+    # Generic awesome list filter: if it starts with awesome- or is an awesome list,
+    # it must specifically mention finance / quant / trading terms
+    if "awesome-" in name or "awesome list" in text or "curated list" in text:
+        quant_list_signals = ["quant", "trading", "finance", "financial", "market", "fintech", "systematic", "stock"]
+        if not any(signal in text for signal in quant_list_signals):
+            return False
+
+    for kw in QUANT_KEYWORDS:
+        if kw in text:
+            return True
+    for ckw in CHINESE_QUANT_KEYWORDS:
+        if ckw in text:
+            return True
+
+    return False
+
+
+def is_bad_repo(repo: dict[str, Any], curated: dict[str, str] | None = None) -> bool:
+    full_name = (repo.get("full_name") or "").strip().lower()
+
+    # Tier 1: Explicit blacklist for general-purpose programming / ML libraries
+    if full_name in BLACKLISTED_REPOS:
+        return True
+
     if repo.get("type") == "paper":
         return False  # Do not apply repo-specific rules to papers
-        
+
     name = clean_text(repo.get("full_name")).lower()
     desc = clean_text(repo.get("description")).lower()
     text = f"{name} {desc}"
+
+    if any(keyword in text for keyword in NEGATIVE_KEYWORDS):
+        return True
+
+    # Curated ground truth overrides bypass generic star / push thresholds
+    if curated and full_name in curated:
+        return False
 
     if len(desc) > 1000:
         return True
     if repo.get("archived") or repo.get("fork"):
         return True
-    if (repo.get("stargazers_count") or 0) < MIN_STARS:
+    stars = repo.get("stargazers_count") or repo.get("stars") or 0
+    if stars < MIN_STARS:
         return True
-    if days_since(repo.get("pushed_at")) > MAX_DAYS_SINCE_PUSH:
+    if repo.get("pushed_at") and days_since(repo.get("pushed_at")) > MAX_DAYS_SINCE_PUSH:
         return True
-    if any(keyword in text for keyword in NEGATIVE_KEYWORDS):
+
+    # Tier 2: Domain relevance validation check
+    if not is_domain_relevant(repo, curated):
         return True
+
     return False
 
 
-def classify_repo(repo: dict[str, Any]) -> str:
+def classify_repo(repo: dict[str, Any], curated: dict[str, str] | None = None) -> str:
+    full_name = (repo.get("full_name") or "").strip().lower()
+
+    # Ground truth overrides from curated_mappings.json take highest priority
+    if curated and full_name in curated:
+        return curated[full_name]
+
     if repo.get("type") == "paper" or repo.get("source") in ("arxiv", "ssrn", "scholar"):
         return "Research Papers & Articles"
     if repo.get("source") == "huggingface" or repo.get("type") in ("huggingface", "huggingface_dataset"):
@@ -565,19 +748,19 @@ def classify_repo(repo: dict[str, Any]) -> str:
         return "Backtesting"
     if "simulation" in text and ("market" in text or "trading" in text or "exchange" in text or "synthetic" in text) or "synthetic data" in text:
         return "Simulation & Synthetic Data"
-    if "performance attribution" in text or "portfolio analytics" in text or "tearsheet" in text or "quantstats" in text or "pyfolio" in text:
+    if "performance attribution" in text or "portfolio analytics" in text or "portfolio performance" in text or "performance analytics" in text or "tearsheet" in text or "quantstats" in text or "pyfolio" in text:
         return "Performance Analytics & Attribution"
     if "smart beta" in text or "factor investing" in text or "factor model" in text or "factor portfolio" in text:
         return "Factor Investing & Smart Beta"
     if "factor" in text or "alpha" in text:
         return "Alpha Research"
-    if "statistical arbitrage" in text or "pairs trading" in text or "stat arb" in text:
+    if "statistical arbitrage" in text or "pairs trading" in text or "pair trading" in text or "stat arb" in text or ("arbitrage" in text and ("trading" in text or "crypto" in text)):
         return "Statistical Arbitrage"
-    if "event-driven trading" in text or "event driven trading" in text or "corporate action" in text or "earnings" in text and "trading" in text:
+    if (("event-driven" in text or "event driven" in text) and "trading" in text) or "corporate action" in text or ("earnings" in text and "trading" in text):
         return "Event-Driven Trading"
     if "market making" in text or "liquidity provision" in text or "avellaneda-stoikov" in text or "avellaneda stoikov" in text or "market maker" in text:
         return "Market Making & Liquidity Provision"
-    if "econometrics" in text or "time series analysis" in text or "cointegration" in text:
+    if "econometric" in text or "time series" in text or "cointegration" in text or "causal inference" in text or "计量经济" in text or ("forecasting" in text and ("statistical" in text or "probabilistic" in text or "hierarchical" in text)):
         return "Time Series Analysis & Econometrics"
     if "fixed income" in text or "bond pricing" in text or "yield curve" in text or "interest rate" in text or "credit risk" in text:
         return "Fixed Income & Credit Models"
@@ -585,7 +768,7 @@ def classify_repo(repo: dict[str, Any]) -> str:
         return "Foreign Exchange (FX) & Commodities"
     if "portfolio" in text and ("optimiz" in text or "allocation" in text or "parity" in text):
         return "Portfolio Optimization"
-    if "candlestick" in text or "financial visualization" in text or "trading dashboard" in text or "mplfinance" in text:
+    if "candlestick" in text or "financial visualization" in text or "trading dashboard" in text or "mplfinance" in text or ("plotter" in text and "options" in text) or ("visualization" in text and "financial" in text):
         return "Financial Visualization & Dashboards"
     if "risk" in text and ("model" in text or "manag" in text or "value at" in text):
         return "Risk Modeling"
@@ -599,11 +782,11 @@ def classify_repo(repo: dict[str, Any]) -> str:
         return "Hardware Acceleration (FPGA & GPU)"
     if "broker" in text and "api" in text or "interactive brokers" in text or "ibkr" in text or "alpaca" in text or "ccxt" in text:
         return "Brokerage & Exchange APIs (Execution Frameworks)"
-    if "hft" in text or "high frequency" in text or "execution" in text:
+    if "hft" in text or "high frequency" in text or "high-frequency" in text or "execution" in text:
         return "Execution and HFT"
     if "llm" in text or "agent" in text or "gpt" in text or "large language" in text:
         return "LLM / AI Agents for Finance"
-    if "reinforcement learning" in text or "finrl" in text or "drl" in text and "trading" in text:
+    if "reinforcement learning" in text or "强化学习" in text or "finrl" in text or ("drl" in text and "trading" in text):
         return "Reinforcement Learning for Trading"
     if ("nlp" in text or "sentiment" in text) and ("finance" in text or "financial" in text or "sec" in text or "edgar" in text or "10-k" in text):
         return "Financial NLP (Traditional)"
@@ -611,7 +794,7 @@ def classify_repo(repo: dict[str, Any]) -> str:
         return "Machine Learning for Trading"
     if "mev" in text or "maximal extractable value" in text or "amm" in text or "automated market maker" in text or "impermanent loss" in text:
         return "DeFi & MEV"
-    if "crypto" in text or "bitcoin" in text or "defi" in text:
+    if "crypto" in text or "bitcoin" in text or "defi" in text or "binance" in text or "kucoin" in text or "huobi" in text:
         return "Crypto Quant"
     if "time series database" in text or "timeseries database" in text or "tick database" in text or "kdb" in text or "questdb" in text:
         return "Time-Series Databases & Data Infrastructure"
@@ -619,7 +802,7 @@ def classify_repo(repo: dict[str, Any]) -> str:
         return "Alternative Data & Web Scraping"
     if "feature store" in text or "mlops" in text and ("finance" in text or "trading" in text):
         return "MLOps & Data Pipelines for Finance"
-    if "data" in text and ("api" in text or "feed" in text or "market" in text):
+    if ("data" in text and ("api" in text or "feed" in text or "market" in text)) or "tradingview" in text or "金融資料" in text or "行情" in text:
         return "Data and Feeds"
     if "quantum finance" in text or "quantum computing" in text and ("finance" in text or "trading" in text):
         return "Quantum Finance"
@@ -629,7 +812,7 @@ def classify_repo(repo: dict[str, Any]) -> str:
         return "Interview / Learning"
     if "awesome-" in name or "curated list" in text or "awesome list" in text:
         return "Source Lists"
-    if "indicator" in text or "library" in text or "util" in text:
+    if "indicator" in text or "technical analysis" in text or "library" in text or "util" in text:
         return "Utilities"
 
     return "Candidates to Review"
@@ -670,8 +853,10 @@ def repo_score(repo: dict[str, Any]) -> float:
     )
 
 
-def collect_repositories() -> dict[str, list[dict[str, Any]]]:
+def collect_repositories(skip_search: bool = False) -> dict[str, list[dict[str, Any]]]:
     headers = github_headers()
+    curated_map, curated_seeds = load_curated_mappings()
+
     grouped: dict[str, dict[str, dict[str, Any]]] = {
         category: {} for category in CATEGORIES
     }
@@ -679,234 +864,283 @@ def collect_repositories() -> dict[str, list[dict[str, Any]]]:
     grouped["AI Models & Datasets"] = {}
     seen: set[str] = set()
 
-    if DATA_PATH.exists():
-        import json
-        try:
-            existing_data = json.loads(DATA_PATH.read_text(encoding="utf-8"))
-            for cat, items in existing_data.items():
-                if cat not in grouped:
-                    grouped[cat] = {}
-                for repo in items:
-                    url = repo.get("html_url")
-                    if url:
-                        grouped[cat][url] = repo
-                        if repo.get("type") == "github":
-                            stars = repo.get("stargazers_count") or repo.get("stars") or 0
-                            if stars == 0 or repo.get("stars") == 0 or repo.get("stargazers_count") is None:
-                                continue
-                            name = repo.get("full_name")
-                            if name:
-                                seen.add(name)
-                            seen.add(url)
-                        else:
-                            seen.add(url)
-        except Exception as exc:
-            print(f"Failed to load existing data: {exc}", file=sys.stderr)
+    # 0. Seed curated repositories with full metadata directly
+    for norm_name, meta in curated_seeds.items():
+        category = curated_map.get(norm_name, "Research Frameworks")
+        html_url = meta.get("html_url") or f"https://github.com/{meta.get('full_name', norm_name)}"
+        meta.setdefault("type", "github")
+        meta.setdefault("seed_discovered", True)
+        if category not in grouped:
+            grouped[category] = {}
+        grouped[category][html_url] = meta
+        seen.add(norm_name)
+        seen.add(html_url)
 
-    # 1. Search API Discovery
-    for category, queries in CATEGORIES.items():
-        if not queries:
+    # 1. Load existing data and candidates, validating and re-classifying
+    for path in (DATA_PATH, CANDIDATES_JSON_PATH):
+        if not path.exists():
             continue
-        print(f"Collecting: {category}", file=sys.stderr)
-        for query in queries:
-            try:
-                repos = search_repositories(query, headers)
-            except Exception as exc:
-                print(f"  query failed: {query} — {exc}", file=sys.stderr)
-                continue
+        try:
+            existing_data = json.loads(path.read_text(encoding="utf-8"))
+            items_to_process: list[dict[str, Any]] = []
+            if isinstance(existing_data, dict):
+                for cat, items in existing_data.items():
+                    if isinstance(items, list):
+                        items_to_process.extend(items)
+            elif isinstance(existing_data, list):
+                items_to_process.extend(existing_data)
 
-            for repo in repos:
-                full_name = repo.get("full_name")
-                html_url = repo.get("html_url")
-                if not full_name or not html_url or is_bad_repo(repo):
+            for repo in items_to_process:
+                if is_bad_repo(repo, curated_map):
                     continue
-                if full_name in seen or html_url in seen:
+                url = repo.get("html_url")
+                if not url:
                     continue
-                seen.add(full_name)
-                seen.add(html_url)
-                grouped[category][html_url] = repo
-            time.sleep(2.5)
+                full_name = (repo.get("full_name") or "").strip().lower()
+                category = classify_repo(repo, curated_map)
+                if category not in grouped:
+                    grouped[category] = {}
+                grouped[category][url] = repo
 
-    # 2. Seed Sources Discovery
-    if not get_api_key("GITHUB_TOKEN"):
-        print("Skipping seed source discovery because GITHUB_TOKEN is not set in env or api_keys.json.", file=sys.stderr)
-    else:
-        seed_sources = load_seed_sources()
-        discovered: dict[str, dict[str, Any]] = {}
-        for seed_url in seed_sources:
-            parsed = repo_api_path(seed_url)
-            if not parsed:
-                continue
-            owner, repo = parsed
-            print(f"Reading seed source: {owner}/{repo}", file=sys.stderr)
-            seed_meta = fetch_repo_metadata(owner, repo, headers)
-            if not seed_meta:
-                continue
-            
-            # Record the seed source itself
-            seed_normalized = f"https://github.com/{owner}/{repo}"
-            grouped["Source Lists"][seed_normalized] = seed_meta
-            seen.add(f"{owner}/{repo}")
-            seen.add(seed_normalized)
-
-            default_branch = seed_meta.get("default_branch") or "main"
-            readme_text = fetch_readme_text(owner, repo, default_branch)
-            for link_type, linked_url, link_id in extract_links(readme_text):
-                if link_type == "github" and linked_url == seed_normalized:
-                    continue
-                
-                # Use a unique identifier key mapping to the type
-                unique_key = f"{link_type}:{link_id}"
-                if unique_key not in discovered:
-                    discovered[unique_key] = {"type": link_type, "url": linked_url, "id": link_id, "count": 1}
+                if repo.get("type") == "github":
+                    stars = repo.get("stargazers_count") or repo.get("stars") or 0
+                    if stars == 0 or repo.get("stars") == 0 or repo.get("stargazers_count") is None:
+                        continue
+                    if full_name:
+                        seen.add(full_name)
+                    seen.add(url)
                 else:
-                    discovered[unique_key]["count"] += 1
-            time.sleep(1.5)
+                    seen.add(url)
+        except Exception as exc:
+            print(f"Failed to load {path}: {exc}", file=sys.stderr)
 
-        for unique_key, item in discovered.items():
-            link_type = item["type"]
-            link_id = item["id"]
-            repo_url = item["url"]
-            
-            if link_type == "github":
-                if link_id in seen:
+    if not skip_search:
+        # 2. Search API Discovery
+        for category, queries in CATEGORIES.items():
+            if not queries:
+                continue
+            print(f"Collecting: {category}", file=sys.stderr)
+            for query in queries:
+                try:
+                    repos = search_repositories(query, headers)
+                except Exception as exc:
+                    print(f"  query failed: {query} — {exc}", file=sys.stderr)
                     continue
-                owner, repo = link_id.split("/")
-                meta = fetch_repo_metadata(owner, repo, headers)
-                time.sleep(1.0)
-                if not meta or is_bad_repo(meta):
-                    continue
-                meta["type"] = "github"
-                meta["seed_discovered"] = True
-                category = classify_repo(meta)
-                html_url = meta.get("html_url")
-                grouped[category][html_url] = meta
-                seen.add(link_id)
-                if html_url:
+
+                for repo in repos:
+                    full_name = repo.get("full_name")
+                    html_url = repo.get("html_url")
+                    if not full_name or not html_url or is_bad_repo(repo, curated_map):
+                        continue
+                    norm_name = full_name.strip().lower()
+                    if norm_name in seen or html_url in seen:
+                        continue
+                    assigned_cat = classify_repo(repo, curated_map)
+                    cat_to_use = assigned_cat if assigned_cat != "Candidates to Review" else category
+                    if cat_to_use not in grouped:
+                        grouped[cat_to_use] = {}
+                    seen.add(norm_name)
                     seen.add(html_url)
-            elif link_type == "arxiv":
-                if link_id in seen:
-                    continue
-                meta = fetch_arxiv_metadata(link_id)
-                time.sleep(1.0)
-                if not meta:
-                    continue
-                meta["seed_discovered"] = True
-                category = "Research Papers & Articles"
-                grouped[category][repo_url] = meta
-                seen.add(link_id)
-            elif link_type == "ssrn":
-                if link_id in seen:
-                    continue
-                meta = fetch_ssrn_metadata(link_id)
-                time.sleep(1.0)
-                if not meta:
-                    continue
-                meta["seed_discovered"] = True
-                category = "Research Papers & Articles"
-                grouped[category][repo_url] = meta
-                seen.add(link_id)
-            elif link_type in ("huggingface", "huggingface_dataset"):
-                if link_id in seen:
-                    continue
-                meta = fetch_huggingface_metadata(link_id, is_dataset=(link_type == "huggingface_dataset"))
-                time.sleep(1.0)
-                if not meta:
-                    continue
-                meta["seed_discovered"] = True
-                category = "AI Models & Datasets"
-                grouped[category][repo_url] = meta
-                seen.add(link_id)
+                    grouped[cat_to_use][html_url] = repo
+                time.sleep(2.5)
 
-    # 3. Keywords & SerpApi Discovery
-    keywords_path = Path("data/scholar_keywords.txt")
-    if not keywords_path.exists():
-        print(f"Warning: {keywords_path} does not exist.", file=sys.stderr)
-        keywords = []
-    else:
-        with open(keywords_path, "r", encoding="utf-8") as f:
-            all_keywords = [line.strip() for line in f if line.strip()]
-        if len(all_keywords) > 0:
-            day_offset = dt.date.today().toordinal() % max(1, len(all_keywords) // 4)
-            start_idx = day_offset * 4
-            keywords = all_keywords[start_idx : start_idx + 4]
+        # 3. Seed Sources Discovery
+        if not get_api_key("GITHUB_TOKEN"):
+            print("Skipping seed source discovery because GITHUB_TOKEN is not set in env or api_keys.json.", file=sys.stderr)
         else:
+            seed_sources = load_seed_sources()
+            discovered: dict[str, dict[str, Any]] = {}
+            for seed_url in seed_sources:
+                parsed = repo_api_path(seed_url)
+                if not parsed:
+                    continue
+                owner, repo = parsed
+                print(f"Reading seed source: {owner}/{repo}", file=sys.stderr)
+                seed_meta = fetch_repo_metadata(owner, repo, headers)
+                if not seed_meta:
+                    continue
+                
+                # Record the seed source itself
+                seed_normalized = f"https://github.com/{owner}/{repo}"
+                grouped["Source Lists"][seed_normalized] = seed_meta
+                seen.add(f"{owner}/{repo}".lower())
+                seen.add(seed_normalized)
+
+                default_branch = seed_meta.get("default_branch") or "main"
+                readme_text = fetch_readme_text(owner, repo, default_branch)
+                for link_type, linked_url, link_id in extract_links(readme_text):
+                    if link_type == "github" and linked_url == seed_normalized:
+                        continue
+                    
+                    # Use a unique identifier key mapping to the type
+                    unique_key = f"{link_type}:{link_id}"
+                    if unique_key not in discovered:
+                        discovered[unique_key] = {"type": link_type, "url": linked_url, "id": link_id, "count": 1}
+                    else:
+                        discovered[unique_key]["count"] += 1
+                time.sleep(1.5)
+
+            for unique_key, item in discovered.items():
+                link_type = item["type"]
+                link_id = item["id"]
+                repo_url = item["url"]
+                
+                if link_type == "github":
+                    if link_id.lower() in seen:
+                        continue
+                    owner, repo = link_id.split("/")
+                    meta = fetch_repo_metadata(owner, repo, headers)
+                    time.sleep(1.0)
+                    if not meta or is_bad_repo(meta, curated_map):
+                        continue
+                    meta["type"] = "github"
+                    meta["seed_discovered"] = True
+                    category = classify_repo(meta, curated_map)
+                    html_url = meta.get("html_url")
+                    if category not in grouped:
+                        grouped[category] = {}
+                    grouped[category][html_url] = meta
+                    seen.add(link_id.lower())
+                    if html_url:
+                        seen.add(html_url)
+                elif link_type == "arxiv":
+                    if link_id in seen:
+                        continue
+                    meta = fetch_arxiv_metadata(link_id)
+                    time.sleep(1.0)
+                    if not meta:
+                        continue
+                    meta["seed_discovered"] = True
+                    category = "Research Papers & Articles"
+                    grouped[category][repo_url] = meta
+                    seen.add(link_id)
+                elif link_type == "ssrn":
+                    if link_id in seen:
+                        continue
+                    meta = fetch_ssrn_metadata(link_id)
+                    time.sleep(1.0)
+                    if not meta:
+                        continue
+                    meta["seed_discovered"] = True
+                    category = "Research Papers & Articles"
+                    grouped[category][repo_url] = meta
+                    seen.add(link_id)
+                elif link_type in ("huggingface", "huggingface_dataset"):
+                    if link_id in seen:
+                        continue
+                    meta = fetch_huggingface_metadata(link_id, is_dataset=(link_type == "huggingface_dataset"))
+                    time.sleep(1.0)
+                    if not meta:
+                        continue
+                    meta["seed_discovered"] = True
+                    category = "AI Models & Datasets"
+                    grouped[category][repo_url] = meta
+                    seen.add(link_id)
+
+        # 4. Fetch any remaining curated repos not yet found
+        for norm_name, target_cat in curated_map.items():
+            if norm_name not in seen and "/" in norm_name:
+                owner, repo_name = norm_name.split("/", 1)
+                meta = fetch_repo_metadata(owner, repo_name, headers)
+                if meta and not is_bad_repo(meta, curated_map):
+                    meta["type"] = "github"
+                    meta["seed_discovered"] = True
+                    html_url = meta.get("html_url") or f"https://github.com/{owner}/{repo_name}"
+                    if target_cat not in grouped:
+                        grouped[target_cat] = {}
+                    grouped[target_cat][html_url] = meta
+                    seen.add(norm_name)
+                    seen.add(html_url)
+
+        # 5. Keywords & SerpApi Discovery
+        keywords_path = Path("data/scholar_keywords.txt")
+        if not keywords_path.exists():
+            print(f"Warning: {keywords_path} does not exist.", file=sys.stderr)
             keywords = []
+        else:
+            with open(keywords_path, "r", encoding="utf-8") as f:
+                all_keywords = [line.strip() for line in f if line.strip()]
+            if len(all_keywords) > 0:
+                day_offset = dt.date.today().toordinal() % max(1, len(all_keywords) // 4)
+                start_idx = day_offset * 4
+                keywords = all_keywords[start_idx : start_idx + 4]
+            else:
+                keywords = []
 
-    serpapi_key = get_api_key("SERPAPI_KEY")
-    if not serpapi_key:
-        print("Skipping SerpApi discovery because SERPAPI_KEY is not set.", file=sys.stderr)
-    else:
-        category = "Research Papers & Articles"
-        if category in grouped:
-            urls_to_remove = []
-            for url, repo in grouped[category].items():
-                if repo.get("search_keyword") in keywords:
-                    urls_to_remove.append(url)
-            for url in urls_to_remove:
-                del grouped[category][url]
-                if url in seen:
-                    seen.remove(url)
+        serpapi_key = get_api_key("SERPAPI_KEY")
+        if not serpapi_key:
+            print("Skipping SerpApi discovery because SERPAPI_KEY is not set.", file=sys.stderr)
+        else:
+            category = "Research Papers & Articles"
+            if category in grouped:
+                urls_to_remove = []
+                for url, repo in grouped[category].items():
+                    if repo.get("search_keyword") in keywords:
+                        urls_to_remove.append(url)
+                for url in urls_to_remove:
+                    del grouped[category][url]
+                    if url in seen:
+                        seen.remove(url)
 
-        for kw in keywords:
-            print(f"Fetching Google Scholar for: {kw}", file=sys.stderr)
-            results = fetch_serpapi_scholar(kw, serpapi_key)
-            for res in results:
-                link = res.get("link")
-                if not link:
-                    continue
-                if link in seen:
-                    continue
-                
-                title = res.get("title", "Unknown Title")
-                pub_info = res.get("publication_info", {}).get("summary", "")
-                snippet = res.get("snippet", "")
-                
-                desc = f"{pub_info}. {snippet}".strip()
-                desc = " ".join(desc.split())
-                
-                meta = {
-                    "type": "paper",
-                    "source": "scholar",
-                    "search_keyword": kw,
-                    "full_name": title,
-                    "html_url": link,
-                    "description": desc,
-                    "pushed_at": None,
-                    "seed_discovered": True,
-                }
-                category = "Research Papers & Articles"
-                grouped[category][link] = meta
-                seen.add(link)
-            time.sleep(1.0)
+            for kw in keywords:
+                print(f"Fetching Google Scholar for: {kw}", file=sys.stderr)
+                results = fetch_serpapi_scholar(kw, serpapi_key)
+                for res in results:
+                    link = res.get("link")
+                    if not link:
+                        continue
+                    if link in seen:
+                        continue
+                    
+                    title = res.get("title", "Unknown Title")
+                    pub_info = res.get("publication_info", {}).get("summary", "")
+                    snippet = res.get("snippet", "")
+                    
+                    desc = f"{pub_info}. {snippet}".strip()
+                    desc = " ".join(desc.split())
+                    
+                    meta = {
+                        "type": "paper",
+                        "source": "scholar",
+                        "search_keyword": kw,
+                        "full_name": title,
+                        "html_url": link,
+                        "description": desc,
+                        "pushed_at": None,
+                        "seed_discovered": True,
+                    }
+                    category = "Research Papers & Articles"
+                    grouped[category][link] = meta
+                    seen.add(link)
+                time.sleep(1.0)
 
 
-    # 4. Hugging Face Automated Discovery
-    if keywords:
-        hf_category = "AI Models & Datasets"
-        if hf_category in grouped:
-            urls_to_remove = []
-            for url, repo in grouped[hf_category].items():
-                if repo.get("search_keyword") in keywords:
-                    urls_to_remove.append(url)
-            for url in urls_to_remove:
-                del grouped[hf_category][url]
-                if url in seen:
-                    seen.remove(url)
+        # 6. Hugging Face Automated Discovery
+        if keywords:
+            hf_category = "AI Models & Datasets"
+            if hf_category in grouped:
+                urls_to_remove = []
+                for url, repo in grouped[hf_category].items():
+                    if repo.get("search_keyword") in keywords:
+                        urls_to_remove.append(url)
+                for url in urls_to_remove:
+                    del grouped[hf_category][url]
+                    if url in seen:
+                        seen.remove(url)
 
-        for kw in keywords:
-            print(f"Fetching Hugging Face for: {kw}", file=sys.stderr)
-            models = fetch_huggingface_search(kw, is_dataset=False)
-            datasets = fetch_huggingface_search(kw, is_dataset=True)
-            for res in models + datasets:
-                link = res.get("html_url")
-                if not link or link in seen:
-                    continue
-                res["search_keyword"] = kw
-                res["seed_discovered"] = True
-                grouped[hf_category][link] = res
-                seen.add(link)
-            time.sleep(1.0)
+            for kw in keywords:
+                print(f"Fetching Hugging Face for: {kw}", file=sys.stderr)
+                models = fetch_huggingface_search(kw, is_dataset=False)
+                datasets = fetch_huggingface_search(kw, is_dataset=True)
+                for res in models + datasets:
+                    link = res.get("html_url")
+                    if not link or link in seen:
+                        continue
+                    res["search_keyword"] = kw
+                    res["seed_discovered"] = True
+                    grouped[hf_category][link] = res
+                    seen.add(link)
+                time.sleep(1.0)
 
     final: dict[str, list[dict[str, Any]]] = {}
     for category, repos_by_name in grouped.items():
@@ -961,9 +1195,16 @@ def repo_to_markdown(repo: dict[str, Any]) -> str:
 
 def generate_readme(grouped: dict[str, list[dict[str, Any]]]) -> str:
     now = dt.datetime.now(dt.UTC).strftime("%Y-%m-%d %H:%M UTC")
+
+    # Exclude internal triage categories from public README
+    public_grouped = {
+        cat: repos for cat, repos in grouped.items()
+        if cat not in INTERNAL_CATEGORIES
+    }
+
     contents = "\n".join(
         f"- [{category}](#{re.sub(r'[^a-z0-9 -]', '', category.lower()).replace(' ', '-')})"
-        for category in grouped
+        for category in public_grouped
     )
 
     lines: list[str] = [
@@ -979,7 +1220,7 @@ def generate_readme(grouped: dict[str, list[dict[str, Any]]]) -> str:
         "",
     ]
 
-    for category, repos in grouped.items():
+    for category, repos in public_grouped.items():
         lines.append(f"## {category}")
         lines.append("")
         if not repos:
@@ -1020,7 +1261,11 @@ def generate_readme(grouped: dict[str, list[dict[str, Any]]]) -> str:
 def save_data(grouped: dict[str, list[dict[str, Any]]]) -> None:
     DATA_DIR.mkdir(exist_ok=True)
     compact: dict[str, list[dict[str, Any]]] = {}
-    for category, repos in grouped.items():
+
+    public_grouped = {cat: repos for cat, repos in grouped.items() if cat not in INTERNAL_CATEGORIES}
+    candidates = grouped.get("Candidates to Review", [])
+
+    for category, repos in public_grouped.items():
         compact[category] = []
         for repo in repos:
             license_info = repo.get("license")
@@ -1055,6 +1300,48 @@ def save_data(grouped: dict[str, list[dict[str, Any]]]) -> None:
         encoding="utf-8",
     )
 
+    # Save candidates to internal artifacts
+    compact_candidates = []
+    for repo in candidates:
+        stars = repo.get("stargazers_count") or repo.get("stars") or 0
+        forks = repo.get("forks_count") or repo.get("forks") or 0
+        compact_candidates.append({
+            "full_name": repo.get("full_name"),
+            "html_url": repo.get("html_url"),
+            "description": repo.get("description"),
+            "language": repo.get("language"),
+            "stars": stars,
+            "stargazers_count": stars,
+            "forks": forks,
+            "forks_count": forks,
+            "pushed_at": repo.get("pushed_at"),
+        })
+
+    CANDIDATES_JSON_PATH.write_text(
+        json.dumps(compact_candidates, indent=2, ensure_ascii=False) + "\n",
+        encoding="utf-8",
+    )
+
+    cand_md_lines = [
+        "# Internal Triage Log: Candidates to Review",
+        "",
+        "This artifact tracks newly discovered repositories that passed domain validation but require manual review or category mapping.",
+        "",
+        f"**Total candidates pending review:** {len(compact_candidates)}",
+        "",
+    ]
+    if not compact_candidates:
+        cand_md_lines.append("_No candidates pending review._\n")
+    else:
+        for c in compact_candidates:
+            cand_md_lines.append(
+                f"- [{c.get('full_name')}]({c.get('html_url')}) — {c.get('description')} "
+                f"`{c.get('language') or 'N/A'}` · ⭐ {c.get('stars', 0):,} · updated {(c.get('pushed_at') or 'N/A')[:10]}"
+            )
+        cand_md_lines.append("")
+
+    CANDIDATES_MD_PATH.write_text("\n".join(cand_md_lines), encoding="utf-8")
+
 
 def main() -> None:
     parser = argparse.ArgumentParser()
@@ -1063,9 +1350,14 @@ def main() -> None:
         action="store_true",
         help="Generate README content but do not write files.",
     )
+    parser.add_argument(
+        "--skip-search",
+        action="store_true",
+        help="Skip live search and refresh categories and README from existing datasets and curated mappings.",
+    )
     args = parser.parse_args()
 
-    grouped = collect_repositories()
+    grouped = collect_repositories(skip_search=args.skip_search)
     readme = generate_readme(grouped)
 
     if args.check:
@@ -1077,6 +1369,7 @@ def main() -> None:
 
     print(f"Updated {README_PATH}")
     print(f"Saved metadata to {DATA_PATH}")
+    print(f"Saved internal candidates to {CANDIDATES_JSON_PATH} and {CANDIDATES_MD_PATH}")
 
 
 if __name__ == "__main__":
