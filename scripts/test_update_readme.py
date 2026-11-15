@@ -237,6 +237,50 @@ class TestUpdateReadme(unittest.TestCase):
         for name in cornerstones:
             self.assertIn(f"[{name}]", readme_text)
 
+    def test_candidates_license_parity(self):
+        """Verify that Candidates to Review preserves license information for metadata parity."""
+        import tempfile
+        original_json_path = ur.CANDIDATES_JSON_PATH
+        original_md_path = ur.CANDIDATES_MD_PATH
+        original_data_path = ur.DATA_PATH
+        try:
+            with tempfile.TemporaryDirectory() as tmpdir:
+                tmp_path = Path(tmpdir)
+                ur.CANDIDATES_JSON_PATH = tmp_path / "candidates.json"
+                ur.CANDIDATES_MD_PATH = tmp_path / "candidates.md"
+                ur.DATA_PATH = tmp_path / "github_repos.json"
+
+                mock_grouped = {
+                    "Backtesting": [],
+                    "Candidates to Review": [
+                        {
+                            "full_name": "candidate/licensed-repo",
+                            "html_url": "https://github.com/candidate/licensed-repo",
+                            "description": "A candidate repo with MIT license",
+                            "language": "Python",
+                            "stars": 50,
+                            "license": {"spdx_id": "MIT"},
+                        },
+                        {
+                            "full_name": "candidate/string-licensed-repo",
+                            "html_url": "https://github.com/candidate/string-licensed-repo",
+                            "description": "A candidate repo with string license",
+                            "language": "Python",
+                            "stars": 60,
+                            "license": "Apache-2.0",
+                        },
+                    ],
+                }
+                ur.save_data(mock_grouped)
+                saved_candidates = json.loads(ur.CANDIDATES_JSON_PATH.read_text(encoding="utf-8"))
+                self.assertEqual(len(saved_candidates), 2)
+                self.assertEqual(saved_candidates[0]["license"], "MIT")
+                self.assertEqual(saved_candidates[1]["license"], "Apache-2.0")
+        finally:
+            ur.CANDIDATES_JSON_PATH = original_json_path
+            ur.CANDIDATES_MD_PATH = original_md_path
+            ur.DATA_PATH = original_data_path
+
 
 if __name__ == "__main__":
     unittest.main()

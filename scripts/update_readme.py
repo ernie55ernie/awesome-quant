@@ -1320,6 +1320,12 @@ def save_data(grouped: dict[str, list[dict[str, Any]]]) -> None:
     for repo in candidates:
         stars = repo.get("stargazers_count") or repo.get("stars") or 0
         forks = repo.get("forks_count") or repo.get("forks") or 0
+        license_info = repo.get("license")
+        if isinstance(license_info, str):
+            license_id = license_info
+        else:
+            license_id = (license_info or {}).get("spdx_id")
+
         compact_candidates.append({
             "full_name": repo.get("full_name"),
             "html_url": repo.get("html_url"),
@@ -1330,6 +1336,7 @@ def save_data(grouped: dict[str, list[dict[str, Any]]]) -> None:
             "forks": forks,
             "forks_count": forks,
             "pushed_at": repo.get("pushed_at"),
+            "license": license_id,
         })
 
     CANDIDATES_JSON_PATH.write_text(

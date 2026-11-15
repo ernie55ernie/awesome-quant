@@ -99,10 +99,6 @@
     "category": "Backtesting",
     "notes": "Flexible backtesting framework for Python"
   },
-  "roq-trading/roq": {
-    "category": "Execution and HFT",
-    "notes": "Ultra low-latency C++ trading engine"
-  },
   "roq-trading/roq-api": {
     "category": "Execution and HFT",
     "notes": "Ultra low-latency C++ trading engine API"
