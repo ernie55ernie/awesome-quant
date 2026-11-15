@@ -1,16 +1,7 @@
 {
   "QuantConnect/Lean": {
     "category": "Backtesting",
-    "full_name": "QuantConnect/Lean",
-    "html_url": "https://github.com/QuantConnect/Lean",
-    "description": "Lean Algorithmic Trading Engine by QuantConnect (Python, C#)",
-    "language": "C#",
-    "stars": 22526,
-    "stargazers_count": 22526,
-    "forks": 5419,
-    "forks_count": 5419,
-    "pushed_at": "2026-11-13T21:37:31Z",
-    "license": "Apache-2.0"
+    "notes": "Lean Algorithmic Trading Engine by QuantConnect (Python, C#)"
   },
   "vnpy/vnpy": {
     "category": "Research Frameworks",
@@ -112,7 +103,11 @@
     "category": "Execution and HFT",
     "notes": "Ultra low-latency C++ trading engine"
   },
-  "hftbacktest/hftbacktest": {
+  "roq-trading/roq-api": {
+    "category": "Execution and HFT",
+    "notes": "Ultra low-latency C++ trading engine API"
+  },
+  "nkaz001/hftbacktest": {
     "category": "Execution and HFT",
     "notes": "High-frequency trading and market making backtesting tool"
   },
@@ -172,7 +167,7 @@
     "category": "Performance Analytics & Attribution",
     "notes": "Common financial risk and performance metrics"
   },
-  "robertmartin8/PyPortfolioOpt": {
+  "PyPortfolio/PyPortfolioOpt": {
     "category": "Portfolio Optimization",
     "notes": "Financial portfolio optimization in Python"
   },

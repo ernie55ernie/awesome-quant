@@ -39,6 +39,6 @@ jobs:
             exit 0
           fi
 
-          git add README.md data/github_repos.json
+          git add README.md data/github_repos.json data/candidates_to_review.json data/candidates_to_review.md
           git commit -m "Auto-update awesome quant resources"
           git push

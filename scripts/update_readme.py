@@ -526,7 +526,10 @@ def parse_date(value: str | None) -> dt.datetime | None:
     if not value:
         return None
     try:
-        return dt.datetime.fromisoformat(value.replace("Z", "+00:00"))
+        parsed = dt.datetime.fromisoformat(value.replace("Z", "+00:00"))
+        if parsed.tzinfo is None:
+            parsed = parsed.replace(tzinfo=dt.timezone.utc)
+        return parsed
     except ValueError:
         return None
 
@@ -656,6 +659,11 @@ CHINESE_QUANT_KEYWORDS = [
     "仓位", "分时", "k线", "均线", "因子", "套利", "高频", "做市"
 ]
 
+QUANT_REGEX = re.compile(
+    r"\b(" + "|".join(re.escape(k) for k in sorted(QUANT_KEYWORDS, key=len, reverse=True)) + r")\b",
+    re.IGNORECASE,
+)
+
 
 def is_domain_relevant(repo: dict[str, Any], curated: dict[str, str] | None = None) -> bool:
     """Validates that a repository belongs to quantitative finance, trading, or market analysis."""
@@ -678,9 +686,8 @@ def is_domain_relevant(repo: dict[str, Any], curated: dict[str, str] | None = No
         if not any(signal in text for signal in quant_list_signals):
             return False
 
-    for kw in QUANT_KEYWORDS:
-        if kw in text:
-            return True
+    if QUANT_REGEX.search(text):
+        return True
     for ckw in CHINESE_QUANT_KEYWORDS:
         if ckw in text:
             return True
@@ -695,8 +702,13 @@ def is_bad_repo(repo: dict[str, Any], curated: dict[str, str] | None = None) -> 
     if full_name in BLACKLISTED_REPOS:
         return True
 
-    if repo.get("type") == "paper":
-        return False  # Do not apply repo-specific rules to papers
+    # Papers and Hugging Face models/datasets are exempt from GitHub-specific repo thresholds
+    if (
+        repo.get("type") == "paper"
+        or repo.get("source") in ("arxiv", "ssrn", "scholar", "huggingface")
+        or repo.get("type") in ("huggingface", "huggingface_dataset")
+    ):
+        return False
 
     name = clean_text(repo.get("full_name")).lower()
     desc = clean_text(repo.get("description")).lower()
@@ -784,10 +796,10 @@ def classify_repo(repo: dict[str, Any], curated: dict[str, str] | None = None) -
         return "Brokerage & Exchange APIs (Execution Frameworks)"
     if "hft" in text or "high frequency" in text or "high-frequency" in text or "execution" in text:
         return "Execution and HFT"
-    if "llm" in text or "agent" in text or "gpt" in text or "large language" in text:
-        return "LLM / AI Agents for Finance"
     if "reinforcement learning" in text or "强化学习" in text or "finrl" in text or ("drl" in text and "trading" in text):
         return "Reinforcement Learning for Trading"
+    if "llm" in text or "gpt" in text or "large language" in text or any(k in text for k in ("ai agent", "llm agent", "agentic", "multi-agent", "financial agent", "trading agent")):
+        return "LLM / AI Agents for Finance"
     if ("nlp" in text or "sentiment" in text) and ("finance" in text or "financial" in text or "sec" in text or "edgar" in text or "10-k" in text):
         return "Financial NLP (Traditional)"
     if "deep learning" in text or "machine learning" in text:
@@ -936,12 +948,11 @@ def collect_repositories(skip_search: bool = False) -> dict[str, list[dict[str, 
                     if norm_name in seen or html_url in seen:
                         continue
                     assigned_cat = classify_repo(repo, curated_map)
-                    cat_to_use = assigned_cat if assigned_cat != "Candidates to Review" else category
-                    if cat_to_use not in grouped:
-                        grouped[cat_to_use] = {}
+                    if assigned_cat not in grouped:
+                        grouped[assigned_cat] = {}
                     seen.add(norm_name)
                     seen.add(html_url)
-                    grouped[cat_to_use][html_url] = repo
+                    grouped[assigned_cat][html_url] = repo
                 time.sleep(2.5)
 
         # 3. Seed Sources Discovery
@@ -1037,22 +1048,7 @@ def collect_repositories(skip_search: bool = False) -> dict[str, list[dict[str, 
                     grouped[category][repo_url] = meta
                     seen.add(link_id)
 
-        # 4. Fetch any remaining curated repos not yet found
-        for norm_name, target_cat in curated_map.items():
-            if norm_name not in seen and "/" in norm_name:
-                owner, repo_name = norm_name.split("/", 1)
-                meta = fetch_repo_metadata(owner, repo_name, headers)
-                if meta and not is_bad_repo(meta, curated_map):
-                    meta["type"] = "github"
-                    meta["seed_discovered"] = True
-                    html_url = meta.get("html_url") or f"https://github.com/{owner}/{repo_name}"
-                    if target_cat not in grouped:
-                        grouped[target_cat] = {}
-                    grouped[target_cat][html_url] = meta
-                    seen.add(norm_name)
-                    seen.add(html_url)
-
-        # 5. Keywords & SerpApi Discovery
+        # 4. Keywords & SerpApi Discovery
         keywords_path = Path("data/scholar_keywords.txt")
         if not keywords_path.exists():
             print(f"Warning: {keywords_path} does not exist.", file=sys.stderr)
@@ -1142,12 +1138,31 @@ def collect_repositories(skip_search: bool = False) -> dict[str, list[dict[str, 
                     seen.add(link)
                 time.sleep(1.0)
 
+    # Ensure any remaining curated repos not found in local data are fetched
+    for norm_name, target_cat in curated_map.items():
+        if norm_name not in seen and "/" in norm_name:
+            owner, repo_name = norm_name.split("/", 1)
+            meta = fetch_repo_metadata(owner, repo_name, headers)
+            if meta and not is_bad_repo(meta, curated_map):
+                meta["type"] = "github"
+                meta["seed_discovered"] = True
+                html_url = meta.get("html_url") or f"https://github.com/{owner}/{repo_name}"
+                if target_cat not in grouped:
+                    grouped[target_cat] = {}
+                grouped[target_cat][html_url] = meta
+                seen.add(norm_name)
+                seen.add(html_url)
+
     final: dict[str, list[dict[str, Any]]] = {}
     for category, repos_by_name in grouped.items():
         repos = list(repos_by_name.values())
         repos.sort(key=repo_score, reverse=True)
-        limit = 50 if category == "Research Papers & Articles" else CATEGORY_LIMIT
-        final[category] = repos[:limit]
+        if category in INTERNAL_CATEGORIES:
+            final[category] = repos
+        elif category == "Research Papers & Articles":
+            final[category] = repos[:50]
+        else:
+            final[category] = repos[:CATEGORY_LIMIT]
 
     return final
 
