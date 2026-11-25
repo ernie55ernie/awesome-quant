@@ -2,34 +2,34 @@
 
 This artifact tracks newly discovered repositories that passed domain validation but require manual review or category mapping.
 
-**Total candidates pending review:** 112
+**Total candidates pending review:** 113
 
-- [timescale/timescaledb](https://github.com/timescale/timescaledb) — A time-series database for high-performance real-time analytics packaged as a Postgres extension `C` · ⭐ 23,893 · updated 2026-11-24
-- [we-promise/sure](https://github.com/we-promise/sure) — The personal finance app for everyone (by everyone) `Ruby` · ⭐ 17,684 · updated 2026-11-24
-- [goldmansachs/gs-quant](https://github.com/goldmansachs/gs-quant) — Python toolkit for quantitative finance `Python` · ⭐ 14,376 · updated 2026-11-24
-- [yutiansut/QUANTAXIS](https://github.com/yutiansut/QUANTAXIS) — QUANTAXIS 支持任务调度 分布式部署的 股票/期货/期权  数据/回测/模拟/交易/可视化/多账户 纯本地量化解决方案 `Python` · ⭐ 11,386 · updated 2026-09-18
-- [shidenggui/easytrader](https://github.com/shidenggui/easytrader) — 提供同花顺客户端/miniqmt/雪球的股票量化交易，支持跟踪 joinquant /ricequant 模拟交易 和 实盘雪球组合 `Python` · ⭐ 10,277 · updated 2026-10-16
-- [ghostfolio/ghostfolio](https://github.com/ghostfolio/ghostfolio) — Open Source Wealth Management Software. Angular + NestJS + Prisma + Nx + TypeScript 🤍 `TypeScript` · ⭐ 9,772 · updated 2026-11-24
-- [wealthfolio/wealthfolio](https://github.com/wealthfolio/wealthfolio) — A beautiful, private, local-first personal finance tracker. Investments, net worth, spending, and simulations. `Rust` · ⭐ 9,735 · updated 2026-11-23
-- [tradermonty/claude-trading-skills](https://github.com/tradermonty/claude-trading-skills) — Claude Code skills for equity investors and traders — market analysis, technical charting, economic calendars, screeners, and trading strategy development. `Python` · ⭐ 8,212 · updated 2026-11-23
-- [waditu/czsc](https://github.com/waditu/czsc) — 缠中说禅技术分析工具；缠论；股票；期货；Quant；量化交易 `Rust` · ⭐ 6,636 · updated 2026-11-08
+- [timescale/timescaledb](https://github.com/timescale/timescaledb) — A time-series database for high-performance real-time analytics packaged as a Postgres extension `C` · ⭐ 23,896 · updated 2026-11-25
+- [we-promise/sure](https://github.com/we-promise/sure) — The personal finance app for everyone (by everyone) `Ruby` · ⭐ 17,854 · updated 2026-11-25
+- [goldmansachs/gs-quant](https://github.com/goldmansachs/gs-quant) — Python toolkit for quantitative finance `Python` · ⭐ 14,400 · updated 2026-11-24
+- [yutiansut/QUANTAXIS](https://github.com/yutiansut/QUANTAXIS) — QUANTAXIS 支持任务调度 分布式部署的 股票/期货/期权  数据/回测/模拟/交易/可视化/多账户 纯本地量化解决方案 `Python` · ⭐ 11,388 · updated 2026-09-18
+- [shidenggui/easytrader](https://github.com/shidenggui/easytrader) — 提供同花顺客户端/miniqmt/雪球的股票量化交易，支持跟踪 joinquant /ricequant 模拟交易 和 实盘雪球组合 `Python` · ⭐ 10,278 · updated 2026-10-16
+- [ghostfolio/ghostfolio](https://github.com/ghostfolio/ghostfolio) — Open Source Wealth Management Software. Angular + NestJS + Prisma + Nx + TypeScript 🤍 `TypeScript` · ⭐ 9,778 · updated 2026-11-24
+- [tradermonty/claude-trading-skills](https://github.com/tradermonty/claude-trading-skills) — Claude Code skills for equity investors and traders — market analysis, technical charting, economic calendars, screeners, and trading strategy development. `Python` · ⭐ 8,386 · updated 2026-11-23
+- [wealthfolio/wealthfolio](https://github.com/wealthfolio/wealthfolio) — A beautiful, private, local-first personal finance tracker. Investments, net worth, spending, and simulations. `Rust` · ⭐ 9,751 · updated 2026-11-23
+- [waditu/czsc](https://github.com/waditu/czsc) — 缠中说禅技术分析工具；缠论；股票；期货；Quant；量化交易 `Rust` · ⭐ 6,637 · updated 2026-11-08
 - [fmzquant/strategies](https://github.com/fmzquant/strategies) — quantitative trading with Javascript, Python, C++, PineScript, Blockly, MyLanguage(麦语言) `N/A` · ⭐ 6,061 · updated 2025-04-30
-- [wondertrader/wondertrader](https://github.com/wondertrader/wondertrader) — WonderTrader——量化研发交易一站式框架 `C++` · ⭐ 6,458 · updated 2026-09-01
-- [JerBouma/FinanceToolkit](https://github.com/JerBouma/FinanceToolkit) — Transparent and Efficient Financial Analysis `Python` · ⭐ 5,563 · updated 2026-11-24
-- [klinecharts/KLineChart](https://github.com/klinecharts/KLineChart) — 📈Lightweight k-line chart that can be highly customized. Zero dependencies. Support mobile.（可高度自定义的轻量级k线图，无第三方依赖，支持移动端） `TypeScript` · ⭐ 4,330 · updated 2026-11-16
-- [pst-group/pysystemtrade](https://github.com/pst-group/pysystemtrade) — Systematic Trading in python `Python` · ⭐ 3,640 · updated 2026-11-02
-- [Micro-sheep/efinance](https://github.com/Micro-sheep/efinance) — efinance 是一个可以快速获取基金、股票、债券、期货数据的 Python 库，回测以及量化交易的好帮手！🚀🚀🚀 `Python` · ⭐ 4,187 · updated 2026-07-17
-- [chrisconlan/algorithmic-trading-with-python](https://github.com/chrisconlan/algorithmic-trading-with-python) — Source code for Algorithmic Trading with Python (2020) by Chris Conlan `Python` · ⭐ 3,532 · updated 2021-06-01
-- [tradytics/eiten](https://github.com/tradytics/eiten) — Statistical and Algorithmic Investing Strategies for Everyone `Python` · ⭐ 3,330 · updated 2026-11-24
-- [dgunning/edgartools](https://github.com/dgunning/edgartools) — Read and analyze SEC EDGAR filings in Python. 10-K, 8-K, XBRL financials, Form 3/4/5, 13F, ADV — clean API, well-typed, MIT-licensed. `Python` · ⭐ 2,873 · updated 2026-11-24
-- [koreainvestment/open-trading-api](https://github.com/koreainvestment/open-trading-api) — Korea Investment & Securities Open API Github `Python` · ⭐ 1,679 · updated 2026-11-24
-- [gloom-sh/gloomberb](https://github.com/gloom-sh/gloomberb) — Finance terminal, in your terminal. `TypeScript` · ⭐ 2,790 · updated 2026-11-24
-- [LastAncientOne/Stock_Analysis_For_Quant](https://github.com/LastAncientOne/Stock_Analysis_For_Quant) — Various Types of Stock Analysis in Excel, Matlab, Power BI, Python, R, and Tableau `Jupyter Notebook` · ⭐ 2,092 · updated 2025-05-04
-- [QuantFans/quantdigger](https://github.com/QuantFans/quantdigger) — 基于python的量化交易平台 `Python` · ⭐ 1,835 · updated 2020-05-02
+- [wondertrader/wondertrader](https://github.com/wondertrader/wondertrader) — WonderTrader——量化研发交易一站式框架 `C++` · ⭐ 6,456 · updated 2026-09-01
+- [JerBouma/FinanceToolkit](https://github.com/JerBouma/FinanceToolkit) — Transparent and Efficient Financial Analysis `Python` · ⭐ 5,564 · updated 2026-11-25
+- [klinecharts/KLineChart](https://github.com/klinecharts/KLineChart) — 📈Lightweight k-line chart that can be highly customized. Zero dependencies. Support mobile.（可高度自定义的轻量级k线图，无第三方依赖，支持移动端） `TypeScript` · ⭐ 4,335 · updated 2026-11-16
+- [pst-group/pysystemtrade](https://github.com/pst-group/pysystemtrade) — Systematic Trading in python `Python` · ⭐ 3,642 · updated 2026-11-02
+- [Micro-sheep/efinance](https://github.com/Micro-sheep/efinance) — efinance 是一个可以快速获取基金、股票、债券、期货数据的 Python 库，回测以及量化交易的好帮手！🚀🚀🚀 `Python` · ⭐ 4,186 · updated 2026-07-17
+- [chrisconlan/algorithmic-trading-with-python](https://github.com/chrisconlan/algorithmic-trading-with-python) — Source code for Algorithmic Trading with Python (2020) by Chris Conlan `Python` · ⭐ 3,533 · updated 2021-06-01
+- [tradytics/eiten](https://github.com/tradytics/eiten) — Statistical and Algorithmic Investing Strategies for Everyone `Python` · ⭐ 3,331 · updated 2026-11-24
+- [dgunning/edgartools](https://github.com/dgunning/edgartools) — Read and analyze SEC EDGAR filings in Python. 10-K, 8-K, XBRL financials, Form 3/4/5, 13F, ADV — clean API, well-typed, MIT-licensed. `Python` · ⭐ 2,879 · updated 2026-11-24
+- [koreainvestment/open-trading-api](https://github.com/koreainvestment/open-trading-api) — Korea Investment & Securities Open API Github `Python` · ⭐ 1,681 · updated 2026-11-24
+- [gloom-sh/gloomberb](https://github.com/gloom-sh/gloomberb) — Finance terminal, in your terminal. `TypeScript` · ⭐ 2,797 · updated 2026-11-25
+- [LastAncientOne/Stock_Analysis_For_Quant](https://github.com/LastAncientOne/Stock_Analysis_For_Quant) — Various Types of Stock Analysis in Excel, Matlab, Power BI, Python, R, and Tableau `Jupyter Notebook` · ⭐ 2,093 · updated 2025-05-04
+- [QuantFans/quantdigger](https://github.com/QuantFans/quantdigger) — 基于python的量化交易平台 `Python` · ⭐ 1,836 · updated 2020-05-02
 - [jasonstrimpel/volatility-trading](https://github.com/jasonstrimpel/volatility-trading) — A complete set of volatility estimators based on Euan Sinclair's Volatility Trading  `Python` · ⭐ 1,970 · updated 2024-10-21
 - [alvarobartt/investpy](https://github.com/alvarobartt/investpy) — Financial Data Extraction from Investing.com with Python `Python` · ⭐ 1,867 · updated 2026-04-13
-- [jundizhou/easy-stock](https://github.com/jundizhou/easy-stock) — A股 AI 投研 `Go` · ⭐ 2,052 · updated 2026-11-24
-- [FinanceData/FinanceDataReader](https://github.com/FinanceData/FinanceDataReader) — Financial data reader `Python` · ⭐ 1,579 · updated 2026-05-13
+- [jundizhou/easy-stock](https://github.com/jundizhou/easy-stock) — A股 AI 投研 `Go` · ⭐ 2,063 · updated 2026-11-25
+- [FinanceData/FinanceDataReader](https://github.com/FinanceData/FinanceDataReader) — Financial data reader `Python` · ⭐ 1,580 · updated 2026-05-13
 - [pegasusTrader/PandoraTrader](https://github.com/pegasusTrader/PandoraTrader) — 高频量化交易平台 C++ Trade Platform for quant developer 【浮生着甚苦奔忙，量化之路阻且长。 行行代码凝心血，十年辛苦不寻常】 `C++` · ⭐ 1,493 · updated 2025-10-18
 - [fmilthaler/FinQuant](https://github.com/fmilthaler/FinQuant) — A program for financial portfolio management, analysis and optimisation. `Python` · ⭐ 1,847 · updated 2023-11-04
 - [mcdallas/wallstreet](https://github.com/mcdallas/wallstreet) — Real time stock and option data. `Python` · ⭐ 1,724 · updated 2024-07-06
@@ -40,8 +40,8 @@ This artifact tracks newly discovered repositories that passed domain validation
 - [vsjha18/nsetools](https://github.com/vsjha18/nsetools) — Realtime Data From National Stock Exchange (India) `Python` · ⭐ 910 · updated 2025-03-18
 - [highfestiva/finplot](https://github.com/highfestiva/finplot) — Performant and effortless finance plotting for Python `Python` · ⭐ 1,189 · updated 2026-09-24
 - [rsheftel/pandas_market_calendars](https://github.com/rsheftel/pandas_market_calendars) — Exchange calendars to use with pandas for trading applications `Python` · ⭐ 1,011 · updated 2026-11-23
-- [dragon1086/prism-insight](https://github.com/dragon1086/prism-insight) — AI-based stock analysis and trading system `Python` · ⭐ 816 · updated 2026-11-24
-- [yhilpisch/dx](https://github.com/yhilpisch/dx) — DX Analytics | Financial and Derivatives Analytics with Python `Jupyter Notebook` · ⭐ 769 · updated 2025-04-05
+- [dragon1086/prism-insight](https://github.com/dragon1086/prism-insight) — AI-based stock analysis and trading system `Python` · ⭐ 814 · updated 2026-11-25
+- [yhilpisch/dx](https://github.com/yhilpisch/dx) — DX Analytics | Financial and Derivatives Analytics with Python `Jupyter Notebook` · ⭐ 768 · updated 2025-04-05
 - [Marigold/universal-portfolios](https://github.com/Marigold/universal-portfolios) — Collection of algorithms for online portfolio selection `Jupyter Notebook` · ⭐ 870 · updated 2026-11-13
 - [myquant/strategy](https://github.com/myquant/strategy) — 掘金策略集锦 `Python` · ⭐ 959 · updated 2017-07-11
 - [business-science/tidyquant](https://github.com/business-science/tidyquant) — Bringing financial analysis to the tidyverse `R` · ⭐ 920 · updated 2026-11-01
@@ -51,20 +51,21 @@ This artifact tracks newly discovered repositories that passed domain validation
 - [billpwchan/futu_algo](https://github.com/billpwchan/futu_algo) — Futu Algorithmic Trading Solution (Python) 基於富途OpenAPI所開發量化交易程序 `Python` · ⭐ 630 · updated 2026-11-11
 - [Finance-Hub/FinanceHub](https://github.com/Finance-Hub/FinanceHub) — Resources for Quantitative Finance `Python` · ⭐ 806 · updated 2024-05-28
 - [nooperpudd/ctpwrapper](https://github.com/nooperpudd/ctpwrapper) — 上海期货交易所CTP接口 Shanghai Future CTP Interface  CTP Python API Wrapper `Python` · ⭐ 620 · updated 2026-06-08
-- [PythonCharmers/QuantFinance](https://github.com/PythonCharmers/QuantFinance) — Top training materials in quantitative finance `Jupyter Notebook` · ⭐ 623 · updated 2025-09-02
+- [CharmersTraining/QuantFinance](https://github.com/CharmersTraining/QuantFinance) — Top training materials in quantitative finance `Jupyter Notebook` · ⭐ 624 · updated 2025-09-02
 - [NourozR/Stock-Price-Prediction-LSTM](https://github.com/NourozR/Stock-Price-Prediction-LSTM) — OHLC Average Prediction of Apple Inc. Using LSTM Recurrent Neural Network `Python` · ⭐ 617 · updated 2023-03-30
 - [VivekPa/IntroNeuralNetworks](https://github.com/VivekPa/IntroNeuralNetworks) — Introducing neural networks to predict stock prices `Python` · ⭐ 777 · updated 2019-08-03
 - [jamesmawm/mastering-python-for-finance-second-edition](https://github.com/jamesmawm/mastering-python-for-finance-second-edition) — Sources codes for: Mastering Python for Finance, Second Edition `Jupyter Notebook` · ⭐ 472 · updated 2026-02-03
 - [stefanoamorelli/sec-edgar-mcp](https://github.com/stefanoamorelli/sec-edgar-mcp) — A SEC EDGAR MCP (Model Context Protocol) Server `Python` · ⭐ 389 · updated 2026-11-01
 - [alexanderwanyoike/the0](https://github.com/alexanderwanyoike/the0) — Open Source Algorithmic Trading Engine `TypeScript` · ⭐ 439 · updated 2026-11-15
+- [PythonCharmers/QuantFinance](https://github.com/PythonCharmers/QuantFinance) — Top training materials in quantitative finance `Jupyter Notebook` · ⭐ 623 · updated 2025-09-02
 - [miroblog/deep_rl_trader](https://github.com/miroblog/deep_rl_trader) — Trading Environment(OpenAI Gym) + DDQN (Keras-RL) `Python` · ⭐ 413 · updated 2022-12-08
 - [HKUSTDial/DeepFund](https://github.com/HKUSTDial/DeepFund) — 🔥[NeurIPS'25] DeepFund: Pilot for Your Next Fund Investment `Python` · ⭐ 307 · updated 2026-03-18
-- [DresdenGman/EPSILON-trading-simulator](https://github.com/DresdenGman/EPSILON-trading-simulator) — Open-source quantitative decision lab: test market assumptions, preserve negative results, and reproduce evidence. `TypeScript` · ⭐ 246 · updated 2026-11-23
-- [quantbelt/jupyter-quant](https://github.com/quantbelt/jupyter-quant) — A dockerized Jupyter quant research environment. `Shell` · ⭐ 248 · updated 2026-11-24
+- [DresdenGman/EPSILON-trading-simulator](https://github.com/DresdenGman/EPSILON-trading-simulator) — Open-source quantitative decision lab: test market assumptions, preserve negative results, and reproduce evidence. `TypeScript` · ⭐ 246 · updated 2026-11-24
+- [quantbelt/jupyter-quant](https://github.com/quantbelt/jupyter-quant) — A dockerized Jupyter quant research environment. `Shell` · ⭐ 247 · updated 2026-11-25
 - [PFund-Software-Ltd/pytrade.org](https://github.com/PFund-Software-Ltd/pytrade.org) — Educational Hub for Python Trading `Python` · ⭐ 240 · updated 2026-11-12
 - [wshobson/financial-chat](https://github.com/wshobson/financial-chat) — A financial chat application powered by LangChain, OpenBB, and Claude 3 Opus. `Python` · ⭐ 236 · updated 2025-08-10
 - [lingyixu/Quant-Finance-With-Python-Code](https://github.com/lingyixu/Quant-Finance-With-Python-Code) — Repo for code examples in Quantitative Finance with Python (1st edition) by Chris Kelliher `Jupyter Notebook` · ⭐ 186 · updated 2026-01-15
-- [federicomariamassari/financial-engineering](https://github.com/federicomariamassari/financial-engineering) — Applications of Monte Carlo methods to financial engineering projects, in Python. `Python` · ⭐ 558 · updated 2017-11-20
+- [federicomariamassari/financial-engineering](https://github.com/federicomariamassari/financial-engineering) — Applications of Monte Carlo methods to financial engineering projects, in Python. `Python` · ⭐ 557 · updated 2017-11-20
 - [chrism2671/PyTrendFollow](https://github.com/chrism2671/PyTrendFollow) — PyTrendFollow - systematic futures trading using trend following `Python` · ⭐ 474 · updated 2018-04-25
 - [PIYUSH-KUMAR1809/order-matching-engine](https://github.com/PIYUSH-KUMAR1809/order-matching-engine) — High performance order matching engine `C++` · ⭐ 169 · updated 2026-09-08
 - [miroblog/tf_deep_rl_trader](https://github.com/miroblog/tf_deep_rl_trader) — Trading Environment(OpenAI Gym) + PPO(TensorForce) `Python` · ⭐ 252 · updated 2022-12-08
@@ -77,8 +78,8 @@ This artifact tracks newly discovered repositories that passed domain validation
 - [al1enjesus/polymarket-whales](https://github.com/al1enjesus/polymarket-whales) — 🐋 Real-time whale trade tracker for Polymarket — get terminal alerts + Telegram notifications when smart money moves `Python` · ⭐ 64 · updated 2026-11-16
 - [JuliaComputing/Miletus.jl](https://github.com/JuliaComputing/Miletus.jl) — Writing financial contracts in Julia `Julia` · ⭐ 94 · updated 2025-12-09
 - [pengpengyi92/dsh-quant](https://github.com/pengpengyi92/dsh-quant) — "🐳 Dsh-Quant: The Everything-Plugin Ai native Quant OS " `TypeScript` · ⭐ 75 · updated 2026-11-20
-- [maread99/market_analy](https://github.com/maread99/market_analy) — Analysis of financial instruments `Python` · ⭐ 80 · updated 2026-11-23
-- [fonrex/fonrex](https://github.com/fonrex/fonrex) — Financial data, unlocked. `Python` · ⭐ 81 · updated 2026-11-21
+- [maread99/market_analy](https://github.com/maread99/market_analy) — Analysis of financial instruments `Python` · ⭐ 80 · updated 2026-11-24
+- [fonrex/fonrex](https://github.com/fonrex/fonrex) — Financial data, unlocked. `Python` · ⭐ 81 · updated 2026-11-25
 - [coinpaprika/coinpaprika-api-go-client](https://github.com/coinpaprika/coinpaprika-api-go-client) — Official CoinPaprika API Go client — coin prices, tickers, OHLCV, exchanges, and global market stats. `Go` · ⭐ 56 · updated 2026-10-21
 - [unageanu/jiji2](https://github.com/unageanu/jiji2) — Forex algorithmic trading framework using OANDA REST API. `JavaScript` · ⭐ 250 · updated 2021-04-30
 - [akashaero/Intrinsic-Value-Calculator](https://github.com/akashaero/Intrinsic-Value-Calculator) — This open-source, and convenient python tool is designed to calculate fair value of a stock for given revenue growth and free cash flow margin assumptions of a company. Users can run the tool in batch mode for multiple stock valuations in one go. Download the packaged application in the latest release! `Python` · ⭐ 96 · updated 2025-07-02
