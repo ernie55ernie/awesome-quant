@@ -595,6 +595,7 @@ _No repositories found in this update._
 - [mnemox-ai/tradememory-protocol](https://github.com/mnemox-ai/tradememory-protocol) — Decision audit trail + persistent memory for AI trading agents. Outcome-weighted recall, SHA-256 tamper detection, 17 MCP tools. `Python` · ⭐ 1,401 · forks 0 · updated 2026-07-14 · license MIT
 - [ariadng/metatrader-mcp-server](https://github.com/ariadng/metatrader-mcp-server) — Model Context Protocol (MCP) to enable AI LLMs to trade using MetaTrader platform `Python` · ⭐ 851 · forks 276 · updated 2026-03-28 · license MIT
 - [The-FinAI/PIXIU](https://github.com/The-FinAI/PIXIU) — This repository introduces PIXIU, an open-source resource featuring the first financial large language models (LLMs), instruction tuning data, and evaluation benchmarks to holistically assess financial LLMs. Our goal is to continually push forward the open-source development of financial artificial intelligence (AI). `Jupyter Notebook` · ⭐ 895 · forks 127 · updated 2026-10-08 · license MIT
+- [ZhuLinsen/alphasift](https://github.com/ZhuLinsen/alphasift) — Local-first multi-market quantitative stock screening CLI, Purged Walk-Forward evaluator, Agent Skill, and read-only STDIO MCP server (no live trading). `Python` · ⭐ 583 · forks 269 · updated 2026-11-26 · license Apache-2.0
 - [krakenfx/kraken-cli](https://github.com/krakenfx/kraken-cli) — Trade crypto, tokenized stocks, forex and futures on Kraken from your terminal or your AI agent. Built-in MCP server for Claude, Codex and Cursor, JSON output, and paper trading on live prices. `Rust` · ⭐ 812 · forks 117 · updated 2026-10-29 · license MIT
 
 ## Quantum Finance
@@ -690,4 +691,4 @@ This repository is for research and education only. Nothing here is financial ad
 
 ---
 
-Last auto-generated: 2026-11-25 11:07 UTC
+Last auto-generated: 2026-11-26 06:49 UTC

@@ -7664,6 +7664,23 @@
       "seed_discovered": true
     },
     {
+      "full_name": "ZhuLinsen/alphasift",
+      "type": "github",
+      "source": null,
+      "search_keyword": null,
+      "html_url": "https://github.com/ZhuLinsen/alphasift",
+      "description": "Local-first multi-market quantitative stock screening CLI, Purged Walk-Forward evaluator, Agent Skill, and read-only STDIO MCP server (no live trading).",
+      "language": "Python",
+      "stars": 583,
+      "stargazers_count": 583,
+      "downloads": null,
+      "forks": 269,
+      "forks_count": 269,
+      "pushed_at": "2026-11-26T06:46:00Z",
+      "license": "Apache-2.0",
+      "seed_discovered": true
+    },
+    {
       "full_name": "krakenfx/kraken-cli",
       "type": "github",
       "source": null,
