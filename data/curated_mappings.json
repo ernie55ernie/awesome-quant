@@ -234,5 +234,9 @@
   "justthetips/PerformanceAnalytics": {
     "category": "Performance Analytics & Attribution",
     "notes": "Performance analytics for investment portfolios"
+  },
+  "ZhuLinsen/alphasift": {
+    "category": "LLM / AI Agents for Finance",
+    "notes": "Multi-market quantitative stock screening CLI, Purged Walk-Forward evaluator, portable Agent Skill, and read-only STDIO MCP server"
   }
 }
